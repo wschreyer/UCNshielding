@@ -1,8 +1,8 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-#define BL1U 
-*#define BL1A 
+*#define BL1U 
+#define BL1A 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
@@ -15,8 +15,8 @@ BEAMPOS        420.5600.746257   144.145
 BEAM            -.48                 0.0   -0.1295   -0.3533          PROTON
 BEAMPOS        206.9     964.2    137.16        1.       0.0
 MGNFIELD
-USRBIN           10.    PROTON      -40.      550.     1310.     137.9BEAMON
-USRBIN         -150.      610.     136.4       70.       70.        1. &
+*USRBIN           10.    PROTON      -40.      550.     1310.     137.9BEAMON
+*USRBIN         -150.      610.     136.4       70.       70.        1. &
 #endif  
 DEFAULTS                                                              NEW-DEFA
 USRBIN           10.   DOSE-EQ      -24.     1450.     1450.     1300.global
@@ -44,7 +44,7 @@ warm2cold
 #endif  
 #if FARM 
 RANDOMIZ          1.    MYSEED
-START        400000.
+START       4000000.
 #else  
 RANDOMIZ          1.        8.
 START        400000.
