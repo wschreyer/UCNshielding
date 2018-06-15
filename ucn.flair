@@ -1,4 +1,4 @@
-#!/home/wschreye/flair/flair
+#!/home/wschreye/flair-2.3/flair
 # FLUKA Project file
 Version: 2
 Title: modified from 011tony_notsliced
@@ -328,9 +328,9 @@ Material: NEWPB
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -368,9 +368,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -678,12 +678,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 1483.73 1112.8
+	extends: 1030.37 528.234
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -74.258 50 292.622
+	origin: -45.0823 340 288.217
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -710,12 +710,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 583.918 278.667
+	extends: 1210.81 620.742
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 339.198 386.275 520
+	origin: 105.891 368.467 251.319
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -737,10 +737,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: U-V
-	extends: 678.64 508.98
+	extends: 977.243 499.82
 	labels: 1
 	layer: Media
-	origin: 400.468 523.811 17.985
+	origin: 335.458 312.003 329.121
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -762,12 +762,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 162.961 122.221
+	extends: 1743.57 891.766
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 217.625 941.017 140
+	origin: -159.075 173.256 140
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -780,82 +780,12 @@ Plot: Magenta
 	ztics: 0
 End
 
-# USR-1D plot "USR-1D ucn 21"
-Plot: ucn_21_plot
-	Format: .eps
-	Type:   USR-1D
-	det.0: 0
-	file.0: ucn_21_tab.lis
-	lc.0: red
-	lw.0: 2
-	name.0: Detector 1
-	ndetectors: 1
-	title: USR-1D ucn 21
-	with.0: histerror
-	x.0: 2
-	xlog: 1
-	y.0: 0
-	ylog: 1
-End
-
-# USRBIN plot "USRBIN ucn 22"
-Plot: ucn_22_plot
-	Format: .eps
-	Type:   USRBIN
-	cbcolors: 30
-	cblog: 1
-	cbtics: 1
-	datafile: ucn_22.bnn
-	geo: -Auto-
-	title: USRBIN ucn 22
-End
-
-# USRBIN plot "USRBIN ucn 24"
-Plot: ucn_24_plot
-	Format: .eps
-	Type:   USRBIN
-	axes: Auto
-	bzmax: 250.
-	bzmin: 200.
-	cbcolors: 30
-	cblog: 1
-	cbpalette: FLUKA
-	cbround: 0
-	cbtics: 1
-	cpd: 0
-	datafile: ucn_24.bnn
-	det: 1
-	errors: 0
-	geo: -Auto-
-	grid: 0
-	hist: 2D Projection
-	index: 0
-	lw.0: 0
-	proj: Z
-	ps.0: 0
-	pt.0: 0
-	swap: 0
-	title: USRBIN ucn 24
-	with.0: errorbars
-	x2log: 0
-	x2tics: 0
-	xlog: 0
-	xrebin: 1
-	y2log: 0
-	y2tics: 0
-	ylog: 0
-	yrebin: 1
-	zlog: 0
-	zrebin: 1
-	ztics: 0
-End
-
 # USRBIN plot "Prompt radiation (uSv/h)"
 Plot: floor_level
 	Format: .pdf
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 180
+	bzmax: 195
 	bzmin: 0.
 	cbcolors: 30
 	cblog: True
@@ -875,11 +805,62 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 605248.13460001920
+	int: 612505.34879531735
 	lw.0: 0
-	max: 1.67175412
-	min: 4.11522012E-25
-	norm: 120*6.24e12*3600/1e6
+	max: 1.54811835
+	min: 4.37996578E-25
+	norm: 40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: floor_level01
+	Format: .pdf
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 200
+	bzmin: 0.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 614249.50157365634
+	lw.0: 0
+	max: 0.425772667
+	min: 6.09978136E-24
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -906,7 +887,7 @@ Plot: guide_level
 	Format: .pdf
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 270.
+	bzmax: 270
 	bzmin: 225.
 	cbcolors: 30
 	cblog: True
@@ -926,11 +907,62 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 111.39415288393455
+	int: 5978.3358196297786
 	lw.0: 0
-	max: 8.45676113E-04
-	min: 2.91028458E-23
-	norm: 120*6.24e12*3600/1e6
+	max: 1.30343679E-02
+	min: 7.28724051E-27
+	norm: 40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: guide_level01
+	Format: .pdf
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 300
+	bzmin: 200.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 13308.649351329797
+	lw.0: 0
+	max: 1.03749353E-02
+	min: 1.21336242E-23
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -957,8 +989,8 @@ Plot: pump_level
 	Format: .pdf
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 570
-	bzmin: 375.
+	bzmax: 600
+	bzmin: 450.
 	cbcolors: 30
 	cblog: True
 	cbmax: 1e6
@@ -977,11 +1009,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 0.12806160002091391
+	int: 0.75470714769316738
 	lw.0: 0
-	max: 3.33474617E-08
-	min: 7.46173545E-33
-	norm: 120*6.24e12*3600/1e6
+	max: 2.29272089E-07
+	min: 1.51681283E-27
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1004,11 +1036,62 @@ set rmargin at screen 0.8
 End
 
 # USRBIN plot "Prompt radiation (uSv/h)"
-Plot: cryostat_pit
+Plot: pump_level01
+	Format: .pdf
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 600.
+	bzmin: 450.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 0.75470929947633147
+	lw.0: 0
+	max: 1.42249618E-07
+	min: 1.88802653E-25
+	norm: 40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: cryostat_pit_NS
 	Format: .pdf
 	Type:   USRBIN
 	axes: Y-Z
-	bxmax: 415.
+	bxmax: 415
 	bxmin: 295.
 	cbcolors: 30
 	cblog: True
@@ -1028,12 +1111,159 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 58821.778668305247
+	int: 112837.13134690536
 	lw.0: 0
-	max: 2.13688636
-	min: 4.87230787E-24
-	norm: 120*6.24e12*3600/1e6
+	max: 0.262585431
+	min: 1.73559585E-20
+	norm: 40*6.24e12*3600/1e6
 	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 1
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: cryostat_pit01_NS
+	Format: .pdf
+	Type:   USRBIN
+	axes: Y-Z
+	bxmax: 400
+	bxmin: 300.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 56516.177803983228
+	lw.0: 0
+	max: 6.95894286E-02
+	min: 1.68857561E-19
+	norm: 40*6.24e12*3600/1e6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 1
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: cryostat_pit_EW
+	Format: .pdf
+	Type:   USRBIN
+	axes: X-Z
+	bymax: 390
+	bymin: 315.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_25.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 23.698161259565410
+	lw.0: 0
+	max: 2.73210662E-05
+	min: 9.10512933E-26
+	norm: 40*6.24e12*3600/1e6
+	proj: Y
+	ps.0: 0
+	pt.0: 0
+	swap: 1
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: cryostat_pit01_EW
+	Format: .pdf
+	Type:   USRBIN
+	axes: X-Z
+	bymax: 400
+	bymin: 300.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 31.300337770678006
+	lw.0: 0
+	max: 1.81397481E-05
+	min: 5.89635855E-27
+	norm: 40*6.24e12*3600/1e6
+	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 1
