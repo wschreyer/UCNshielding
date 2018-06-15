@@ -1,8 +1,8 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-#define BL1U 
-*#define BL1A 
+*#define BL1U 
+#define BL1A 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
@@ -1054,7 +1054,7 @@ RCC body24     320. 596.314 144.145 -200. 0.0 0.0 11.
 RPP ncon       -215. 340. -10. 165. 0.0 200.
 RPP body25     290. 628. 165. 370. 350. 467.36
 RPP body26     200. 560. 580. 780. 350. 467.36
-RPP body27     259.15528423369 628. -65. 165. 243.84 350.
+RPP body27     259.15528423369 628.0 -10.0 165.0 243.84 350.0
 RPP body28     550. 628. 165. 372. 243.84 350.
 RPP body29     -444. 340. -10. 165. 200. 350.
 RPP body30     -24. 1530. -10. 780. 467.36 731.60013537286
