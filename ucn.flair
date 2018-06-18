@@ -678,12 +678,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 1030.37 772.777
+	extends: 166.411 85.3132
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -45.0823 340 288.217
+	origin: 680.034 340 162.445
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -710,12 +710,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 486.597 364.948
+	extends: 1452.97 744.889
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 203.523 109.904 251.319
+	origin: 89.5376 536.752 251.319
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -737,10 +737,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: U-V
-	extends: 977.243 732.932
+	extends: 392.732 200.867
 	labels: 1
 	layer: Media
-	origin: 335.458 312.003 329.121
+	origin: 294.169 198.563 393.15
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -752,7 +752,7 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: -1 0 0
+	basisu: -0.999998 0 0.00193916
 	basisv: 0 1 0
 	boundaries: 1
 	cbcolors: 0
@@ -760,14 +760,14 @@ Plot: Magenta
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: X-Y
+	coord: U-V
 	cpd: 0
-	extends: 1743.57 1307.68
+	extends: 10.577 5.40971
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -159.075 173.256 140
+	origin: -599.518 957.52 140.001
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
@@ -805,10 +805,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 132854.62339380791
+	int: 440169.90325739660
 	lw.0: 0
-	max: 0.276856840
-	min: 5.61143228E-24
+	max: 0.332829356
+	min: 1.74164559E-22
 	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -907,10 +907,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 92.036198471534078
+	int: 20267.298310200887
 	lw.0: 0
-	max: 9.47782537E-04
-	min: 1.63947700E-23
+	max: 8.79879016E-03
+	min: 7.87105166E-21
 	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1009,10 +1009,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1.6973738053889780E-002
+	int: 14.737565467410693
 	lw.0: 0
-	max: 3.41526585E-09
-	min: 9.61875069E-33
+	max: 7.81742870E-07
+	min: 2.42710055E-30
 	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1111,10 +1111,59 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 58822.514031210463
+	int: 287.72881603636029
 	lw.0: 0
-	max: 2.13690686
-	min: 1.72231607E-23
+	max: 8.84394860E-04
+	min: 3.00879561E-27
+	norm: 120*6.24e12*3600/1e6
+	proj: X
+	ps.0: 0
+	pt.0: 0
+	swap: 1
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: exclusion_area_NS
+	Format: .pdf
+	Type:   USRBIN
+	axes: Y-Z
+	bxmax: -200
+	bxmin: -395.
+	cbcolors: 30
+	cblog: True
+	cbmax: 1e6
+	cbmin: 0.01
+	cbpalette: FLUKA
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 0
+	datafile: ucn_25.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 69909.115962475524
+	lw.0: 0
+	max: 0.193275288
+	min: 7.51858472E-17
 	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0

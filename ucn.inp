@@ -2,35 +2,37 @@ TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
 *#define BL1U 
-#define BL1A 
+*#define BL1U1 
+*#define BL1U2 
+*#define BL1U3 
+*#define BL1A 
+#define BL1A1 
+*#define BL1A2 
+*#define BL1A3 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
+#if FARM 
+RANDOMIZ          1.    MYSEED
+#if BL1A
+START       4000000.
+#else 
+START        400000.
+#endif 
+#else  
+RANDOMIZ          1.        8.
+START        400000.
+#endif  
 #if BL1U 
 BEAM            -.48                         -0.88      -2.5          PROTON
 BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
 BEAMPOS        420.5600.746257   144.145
-*BEAMPOS        -895.977.959812   144.145
-#if FARM 
-RANDOMIZ          1.    MYSEED
-START        400000.
-#else  
-RANDOMIZ          1.        8.
-START        400000.
-#endif  
 #elif BL1A 
 BEAM            -.48                 0.0   -0.1295   -0.3533          PROTON
 BEAMPOS        206.9     964.2    137.16        1.       0.0
-MGNFIELD
-#if FARM 
-RANDOMIZ          1.    MYSEED
-START       4000000.
-#else  
-RANDOMIZ          1.        8.
-START        400000.
-#endif  
-*USRBIN           10.    PROTON      -40.      550.     1310.     137.9BEAMON
-*USRBIN         -150.      610.     136.4       70.       70.        1. &
+#elif BL1A1 
+BEAM            -.48                 0.0       0.0       0.0          PROTON
+BEAMPOS        -600.    958.92    137.16        1.       0.0
 #endif  
 DEFAULTS                                                              NEW-DEFA
 USRBIN           10.   DOSE-EQ      -24.     1450.     1450.     1300.global
@@ -1054,7 +1056,7 @@ RCC body24     320. 596.314 144.145 -200. 0.0 0.0 11.
 RPP ncon       -215. 340. -10. 165. 0.0 200.
 RPP body25     290. 628. 165. 370. 350. 467.36
 RPP body26     200. 560. 580. 780. 350. 467.36
-RPP body27     259.15528423369 628.0 -10.0 165.0 243.84 350.0
+RPP body27     259.15528423369 628. -10. 165. 243.84 350.
 RPP body28     550. 628. 165. 372. 243.84 350.
 RPP body29     -444. 340. -10. 165. 200. 350.
 RPP body30     -24. 1530. -10. 780. 467.36 731.60013537286
