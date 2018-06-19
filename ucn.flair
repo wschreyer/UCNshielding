@@ -328,9 +328,9 @@ Material: NEWPB
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -368,9 +368,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -678,7 +678,7 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 166.411 124.808
+	extends: 166.411 79.0904
 	grid: 0
 	index: 0
 	labels: 1
@@ -710,7 +710,7 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1743.56 1307.67
+	extends: 1743.56 828.664
 	grid: 0
 	index: 0
 	labels: 1
@@ -737,7 +737,7 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: U-V
-	extends: 392.732 294.549
+	extends: 392.732 186.181
 	labels: 1
 	layer: Media
 	origin: 319.446 268.01 223.55
@@ -762,12 +762,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 700.698 525.524
+	extends: 700.698 332.176
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -493 806.306 140.496
+	origin: -12.9087 843.496 139.565
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
