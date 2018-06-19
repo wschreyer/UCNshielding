@@ -6,19 +6,19 @@ GLOBAL                                                                DEPRBODY
 *#define BL1U2 
 *#define BL1U3 
 *#define BL1A 
-#define BL1A1 
-*#define BL1A2 
+*#define BL1A1 
+#define BL1A2 
 *#define BL1A3 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
 #if FARM 
 RANDOMIZ          1.    MYSEED
-#if BL1A
+#if BL1A 
 START       4000000.
-#else 
+#else  
 START        400000.
-#endif 
+#endif  
 #else  
 RANDOMIZ          1.        8.
 START        400000.
@@ -33,6 +33,9 @@ BEAMPOS        206.9     964.2    137.16        1.       0.0
 #elif BL1A1 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS        -600.    958.92    137.16        1.       0.0
+#elif BL1A2 
+BEAM            -.48                 0.0       0.0       0.0          PROTON
+BEAMPOS        -250.    958.92    137.16        1.       0.0
 #endif  
 DEFAULTS                                                              NEW-DEFA
 USRBIN           10.   DOSE-EQ      -24.     1450.     1450.     1300.global

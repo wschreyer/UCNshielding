@@ -6,7 +6,7 @@ Input: ucn.inp
 Exec: myfluka
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Plot
+Page: Input
 Source: fluscw.f
 Source: usimbs.f
 DefMain: True
@@ -678,12 +678,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 166.411 85.3132
+	extends: 166.411 124.808
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 680.034 340 162.445
+	origin: 689.348 340 156.824
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -710,12 +710,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1452.97 744.889
+	extends: 1743.56 1307.67
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 89.5376 536.752 251.319
+	origin: 69.2065 463.841 251.319
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -737,10 +737,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: U-V
-	extends: 392.732 200.867
+	extends: 392.732 294.549
 	labels: 1
 	layer: Media
-	origin: 294.169 198.563 393.15
+	origin: 319.446 268.01 223.55
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -762,12 +762,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: U-V
 	cpd: 0
-	extends: 10.577 5.40971
+	extends: 700.698 525.524
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -599.518 957.52 140.001
+	origin: -493 806.306 140.496
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0
