@@ -6,7 +6,7 @@ Input: ucn.inp
 Exec: myfluka
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Input
+Page: Geometry
 Source: fluscw.f
 Source: usimbs.f
 DefMain: True
@@ -328,9 +328,9 @@ Material: NEWPB
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -368,9 +368,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -678,12 +678,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 166.411 79.0904
+	extends: 199.693 94.9085
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 689.348 340 156.824
+	origin: 672.566 340 161.561
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: False
@@ -710,12 +710,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1743.56 828.664
+	extends: 2092.27 994.397
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 69.2065 463.841 251.319
+	origin: -3.14388 538.715 251.319
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -737,10 +737,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: U-V
-	extends: 392.732 186.181
+	extends: 1407.23 667.119
 	labels: 1
 	layer: Media
-	origin: 319.446 268.01 223.55
+	origin: 387.534 455.081 355.988
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -752,7 +752,7 @@ End
 Plot: Magenta
 	Format: .eps
 	Type:   Geometry
-	basisu: -0.999998 0 0.00193916
+	basisu: -1 0 0
 	basisv: 0 1 0
 	boundaries: 1
 	cbcolors: 0
@@ -760,14 +760,14 @@ Plot: Magenta
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
-	coord: U-V
+	coord: X-Y
 	cpd: 0
-	extends: 700.698 332.176
+	extends: 1743.56 826.561
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -12.9087 843.496 139.565
+	origin: -125.575 608.632 144.145
 	subtype: Material
 	title: GeoViewer Magenta plot
 	x2log: 0

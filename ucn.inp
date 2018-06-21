@@ -2,13 +2,13 @@ TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
 *#define BL1U 
-*#define BL1U1 
+#define BL1U1 
 *#define BL1U2 
 *#define BL1U3 
 *#define BL1A 
 *#define BL1A1 
 *#define BL1A2 
-#define BL1A3 
+*#define BL1A3 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
@@ -39,6 +39,10 @@ BEAMPOS        -250.    958.92    137.16        1.       0.0
 #elif BL1A3 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         100.    958.92    137.16        1.       0.0
+#elif BL1U1 
+BEAM            -.48                 0.0       0.0       0.0          PROTON
+BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
+BEAMPOS        -600.    888.24   144.145        1.       0.0
 #endif  
 DEFAULTS                                                              NEW-DEFA
 USRBIN           10.   DOSE-EQ      -24.     1450.     1450.     1300.global
