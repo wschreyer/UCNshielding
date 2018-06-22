@@ -1,12 +1,11 @@
-#!/home/wschreye/flair-2.3/flair
+#!/usr/local/flair/flair
 # FLUKA Project file
 Version: 2
 Title: modified from 011tony_notsliced
 Input: ucn.inp
-Exec: myfluka
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Geometry
+Page: Plot
 Source: fluscw.f
 Source: usimbs.f
 DefMain: True
@@ -16,7 +15,6 @@ F77dline: False
 
 # Run information
 Run: <default>
-	Exe:      myfluka
 	Prev:     0
 	Last:     1
 	Status:   3
@@ -52,7 +50,6 @@ End
 # Run information
 Run: ucn_aa
 	Rnd:      9
-	Exe:      myfluka
 	Prev:     0
 	Last:     1
 	Status:   3
@@ -88,7 +85,6 @@ End
 # Run information
 Run: ucn_ab
 	Rnd:      10
-	Exe:      myfluka
 	Prev:     0
 	Last:     1
 	Status:   3
@@ -122,7 +118,6 @@ End
 # Run information
 Run: ucn_ac
 	Rnd:      11
-	Exe:      myfluka
 	Prev:     0
 	Last:     1
 	Status:   3
@@ -156,7 +151,6 @@ End
 # Run information
 Run: ucn_ad
 	Rnd:      12
-	Exe:      myfluka
 	Prev:     0
 	Last:     1
 	Status:   3
@@ -328,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -368,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -672,13 +666,13 @@ Plot: Red
 	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
-	cblog: False
+	cblog: 0
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 199.693 94.9085
+	extends: 199.693 101.57
 	grid: 0
 	index: 0
 	labels: 1
@@ -686,13 +680,13 @@ Plot: Red
 	origin: 672.566 340 161.561
 	subtype: Material
 	title: GeoViewer Red plot
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
-	y2log: False
+	xlog: 0
+	y2log: 0
 	y2tics: 0
-	ylog: False
-	zlog: False
+	ylog: 0
+	zlog: 0
 	ztics: 0
 End
 
@@ -710,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 2092.27 994.397
+	extends: 700.697 356.394
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -3.14388 538.715 251.319
+	origin: 6.99107 120.936 251.319
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -737,10 +731,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: U-V
-	extends: 1407.23 667.119
+	extends: 189.396 96.3323
 	labels: 1
 	layer: Media
-	origin: 387.534 455.081 355.988
+	origin: 287.284 179.646 255.033
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -762,7 +756,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1743.56 826.561
+	extends: 1743.56 886.824
 	grid: 0
 	index: 0
 	labels: 1
@@ -787,10 +781,10 @@ Plot: floor_level
 	axes: Auto
 	bzmax: 195
 	bzmin: 0.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -805,28 +799,28 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 440169.90325739660
+	int: 612351.33280018321
 	lw.0: 0
-	max: 0.332829356
-	min: 1.74164559E-22
-	norm: 120*6.24e12*3600/1e6
+	max: 1.54773021
+	min: 9.52742617E-25
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -838,10 +832,10 @@ Plot: floor_level01
 	axes: Auto
 	bzmax: 200
 	bzmin: 0.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -860,24 +854,24 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 7.95068219E-02
 	min: 4.46182189E-23
-	norm: 120*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -888,11 +882,11 @@ Plot: guide_level
 	Type:   USRBIN
 	axes: Auto
 	bzmax: 255
-	bzmin: 225.
-	cbcolors: 30
-	cblog: True
+	bzmin: 240.
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -907,28 +901,28 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 20267.298310200887
+	int: 1997.1558649287442
 	lw.0: 0
-	max: 8.79879016E-03
-	min: 7.87105166E-21
-	norm: 120*6.24e12*3600/1e6
+	max: 1.35578308E-02
+	min: 6.56592227E-26
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -940,10 +934,10 @@ Plot: guide_level01
 	axes: Auto
 	bzmax: 300
 	bzmin: 200.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -958,28 +952,28 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 305.31493867377912
+	int: 13268.118860474980
 	lw.0: 0
-	max: 3.44470551E-04
-	min: 2.12439516E-23
-	norm: 120*6.24e12*3600/1e6
+	max: 1.03587145E-02
+	min: 6.97132462E-22
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -991,10 +985,10 @@ Plot: pump_level
 	axes: Auto
 	bzmax: 600
 	bzmin: 450.
-	cbcolors: 30
-	cblog: True
-	cbmax: 1e6
-	cbmin: 0.01
+	cbcolors: 9
+	cblog: 1
+	cbmax: 1000000.0
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1009,28 +1003,28 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 14.737565467410693
+	int: 0.88301963377286152
 	lw.0: 0
-	max: 7.81742870E-07
-	min: 2.42710055E-30
-	norm: 120*6.24e12*3600/1e6
+	max: 3.16124670E-07
+	min: 5.73495219E-30
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -1042,10 +1036,10 @@ Plot: pump_level01
 	axes: Auto
 	bzmax: 600
 	bzmin: 450.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1060,28 +1054,28 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1.7014833492830554E-002
+	int: 0.88303708080421761
 	lw.0: 0
-	max: 2.53628696E-09
-	min: 8.93575541E-31
-	norm: 120*6.24e12*3600/1e6
+	max: 1.95327374E-07
+	min: 9.84627139E-27
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -1093,10 +1087,10 @@ Plot: cryostat_pit_NS
 	axes: Y-Z
 	bxmax: 415
 	bxmin: 295.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1111,26 +1105,26 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 287.72881603636029
+	int: 112801.81757259031
 	lw.0: 0
-	max: 8.84394860E-04
-	min: 3.00879561E-27
-	norm: 120*6.24e12*3600/1e6
+	max: 0.262561649
+	min: 6.93639793E-24
+	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 1
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -1142,10 +1136,10 @@ Plot: exclusion_area_NS
 	axes: Y-Z
 	bxmax: -200
 	bxmin: -395.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1160,26 +1154,26 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 69909.115962475524
+	int: 0.98668890413961552
 	lw.0: 0
-	max: 0.193275288
-	min: 7.51858472E-17
-	norm: 120*6.24e12*3600/1e6
+	max: 5.50357436E-06
+	min: 3.57744131E-25
+	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 1
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -1191,10 +1185,10 @@ Plot: cryostat_pit01_NS
 	axes: Y-Z
 	bxmax: 400
 	bxmin: 300.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1213,22 +1207,22 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.217290312
 	min: 1.41236505E-23
-	norm: 120*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
 	swap: 1
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -1240,10 +1234,10 @@ Plot: cryostat_pit_EW
 	axes: X-Z
 	bymax: 390
 	bymin: 315.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1258,26 +1252,26 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1.0475071918735774E-004
+	int: 24.605455023539271
 	lw.0: 0
-	max: 8.12123480E-10
-	min: 1.85790291E-31
-	norm: 120*6.24e12*3600/1e6
+	max: 2.70179080E-05
+	min: 3.94748290E-25
+	norm: 40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 1
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
@@ -1289,10 +1283,10 @@ Plot: cryostat_pit01_EW
 	axes: X-Z
 	bymax: 400
 	bymin: 300.
-	cbcolors: 30
-	cblog: True
+	cbcolors: 9
+	cblog: 1
 	cbmax: 1e6
-	cbmin: 0.01
+	cbmin: 0.1
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 1
@@ -1307,26 +1301,26 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 31.300337770678006
+	int: 32.324333956500780
 	lw.0: 0
-	max: 1.81397481E-05
-	min: 5.89635855E-27
-	norm: 120*6.24e12*3600/1e6
+	max: 1.86853576E-05
+	min: 1.64640931E-24
+	norm: 40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
 	swap: 1
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: False
+	x2log: 0
 	x2tics: 0
-	xlog: False
+	xlog: 0
 	xrebin: 1
-	y2log: False
+	y2log: 0
 	y2tics: 0
-	ylog: False
+	ylog: 0
 	yrebin: 1
-	zlog: False
+	zlog: 0
 	zrebin: 1
 	ztics: 0
 End
