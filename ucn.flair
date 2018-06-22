@@ -322,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -362,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -799,11 +799,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 612351.33280018321
+	int: 132856.44335467959
 	lw.0: 0
-	max: 1.54773021
-	min: 9.52742617E-25
-	norm: 40*6.24e12*3600/1e6
+	max: 0.276864886
+	min: 1.48417742E-23
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -854,7 +854,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 7.95068219E-02
 	min: 4.46182189E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -901,11 +901,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1997.1558649287442
+	int: 34.273185253995337
 	lw.0: 0
-	max: 1.35578308E-02
-	min: 6.56592227E-26
-	norm: 40*6.24e12*3600/1e6
+	max: 8.05065327E-04
+	min: 6.03104594E-24
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -956,7 +956,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.03587145E-02
 	min: 6.97132462E-22
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1003,11 +1003,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 0.88301963377286152
+	int: 1.7380661648704828E-002
 	lw.0: 0
-	max: 3.16124670E-07
-	min: 5.73495219E-30
-	norm: 40*6.24e12*3600/1e6
+	max: 3.36525163E-09
+	min: 1.57875430E-32
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1058,7 +1058,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.95327374E-07
 	min: 9.84627139E-27
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1105,11 +1105,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 112801.81757259031
+	int: 58821.345261337454
 	lw.0: 0
-	max: 0.262561649
-	min: 6.93639793E-24
-	norm: 40*6.24e12*3600/1e6
+	max: 2.13687086
+	min: 3.97913791E-25
+	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1154,11 +1154,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 0.98668890413961552
+	int: 27.634885891173088
 	lw.0: 0
-	max: 5.50357436E-06
-	min: 3.57744131E-25
-	norm: 40*6.24e12*3600/1e6
+	max: 2.58514228E-06
+	min: 2.77174601E-29
+	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1207,7 +1207,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.217290312
 	min: 1.41236505E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1252,11 +1252,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 24.605455023539271
+	int: 7.5686859573745007E-005
 	lw.0: 0
-	max: 2.70179080E-05
-	min: 3.94748290E-25
-	norm: 40*6.24e12*3600/1e6
+	max: 1.68833558E-10
+	min: 3.93030871E-33
+	norm: 120*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -1305,7 +1305,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.86853576E-05
 	min: 1.64640931E-24
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
