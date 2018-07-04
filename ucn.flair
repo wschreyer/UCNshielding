@@ -803,7 +803,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.54840744
 	min: 2.30454127E-25
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -854,7 +854,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 7.95068219E-02
 	min: 4.46182189E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -905,7 +905,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.36372121E-02
 	min: 1.32941167E-24
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -956,7 +956,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.03587145E-02
 	min: 6.97132462E-22
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1007,7 +1007,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 2.74652223E-07
 	min: 5.18241748E-27
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1058,7 +1058,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.95327374E-07
 	min: 9.84627139E-27
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1109,7 +1109,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.262563616
 	min: 5.07606570E-26
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1158,7 +1158,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 5.56096211E-06
 	min: 1.98212064E-28
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1207,7 +1207,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.217290312
 	min: 1.41236505E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1256,7 +1256,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 2.73278747E-05
 	min: 5.15351360E-28
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -1305,7 +1305,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.86853576E-05
 	min: 1.64640931E-24
-	norm: 40*6.24e12*3600/1e6
+	norm: 120*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
