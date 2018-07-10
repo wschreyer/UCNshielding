@@ -63,18 +63,18 @@ USRBIN           10.   DOSE-EQ      -24.     1450.     1450.     1300.global
 USRBIN        -1250.    -1800.       0.0       54.       65.       26. &
 USRBIN           10.   DOSE-EQ      -25.     1420.     1410.     1290.fine
 USRBIN        -1220.    -1800.       0.0      176.      214.       86. &
-BIASING           1.                  2.  BLCKHOLE  COLLIMAT          USER
-BIASING           1.                  2.  GGUIDE01  SPL11C01          USER
-BIASING           1.                  2.        T1  NOSPLTCO          USER
-BIASING           1.                  2.  STAINLES     WOODY          USER
-BIASING           1.                  2.  TARGARM1      CRAL          USER
-BIASING           1.                  2.     CRHEX  @LASTREG          USER
-BIASING           3.                  2.  BLCKHOLE  COLLIMAT          USER
-BIASING           3.                  2.  GGUIDE01  SPL11C01          USER
-BIASING           3.                  2.        T1  NOSPLTCO          USER
-BIASING           3.                  2.  STAINLES     WOODY          USER
-BIASING           3.                  2.  TARGARM1      CRAL          USER
-BIASING           3.                  2.     CRHEX  @LASTREG          USER
+USRBIN           10.   DOSE-EQ      -25.     1420.     1410.     1290.finen
+USRBIN        -1220.    -1800.       0.0      176.      214.       86. &
+AUXSCORE      USRBIN   NEUTRON               finen
+USRBIN           10.   DOSE-EQ      -25.     1420.     1410.     1290.fineg
+USRBIN        -1220.    -1800.       0.0      176.      214.       86. &
+AUXSCORE      USRBIN    PHOTON               fineg
+BIASING          0.0                  2.  BLCKHOLE  COLLIMAT          USER
+BIASING          0.0                  2.  GGUIDE01  SPL11C01          USER
+BIASING          0.0                  2.        T1  NOSPLTCO          USER
+BIASING          0.0                  2.  STAINLES     WOODY          USER
+BIASING          0.0                  2.  TARGARM1      CRAL          USER
+BIASING          0.0                  2.     CRHEX  @LASTREG          USER
 #if DRAW 
 USERDUMP        100.       88.        2.        1.
 USRICALL
@@ -218,7 +218,8 @@ $start_transform ucnguide
 RCC guide      0.0 0.0 0.0 0.0 100. 0.0 4.25
 RCC guideo     0.0 0.0 0.0 0.0 100. 0.0 4.75
 RCC guideooo   0.0 0.0 0.0 0.0 100. 0.0 7.5
-RPP yswitch    -30. 30. -50. 50. -30. 30.
+RPP yswitch    -30. 30. -65. 35. -30. 30.
+RPP ynshld     -30. 30. -65. -60. -30. 30.
 $end_transform 
 $start_transform ucnguidf
 RCC guidf      0.0 0.0 0.0 0.0 350. 0.0 4.2500
@@ -499,9 +500,8 @@ RPP M11w45     435.77707238975 558.2726619015 925.1056546586 1058.1673316929
               147.32 304.8
 RPP souttop    -932.2554663069 1530.7350354556 776.98208100582 1326.2448133216
               682.58227237881 731.52
-RPP souttop1   -170. 1530.7350354556 780. 1340.4063358212 243.84 609.6
-RPP souttop2   -1277.600276631 -170. 411.76175128536 1340.4063358212 243.84
-              609.6
+RPP souttop1   -80. 1530.7350354556 780. 1340.4063358212 243.84 609.6
+RPP souttop2   -1277.600276631 -80. 411.76175128536 1340.4063358212 243.84 609.6
 RPP cyclwal1   -1265.581643793 -1173.984502188 -1236.852717407 1326.2448133216
               426.72 731.52
 RPP surrM11    337.62800064971 983.4895135203 131. 1058.1673316929 0.0 243.84
@@ -1014,9 +1014,9 @@ RPP M11w54     130.02440113328 558.64599061132 1058.1673316929 1149.7166896617
               182.88 213.36
 RPP M11w55     337.62800064971 382.3853 1031.8294723555 1058.1673316929 106.68
               213.36
-RPP eedm1      -170. 160. 155. 251.16431614614 0.0 150.
+RPP eedm1      -80. 160. 155. 251.16431614614 0.0 150.
 RPP eedm2      340. 636. -30. 155. 0.0 243.84
-RPP eedm3      -170. 284.13907338459 595. 780. 243.84 350.
+RPP eedm3      -80. 284.13907338459 595. 780. 243.84 350.
 RPP M11s57     292.63641155881 558.2726619015 446.78036827821 716.18729331824
               76.2 116.5
 $start_transform M11ee
@@ -1046,8 +1046,8 @@ RPP cabltra0   -444.8403689923 -75. 650.34364864025 682.58227237881 0.0 45.72
 RPP swcon1     -321.7917366353 -75. 250. 488.81845771841 0.0 243.84
 RPP swcon2     -442.5644469627 -75. 488.81845771841 682.58227237881 0.0 243.84
 RPP wcon1      -75. 106. 251.16431614614 622.20485564924 0.0 125.
-RPP wcon2      -170. 140. 155. 580. 125. 190.
-RPP wcon3      -170. 140. 155. 622.20485564924 190. 350.
+RPP wcon2      -80. 140. 155. 580. 125. 190.
+RPP wcon3      -80. 140. 155. 622.20485564924 190. 350.
 RPP con_hand   106. 160. 251.16431614614 520. 0.0 150.
 RPP wste1      106. 292.63641155881 520. 622.20485564924 0.0 100.
 RPP wste2      106. 292.63641155881 520. 622.20485564924 100. 120.
@@ -1069,8 +1069,7 @@ RPP uste       140. 284.13907338459 155. 594. 243.84 350.
 RPP unenesol   276. 550. 155. 440. 243.84 350.
 RPP usenesol   284.13907338459 628. 716.18729331824 780. 243.84 350.
 RPP ueenesol   550. 628. 372. 716.18729331824 243.84 350.
-RPP body7      -170. -75. 250. 595. 243.84 350.
-RPP body14     -170. 284. 250. 780. 350. 467.36
+RPP body14     -80. 284. 250. 780. 350. 467.36
 PLA body19     -82.21921916438 -56.92099788303 0.0 49.119999999994
               60.159999999995 450.
 RPP body20     200. 628. -30. 155. 350. 467.36
@@ -1078,13 +1077,13 @@ RPP body21     140. 560. 155. 580. 350. 423.945
 RPP body22     560. 628. 370. 780. 350. 424.
 RPP body23     194.02953295155 284.13907338459 580. 622.20485564924 120. 160.
 RCC body24     320. 596.314 144.145 -200. 0.0 0.0 11.
-RPP ncon       -215. 340. -30. 155. 0.0 200.
+RPP ncon       -80. 340. -30. 155. 0.0 200.
 RPP body25     290. 628. 155. 370. 350. 467.36
 RPP body26     284. 560. 580. 780. 350. 424.
 RPP body27     259.15528423369 628. -30. 155. 243.84 350.
 RPP body28     550. 628. 155. 372. 243.84 350.
-RPP body29     -215.02347008 340. -30. 155. 200. 350.
-RPP body30     -170. 940. -30. 780. 423.945 840.
+RPP body29     -80. 340. -30. 155. 200. 350.
+RPP body30     -80. 940. -30. 780. 423.945 840.
 RPP swcon4     -442.5644469627 -75. 622.20485564924 682.58227237881 175. 243.84
 RPP cable1     -442.5644469627 -75. 622.58227237881 682.58227237881 190. 243.84
 RPP cable2     -502.5644469627 -442.5644469627 488.81845771841 703.25969507007
@@ -1093,7 +1092,7 @@ RPP cable3     -442.5644469627 -321.7917366353 488.81845771841 518.81845771841
               190. 243.84
 RPP cable4     -321.7917366353 -291.7917366353 344. 518.81845771841 190. 243.84
 XYP body32     1250.
-RPP body33     -170. 200. -30. 250. 350. 467.36
+RPP body33     -80. 200. -30. 250. 350. 467.36
 RPP body31     -442.5644469627 106. 580. 630. 120. 190.
 PLA body34     75.79394376403 65.232492583796 0.0 572.14525045291 772.193137569
               60.
@@ -1285,21 +1284,23 @@ RCC crvld2o    0.0 195. 15.3 0.0 0.0 180. 2.5
 RCC crvld2i    0.0 195. 15.3 0.0 0.0 180. 2.14
 RCC crvshldo   0.0 195. 15.8 0.0 0.0 180. 12.
 RCC crvshldi   0.0 195. 15.8 0.0 0.0 180. 11.85
+RPP crnshld1   -46. 46. 55. 60. -40.00107294969 127.65392705031
+RPP crnshld2   -18. 18. 55. 60. -17. 36.
 $end_transform 
 RPP duct1      260. 410. 310. 370. 423.945 591.04526289925
-RPP duct2      -24. 410. 310. 340. 585. 615.
-RPP duct3      -24. 410. 340. 370. 585. 615.
+RPP duct2      -80. 410. 310. 340. 585. 615.
+RPP duct3      -80. 410. 340. 370. 585. 615.
 RPP duct4      540. 570. 390. 590. 296. 326.
 RPP duct5      540. 740. 390. 420. 296. 326.
 RPP duct6      710. 740. 390. 420. 296. 386.
 RPP duct7      710. 740. 220. 420. 356. 386.
 RPP duct8      710. 940. 220. 250. 356. 386.
-RPP pumps      -280. -24. 160. 450. 370. 615.
+RPP pumps      -430. -174. 120. 410. 370. 615.
 RPP maze1      260. 505. 280. 450. 423.945 605.
-RPP maze2      410. 680. 280. 380. 510. 690.
-RPP maze8      590. 680. 110. 380. 510. 690.
-RPP maze9      590. 860. 110. 200. 510. 690.
-RPP maze10     770. 860. 200. 370. 510. 840.
+RPP maze2      410. 655. 310. 380. 510. 690.
+RPP maze8      590. 655. 110. 380. 510. 690.
+RPP maze9      590. 860. 110. 175. 510. 690.
+RPP maze10     795. 860. 175. 370. 510. 840.
 RPP duct9      480. 570. 560. 590. 296. 326.
 RPP body12     -444. -306. -65. 20. 0.0 200.
 END
@@ -1320,7 +1321,7 @@ GUIDE001     5 +guideo -guide -guidf -guidg
 GUIDE101     5 +guideooo -guideo -guidfo -guidgo
                | +guidgooo -guideo -guidgo -guidfo
                | +guidfooo -guidfo -guidgo -guideo
-               | +yswitch -guideooo -guidfooo -guidgooo
+               | +yswitch -guideooo -guidfooo -guidgooo -ynshld
 STFLANGE     5 +eeeeeee -cryptbAe
                | +fffffff1 -cryptbAe
                | +fffffff2 -cryptbAe
@@ -1421,7 +1422,7 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                | +(+ncon |  +swcon1 |  +swcon2 |  +M11e23 |  +swcon4 |  +wcon1 |  +wcon2 |  +wcon3 |  +con_hand)
                -guideooo -guidgooo -guidfooo -cable1 -cable2 -cable3 -cable4 -body31 -cabltra0 -cabltra1 -maze1
                -maze8 -maze9 -maze10
-               | +(+body14 -body21 |  +body20 |  +body7 |  +body25 -body21 |  +body27 |  +body28 |  +body29 |
+               | +(+body14 -body21 |  +body20 |   |  +body25 -body21 |  +body27 |  +body28 |  +body29 |
                +body30 -m11cover -nepyramE -body26 -body22 |  +body33 -body21 |  +immovab -cryptbAe -stopbeam |
                +souttop1 -wpyram -M11w06 -M11w45 -M11s37 -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6
                -B1A13 -cste_out) -souttop5 -souttop6 -souttop7 -guideooo -guidfooo -guidgooo -yswitch -CRYOSTAT
@@ -1678,7 +1679,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -M11s52 -M11w54 -eedm1 -eedm2 -eedm3 -M11s57 -M11e60 -M11e64 -B1A9 -M11e69 -sphco -wcon1 -wcon2
                -wcon3 -swcon1 -swcon2 -M11e23 -con_hand -wste1 -wste2 -wste3 -wste4 -wenesol -eenesol -nenesol
                -nwenesol -targend -magpipe4 -nshield1 -nshield2 -nshield3 -usenesol -ueenesol -unenesol -cste_out
-               -uste -M11w45 -T1hole5 -T1hole6 -body14 -body20 -body7 -body21 -body22 -(+body23 -body24 -cryptbAe
+               -uste -M11w45 -T1hole5 -T1hole6 -body14 -body20  -body21 -body22 -(+body23 -body24 -cryptbAe
                ) -ncon -body25 -body26 -body27 -body28 -body29 -M11e23 -body30 -swcon4 -body33 -body12
                | +BL1A01x -BL1A
                | +BL1Ax +B1A05a -BL1A
@@ -2148,6 +2149,8 @@ VACTNK       5 +vactnko -vactnki -hvactnko
                | +hvactnko -hvactnki -vactnki -CRYOSTAT
 NSHLD        5 +b4cshld1 -hvactnko -srcpit -duct9
                | +b4cshld2 -hvactnko -srcpit -CRYOSTAT
+               | +crnshld1 -crnshld2
+               | +ynshld
 PBSHIELD     5 +pbshield
 CRSTEEL      5 +b8 -b9
                | +b10 -b11
@@ -2194,7 +2197,7 @@ CRAL         5 +b2 -crgdvaco -b1
 CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
                -connflg3 -connflg4 -guideooo
                | +CRYOSTA1
-               | +CRYOSTA2 -guideooo
+               | +CRYOSTA2 -guideooo -(crnshld1 -crnshld2 )
                | +duct1
                | +duct2
                | +maze1 -CRYOSTAT
@@ -2495,7 +2498,7 @@ ROT-DEFI                             20.                              ucnguide
 ROT-DEFI                                      275.      160.      250.ucnguide
 ROT-DEFI                            166.                              ucnguidf
 ROT-DEFI                                      275.      160.      250.ucnguidf
-ROT-DEFI                             46.                              ucnguidg
+ROT-DEFI                             54.                              ucnguidg
 ROT-DEFI                                      275.      160.      250.ucnguidg
 ROT-DEFI                          -80.75                              twiz1
 ROT-DEFI                                  244.1936  169.9257          twiz1
