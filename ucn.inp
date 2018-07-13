@@ -1,8 +1,8 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-#define BL1U 
-*#define BL1U1 
+*#define BL1U 
+#define BL1U1 
 *#define BL1U2 
 *#define BL1U3 
 *#define BL1A 
@@ -16,8 +16,6 @@ GLOBAL                                                                DEPRBODY
 #if FARM 
 RANDOMIZ          1.    MYSEED
 #if BL1A 
-START       4000000.
-#elif BL1U1 
 START       4000000.
 #else  
 START        400000.
