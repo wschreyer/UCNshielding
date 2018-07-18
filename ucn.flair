@@ -5,7 +5,7 @@ Title: modified from 011tony_notsliced
 Input: ucn.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Plot
+Page: Geometry
 Source: fluscw.f
 Source: usimbs.f
 DefMain: True
@@ -322,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -362,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -672,12 +672,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 596.28 447.21
+	extends: 715.536 348.868
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 264.698 200 183.219
+	origin: 338.986 325 382.947
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 700.698 525.524
+	extends: 840.838 409.961
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 42.0533 57.8045 250
+	origin: 278.765 300.207 600
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -731,10 +731,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: Y-Z
-	extends: 977.242 732.932
+	extends: 471.278 229.777
 	labels: 1
 	layer: Media
-	origin: 240 -377.396 229.475
+	origin: 340 128.75 473.383
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -756,12 +756,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1452.97 1089.73
+	extends: 1210.81 590.344
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -289.47 -286.919 145
+	origin: -81.6447 90.7809 145
 	proj: Z
 	subtype: Material
 	title: GeoViewer Magenta plot
@@ -804,7 +804,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.333800584
 	min: 1.39777418E-21
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -855,7 +855,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.425694615
 	min: 4.19857270E-23
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -906,7 +906,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 7.01524224E-03
 	min: 4.62880709E-22
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -957,7 +957,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 8.36671796E-03
 	min: 1.65466687E-18
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1008,7 +1008,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.12353597E-07
 	min: 3.04388077E-22
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1059,7 +1059,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 2.77690788E-07
 	min: 1.39772235E-28
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1110,7 +1110,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.00460241E-03
 	min: 5.30665141E-22
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1159,7 +1159,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 0.329470664
 	min: 1.98048571E-19
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1208,7 +1208,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 7.55140409E-02
 	min: 8.12164783E-16
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
@@ -1257,7 +1257,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.48101371E-08
 	min: 6.46656484E-23
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -1306,7 +1306,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 1.20284619E-06
 	min: 6.79801043E-24
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
@@ -1355,7 +1355,7 @@ set rmargin at screen 0.8
 	lw.0: 0
 	max: 5.75459786E-02
 	min: 1.61806108E-20
-	norm: 140*6.24e12*3600/1e6
+	norm: 40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	pt.0: 0
