@@ -18,7 +18,7 @@ RANDOMIZ          1.    MYSEED
 #if BL1A 
 START       4000000.
 #else  
-START        400000.
+START          1000.
 #endif  
 #else  
 RANDOMIZ          1.        8.
@@ -1077,7 +1077,7 @@ RPP body26     284. 560. 580. 780. 350. 424.
 RPP body27     259.15528423369 628. -100. 116. 243.84 350.
 RPP body28     550. 628. 116. 372. 243.84 350.
 RPP body29     -80. 340. -100. 116. 200. 350.
-RPP body30     -80. 940. -60. 780. 423.945 840.
+RPP body30     -80. 940. -60. 780. 423.945 910.
 RPP swcon4     -442.5644469627 -75. 622.20485564924 682.58227237881 175. 243.84
 RPP cable1     -442.5644469627 -75. 622.58227237881 682.58227237881 190. 243.84
 RPP cable2     -502.5644469627 -442.5644469627 488.81845771841 703.25969507007
@@ -1280,27 +1280,28 @@ RCC crvld2i    0.0 195. 15.3 0.0 0.0 180. 2.14
 RCC crvshldo   0.0 195. 15.8 0.0 0.0 180. 12.
 RCC crvshldi   0.0 195. 15.8 0.0 0.0 180. 11.85
 $end_transform 
-RPP duct1      260. 410. 310. 370. 423.945 591.04526289925
-RPP duct2      100.0 160.0 250.0 370.0 585.0 645.0
-RPP duct10     20.0 160.0 250.0 280.0 585.0 645.0
-RPP duct3      160.0 260.0 340.0 370.0 585.0 645.0
+RPP duct2      100. 160. 250. 370. 605. 665.
+RPP duct10     20. 160. 250. 280. 605. 665.
+RPP duct3      160. 325. 340. 370. 605. 665.
 RPP duct4      540. 570. 390. 590. 296. 326.
 RPP duct5      540. 740. 390. 420. 296. 326.
 RPP duct6      710. 740. 390. 420. 296. 386.
 RPP duct7      710. 740. 220. 420. 356. 386.
 RPP duct8      710. 940. 220. 250. 356. 386.
-RPP pumps      -240. 20. -60. 410. 370. 840.
-RPP maze1      260. 505. 280. 450. 423.945 615.
-RPP maze2      410. 655. 315. 390. 510. 690.
-RPP maze8      580. 655. 110. 390. 510. 690.
-RPP maze9      580. 860. 110. 185. 510. 690.
-RPP maze10     785. 860. 185. 285. 510. 840.
+RPP pumps      -240. 20. -60. 410. 370. 910.
+RPP maze1      325. 420. 300. 410. 423.945 520.
+RPP maze2      325. 665. 300. 410. 610. 790.
+RPP maze8      575. 665. 170. 410. 610. 790.
+RPP maze9      575. 820. 170. 230. 610. 790.
+RPP maze10     820.0 880.0 170.0 415.0 610.0 790.0
 RPP duct9      480. 570. 560. 590. 296. 326.
 RPP body12     -444. -306. -100. -35. 0.0 200.
 RPP body7      -350. -167. 46.5 411.5 244. 366.
 RPP body17     -258.5 -167.5 46.5 299. 0.0 244.
 RPP body18     -349.5 -258.5 46.5 137.5 0.0 244.
 RPP body42     -444.84 -80. 300. 411.5 244. 366.
+RPP maze11     820.0 940.0 415.0 510.0 610.0 790.0
+RPP maze3      325. 520. 300. 410. 520. 610.
 END
 BLCKHOLE     5 +blckhole -surround
 COLLIMAT     5 +collimao -collimai
@@ -1365,7 +1366,7 @@ PYRAST01     5 +M11s47
                | +body8 +M11s49
                | +M11w06 +ft04half -M11w04 -M11w05 -M11w07 -ft03
                | +M11w02 +M11w04 +ft04half -M11B2 -M11w01 -M11w03 -M11w07 -ft03
-               | +(+body21 -cste_out |  +body22) -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -duct1 -maze1  -maze8
+               | +(+body21 -cste_out |  +body22) -CRYOSTAT -CRYOSTA1 -CRYOSTA2  -maze1  -maze8
                | +body26
                | +b4cshld4 -guideooo
                | +b4cshld3 -guideooo
@@ -1426,7 +1427,7 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                -m11cover -nepyramE -body26 -body22 |  +body33 -body21 |  +immovab -cryptbAe -stopbeam |
                +souttop1 -wpyram -M11w06 -M11w45 -M11s37 -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6
                -B1A13 -cste_out) -souttop5 -souttop6 -souttop7 -guideooo -guidfooo -guidgooo -CRYOSTAT -CRYOSTA2
-               -duct1 -duct2 -duct3 -duct10  -pumps -maze1 -maze2 -maze8 -maze9 -maze10
+               -duct2 -duct3 -duct10 -pumps -maze1 -maze2 -maze8 -maze9 -maze10 -maze11 -maze3
                | +(+M13bridg -immovab -M13_z64 -M13_z80 -T1hole5 -T1hole6 |  +M13_z6 +M13_z71 +spyram1 -ft07 |
                +M13_z84 |  +M11e69 -M11e70 |  +ft08 +ft07_6 -ft07 -M11B1)
                | +body12
@@ -2200,7 +2201,6 @@ CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo
                -connflg3 -connflg4 -guideooo
                | +CRYOSTA1
                | +CRYOSTA2 -guideooo -b4cshld3
-               | +duct1
                | +duct2
                | +maze1 -CRYOSTAT
                | +maze8
@@ -2209,6 +2209,8 @@ CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo
                | +duct3
                | +maze2
                | +duct10
+               | +maze11
+               | +maze3
 CRHEX        5 +hex -crguide
 CRHE3        5 +he3 -hex
 CRGDVAC      5 +crhshldi -crguideo -he3 -b29 -crhld2o -crvld2o

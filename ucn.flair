@@ -5,7 +5,7 @@ Title: modified from 011tony_notsliced
 Input: ucn.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Geometry
+Page: Plot
 Source: fluscw.f
 Source: usimbs.f
 DefMain: True
@@ -322,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -362,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -672,12 +672,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 715.536 348.868
+	extends: 1780.48 936.746
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 338.986 325 382.947
+	origin: 568.905 460 797.526
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -692,7 +692,7 @@ End
 
 # Geometry plot "GeoViewer Green plot"
 Plot: Green
-	Format: .eps
+	Format: .svg
 	Type:   Geometry
 	basisu: -1 0 0
 	basisv: 0 1 0
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 840.838 409.961
+	extends: 900 650
 	grid: 0
 	index: 0
-	labels: 1
+	labels: 0
 	layer: Media
-	origin: 278.765 300.207 600
+	origin: 100 450 630
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -731,10 +731,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: Y-Z
-	extends: 471.278 229.777
+	extends: 1688.67 823.334
 	labels: 1
 	layer: Media
-	origin: 340 128.75 473.383
+	origin: 340 211.251 509.462
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -756,12 +756,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1210.81 590.344
+	extends: 2510.74 1224.14
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -81.6447 90.7809 145
+	origin: -273.225 219.587 145
 	proj: Z
 	subtype: Material
 	title: GeoViewer Magenta plot
@@ -777,10 +777,10 @@ End
 
 # USRBIN plot "Prompt radiation (uSv/h)"
 Plot: floor_level
-	Format: .pdf
+	Format: .svg
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 195
+	bzmax: 195.
 	bzmin: 0.
 	cbcolors: 8
 	cblog: 1
@@ -797,13 +797,14 @@ set rmargin at screen 0.8
 	det: 1
 	errors: 0
 	geo: -Auto-
+	geopos: 144
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 436943.26354619022
+	int: 608339.55505884904
 	lw.0: 0
-	max: 0.333800584
-	min: 1.39777418E-21
+	max: 1.54009724
+	min: 1.83190253E-25
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -820,6 +821,8 @@ set rmargin at screen 0.8
 	y2log: 0
 	y2tics: 0
 	ylog: 0
+	ymax: 1400
+	ymin: -1500
 	yrebin: 1
 	zlog: 0
 	zrebin: 1
@@ -879,7 +882,7 @@ End
 
 # USRBIN plot "Prompt radiation (uSv/h)"
 Plot: guide_level
-	Format: .pdf
+	Format: .svg
 	Type:   USRBIN
 	axes: Auto
 	bzmax: 255
@@ -902,10 +905,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 7966.2211777569019
+	int: 1944.0323286262339
 	lw.0: 0
-	max: 7.01524224E-03
-	min: 4.62880709E-22
+	max: 1.36787891E-02
+	min: 1.61710534E-27
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -922,6 +925,8 @@ set rmargin at screen 0.8
 	y2log: 0
 	y2tics: 0
 	ylog: 0
+	ymax: 1400
+	ymin: -1500
 	yrebin: 1
 	zlog: 0
 	zrebin: 1
@@ -981,11 +986,11 @@ End
 
 # USRBIN plot "Prompt radiation (uSv/h)"
 Plot: pump_level
-	Format: .pdf
+	Format: .svg
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 705
-	bzmin: 510.
+	bzmax: 645
+	bzmin: 615.
 	cbcolors: 8
 	cblog: 1
 	cbmax: 5000000.0
@@ -1004,10 +1009,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 3.1208581845824308
+	int: 6.0951067377134405E-002
 	lw.0: 0
-	max: 1.12353597E-07
-	min: 3.04388077E-22
+	max: 1.50712324E-07
+	min: 2.37223802E-27
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1024,6 +1029,8 @@ set rmargin at screen 0.8
 	y2log: 0
 	y2tics: 0
 	ylog: 0
+	ymax: 1400
+	ymin: -1500
 	yrebin: 1
 	zlog: 0
 	zrebin: 1
