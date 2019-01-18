@@ -5,7 +5,7 @@ Title: modified from 011tony_notsliced
 Input: ucn.inp
 Submit: *Default
 Tabs: 0.1 0.32 0.56 0.81 1.0
-Page: Plot
+Page: Geometry
 Source: fluscw.f
 Source: usimbs.f
 DefMain: True
@@ -672,12 +672,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 1780.48 936.746
+	extends: 596.28 289.982
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 568.905 460 797.526
+	origin: 637.813 550 747.833
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 900 650
+	extends: 1296 630.269
 	grid: 0
 	index: 0
-	labels: 0
+	labels: 1
 	layer: Media
-	origin: 100 450 630
+	origin: 104.208 221.649 200
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -731,10 +731,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: Y-Z
-	extends: 1688.67 823.334
+	extends: 392.731 190.504
 	labels: 1
 	layer: Media
-	origin: 340 211.251 509.462
+	origin: 710 466.186 761.76
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -756,12 +756,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 2510.74 1224.14
+	extends: 840.84 407.87
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -273.225 219.587 145
+	origin: 106.382 477.198 750
 	proj: Z
 	subtype: Material
 	title: GeoViewer Magenta plot
