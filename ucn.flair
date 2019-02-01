@@ -672,12 +672,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 596.28 289.982
+	extends: 1483.74 721.568
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 637.813 550 747.833
+	origin: 32.4511 60 516.308
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1296 630.269
+	extends: 121.129 58.9074
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 104.208 221.649 200
+	origin: 10.0807 -31.4433 640
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -731,10 +731,10 @@ Plot: Blue
 	boundaries: 1
 	cbtics: 0
 	coord: Y-Z
-	extends: 392.731 190.504
+	extends: 471.277 228.605
 	labels: 1
 	layer: Media
-	origin: 710 466.186 761.76
+	origin: 140 95.5787 301.02
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2tics: 0
@@ -756,12 +756,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 840.84 407.87
+	extends: 281.596 136.595
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 106.382 477.198 750
+	origin: 360.81 431.976 224
 	proj: Z
 	subtype: Material
 	title: GeoViewer Magenta plot
@@ -905,10 +905,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1944.0323286262339
+	int: 2035.4253655356872
 	lw.0: 0
-	max: 1.36787891E-02
-	min: 1.61710534E-27
+	max: 1.40553275E-02
+	min: 1.40909403E-27
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1009,10 +1009,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 6.0951067377134405E-002
+	int: 0.27409904627331516
 	lw.0: 0
-	max: 1.50712324E-07
-	min: 2.37223802E-27
+	max: 6.98468057E-07
+	min: 1.70067513E-31
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1113,10 +1113,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 264.71866004450595
+	int: 56857.145199780985
 	lw.0: 0
-	max: 1.00460241E-03
-	min: 5.30665141E-22
+	max: 0.135674492
+	min: 2.78147287E-19
 	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
