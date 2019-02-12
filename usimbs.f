@@ -97,8 +97,8 @@
       IF (Z1 .LT. -Z0) Z1 = -Z0
       IF (Z2 .LT. -Z0) Z2 = -Z0
 
-      IF (Y1 .GT. 1100) Y1 = 1100
-      IF (Y2 .GT. 1100) Y2 = 1100
+      IF (Ytrack(0) .GT. 1000) Y1 = 1000 - Y0
+      IF (Ytrack(Ntrack) .GT. 1000) Y2 = 1000 - Y0
   
       R1 = sqrt(X1**2 + Y1**2 + Z1**2)
       R2 = sqrt(X2**2 + Y2**2 + Z2**2)
@@ -139,7 +139,7 @@
       IF ( RHO(NEWMAT) .LT. 0.01 ) R4 = R3
 *      END IF
 
-      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/20. )
+      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/25. )
 
       RETURN
 *
