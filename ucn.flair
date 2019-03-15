@@ -322,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -362,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -655,7 +655,7 @@ End
 Geometry:
 	Frame.bsplit: 0.5
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.518430439952
+	Frame.vsplit: 0.5
 End
 
 # Geometry plot "GeoViewer Red plot"
@@ -672,12 +672,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 1483.74 752.058
+	extends: 1780.48 891.378
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -214.003 360 622.46
+	origin: 55.073 185 314.078
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 2588.85 1313.84
+	extends: 1248.48 625.038
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 151.732 458.277 260
+	origin: 1.79066 305.871 140
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -736,12 +736,12 @@ Plot: Blue
 	cbtics: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 1407.22 658.813
+	extends: 678.634 338.883
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 605 271.058 463.082
+	origin: -40 43.9449 292.452
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2log: 0
@@ -768,12 +768,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1743.57 817.298
+	extends: 1452.97 725.557
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -451.943 282.833 660
+	origin: -378.484 15.1881 680
 	proj: Z
 	subtype: Material
 	title: GeoViewer Magenta plot
@@ -792,7 +792,7 @@ Plot: floor_level
 	Format: .svg
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 195.
+	bzmax: 195
 	bzmin: 0.
 	cbcolors: 8
 	cblog: 1
@@ -813,10 +813,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 608339.55505884904
+	int: 613794.31721515011
 	lw.0: 0
-	max: 1.54009724
-	min: 1.83190253E-25
+	max: 1.54532659
+	min: 1.59726991E-25
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -897,8 +897,8 @@ Plot: guide_level
 	Format: .svg
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 255
-	bzmin: 240.
+	bzmax: 270
+	bzmin: 255.
 	cbcolors: 8
 	cblog: 1
 	cbmax: 5000000.0
@@ -917,10 +917,61 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 2035.4253655356872
+	int: 1284.3707264424236
 	lw.0: 0
-	max: 1.40553275E-02
-	min: 1.40909403E-27
+	max: 1.13657610E-02
+	min: 1.18997212E-27
+	norm: 40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: 0
+	x2tics: 0
+	xlog: 0
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: 0
+	y2tics: 0
+	ylog: 0
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: 0
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: guide_level02
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	cbcolors: 8
+	cblog: 1
+	cbmax: 5000000.0
+	cbmin: 0.05
+	cbpalette: FLUKA2
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 1
+	datafile: ucn_25.bnn
+	det: 2
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 0.23372152407617647
+	lw.0: 0
+	max: 1.27345697E-06
+	min: 1.11550538E-18
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -950,8 +1001,8 @@ Plot: guide_level01
 	Format: .pdf
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 300
-	bzmin: 200.
+	bzmax: 300.
+	bzmin: 250.
 	cbcolors: 8
 	cblog: 1
 	cbmax: 5000000.0
@@ -970,10 +1021,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 39713.932186047961
+	int: 2783.6632707627114
 	lw.0: 0
-	max: 8.36671796E-03
-	min: 1.65466687E-18
+	max: 4.72109485E-03
+	min: 1.27808900E-27
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1001,8 +1052,8 @@ Plot: pump_level
 	Format: .svg
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 645
-	bzmin: 615.
+	bzmax: 735
+	bzmin: 705.
 	cbcolors: 8
 	cblog: 1
 	cbmax: 5000000.0
@@ -1021,10 +1072,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 0.27409904627331516
+	int: 0.25471298720141189
 	lw.0: 0
-	max: 6.98468057E-07
-	min: 1.70067513E-31
+	max: 1.65403833E-07
+	min: 9.04799192E-27
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1074,10 +1125,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 2.1948534625350291
+	int: 2.4522992535946484
 	lw.0: 0
-	max: 2.77690788E-07
-	min: 1.39772235E-28
+	max: 1.54481512E-07
+	min: 7.85051955E-27
 	norm: 40*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
@@ -1125,10 +1176,10 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 56857.145199780985
+	int: 57450.085863033564
 	lw.0: 0
-	max: 0.135674492
-	min: 2.78147287E-19
+	max: 0.134420499
+	min: 1.37698031E-22
 	norm: 40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
