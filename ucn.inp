@@ -8,8 +8,8 @@ GLOBAL                                                                DEPRBODY
 *#define BL1A 
 *#define BL1A1 
 *#define BL1A2 
-#define BL1A3 
-*#define BL1A4 
+*#define BL1A3 
+#define BL1A4 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
@@ -18,6 +18,8 @@ RANDOMIZ          1.    MYSEED
 #if BL1A 
 START        200000.
 #elif BL1A2 
+START           500.
+#elif BL1A4
 START           500.
 #else  
 START          2500.
