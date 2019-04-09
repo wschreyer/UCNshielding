@@ -53,9 +53,9 @@
 *      Z0 = 137.16
 
 *     BL1A1
-*      X0 = -600.0
-*      Y0 = 958.92
-*      Z0 = 137.16
+      X0 = -600.0
+      Y0 = 958.92
+      Z0 = 137.16
 
 *     BL1A2
 *      X0 = -250.0
@@ -83,9 +83,9 @@
 *      Z0 = 144.145
 
 *     BL1U3
-      X0 = 100.0
-      Y0 = 687.5
-      Z0 = 144.145
+*      X0 = 100.0
+*      Y0 = 687.5
+*      Z0 = 144.145
 
       X1 = Xtrack(0) - X0
       Y1 = Ytrack(0) - Y0
@@ -103,8 +103,8 @@
       R1 = sqrt(X1**2 + Y1**2 + Z1**2)
       R2 = sqrt(X2**2 + Y2**2 + Z2**2)
 
-      IF ( R1 .LT. 1.0 ) R1 = 1.0
-      IF ( R2 .LT. 1.0 ) R2 = 1.0
+      IF ( R1 .LT. 10.0 ) R1 = 10.0
+      IF ( R2 .LT. 10.0 ) R2 = 10.0
 *      IF ( R1 .GT. 900.0 ) R1 = 900.0
 *      IF ( R2 .GT. 900.0 ) R2 = 900.0
       
@@ -132,14 +132,9 @@
       NEWMAT = MEDFLK(NEWREG,1)
       R3 = R1
       R4 = R2
-*      IF ( MATNAM(MMAT) .NE. 'CRYOSTAT') THEN
-      IF ( RHO(MMAT) .LT. 0.01 ) R3 = R4
-*      END IF
-*      IF ( MATNAM(NEWMAT) .NE. 'CRYOSTAT') THEN
-      IF ( RHO(NEWMAT) .LT. 0.01 ) R4 = R3
-*      END IF
+      IF ((RHO(MMAT) .LT. 0.01) .AND. (RHO(NEWMAT) .LT. 0.01)) R4 = R3
 
-      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/25. )
+      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/30. )
 
       RETURN
 *
