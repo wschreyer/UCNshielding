@@ -322,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -362,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -672,12 +672,12 @@ Plot: Red
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 1780.48 891.378
+	extends: 1780.48 958.909
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 55.073 185 314.078
+	origin: 55.073 180 314.078
 	subtype: Material
 	title: GeoViewer Red plot
 	x2log: 0
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1248.48 625.038
+	extends: 602.083 324.263
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 1.79066 305.871 140
+	origin: 20.091 505.648 148
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -736,12 +736,12 @@ Plot: Blue
 	cbtics: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 678.634 338.883
+	extends: 977.233 524.96
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -40 43.9449 292.452
+	origin: 140 425.09 326.261
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2log: 0
@@ -768,7 +768,7 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1452.97 725.557
+	extends: 1452.97 780.521
 	grid: 0
 	index: 0
 	labels: 1
@@ -792,8 +792,8 @@ Plot: floor_level
 	Format: .svg
 	Type:   USRBIN
 	axes: Auto
-	bzmax: 195
-	bzmin: 0.
+	bzmax: 165
+	bzmin: 135.
 	cbcolors: 8
 	cblog: 1
 	cbmax: 5000000.0
@@ -813,11 +813,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 613794.31721515011
+	int: 142785.70613422772
 	lw.0: 0
-	max: 1.54532659
-	min: 1.59726991E-25
-	norm: 40*6.24e12*3600/1e6
+	max: 2.20687270
+	min: 2.86676934E-25
+	norm: 140*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -917,11 +917,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 1284.3707264424236
+	int: 2017.0111060618622
 	lw.0: 0
-	max: 1.13657610E-02
-	min: 1.18997212E-27
-	norm: 40*6.24e12*3600/1e6
+	max: 2.19663652E-03
+	min: 2.29947730E-28
+	norm: 140*6.24e12*3600/1e6
 	proj: Z
 	ps.0: 0
 	pt.0: 0
@@ -1156,8 +1156,8 @@ Plot: cryostat_pit_NS
 	Format: .pdf
 	Type:   USRBIN
 	axes: Y-Z
-	bxmax: 400
-	bxmin: 295.
+	bxmax: 205.
+	bxmin: 175.
 	cbcolors: 8
 	cblog: 1
 	cbmax: 5000000.0
@@ -1176,11 +1176,11 @@ set rmargin at screen 0.8
 	grid: 0
 	hist: 2D Projection
 	index: 0
-	int: 57450.085863033564
+	int: 3771.1527002293024
 	lw.0: 0
-	max: 0.134420499
-	min: 1.37698031E-22
-	norm: 40*6.24e12*3600/1e6
+	max: 7.70560205E-02
+	min: 1.65339455E-23
+	norm: 140*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	pt.0: 0
