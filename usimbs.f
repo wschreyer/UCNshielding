@@ -134,7 +134,7 @@
       R4 = R2
       IF ((RHO(MMAT) .LT. 0.01) .AND. (RHO(NEWMAT) .LT. 0.01)) R4 = R3
 
-      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/30. )
+      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/40. )
 
       RETURN
 *
