@@ -5,8 +5,8 @@ GLOBAL                                                                DEPRBODY
 *#define BL1U1 
 *#define BL1U2 
 *#define BL1U3 
-#define BL1A 
-*#define BL1A1 
+*#define BL1A 
+#define BL1A1 
 *#define BL1A2 
 *#define BL1A3 
 *#define BL1A4 
@@ -16,7 +16,9 @@ GLOBAL                                                                DEPRBODY
 #if FARM 
 RANDOMIZ          1.    MYSEED
 #if BL1A 
-START        200000.
+START       2000000.
+#elif BL1A1
+START         10000.
 #elif BL1A2 
 START           500.
 #elif BL1A4 
