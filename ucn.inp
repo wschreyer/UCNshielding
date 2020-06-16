@@ -5,9 +5,9 @@ GLOBAL                                                                DEPRBODY
 *#define BL1U1 
 *#define BL1U2 
 *#define BL1U3 
-*#define BL1A 
+#define BL1A 
 *#define BL1A1 
-#define BL1A2 
+*#define BL1A2 
 *#define BL1A3 
 *#define BL1A4 
 #undef DLAY 
@@ -16,7 +16,7 @@ GLOBAL                                                                DEPRBODY
 #if FARM 
 RANDOMIZ          1.    MYSEED
 #if BL1A 
-START       2000000.
+START         20000.
 #elif BL1A1 
 START         10000.
 #elif BL1A2 
@@ -233,8 +233,6 @@ $start_transform ucnguide
 RCC guide      0.0 0.0 0.0 0.0 200. 0.0 4.9
 RCC guideo     0.0 0.0 0.0 0.0 200. 0.0 5.1
 RCC guideooo   0.0 0.0 0.0 0.0 200. 0.0 7.5
-RPP b4cshld4   -30. 30. 65. 70. -35. 65.
-RPP b4cshld5   -30. 30. 188. 190. -66.5 65.
 $end_transform 
 $start_transform ucnguidf
 RCC guidf      0.0 0.0 0.0 0.0 400. 0.0 4.9
@@ -847,8 +845,6 @@ RPP pif37      -1173.984502188 -538.6406456877 -813.400142802 -626.9635226275
               365.76 426.72
 RPP pif38      -1173.984502188 -447.0524692825 -626.9635226275 411.76175128536
               365.76 487.68
-RPP pif39      -1176.477953361 -566.8134508022 291.00965879151 411.76175128536
-              487.68 548.64
 RPP pillar03   -325.4188189871 -295.1694597336 -937.4038432326 -906.3116742456
               0.0 731.52
 RPP pillar04   190.78754175202 221.03690100552 -937.4038432326 -906.3116742456
@@ -1057,26 +1053,21 @@ RPP nshield3   -440. -350. -1105. -920. 0.0 243.84
 RPP usenesol   300. 565. 716.18729331824 780. 243.84 320.
 RPP ueenesol   520. 565. 410. 500. 243.84 335.
 RPP body14     -167. 565. 410. 782.15 320. 730.
-RPP body20     110. 840. 470. 830. 730. 850.
 PLA body19     -82.21921916438 -56.92099788303 0.0 49.119999999994
               60.159999999995 450.
 RPP body22     275. 635. 520. 720. 320. 450.
 RPP body23     60. 300. 520. 622.20485564924 0.0 243.84
 RCC body24     320. 596.314 144.145 -200. 0.0 0.0 11.
 RPP ncon       30. 340. -150. 0.0 0.0 200.
-RPP body25     290. 550. -85. 370. 335. 467.36
-RPP body27     259.15528423369 670. -150. -30. 243.84 350.
 RPP body28     490. 565. -20. 410. 243.84 730.
 RPP body45     520. 885. -20. 110. 243.84 430.
-RPP body29     30. 340. -150. 0.0 200. 350.
-RPP body30     -440. 670. -150. 410. 335. 730.
 RPP swcon4     -440. -75. 622.20485564924 682.58227237881 175. 243.84
 RPP cable1     -442.5644469627 -75. 622.58227237881 682.58227237881 190. 243.84
 RPP cable2     -502.5644469627 -442.5644469627 488.81845771841 703.25969507007
               190. 243.84
 RPP cable3     -442.5644469627 -105. 488.81845771841 518.81845771841 190. 243.84
 RPP cable4     -110. -80. 299.50072002258 518.81845771841 0.0 243.84
-RPP cable5     -80.0 40.0 410.0 518.81845771841 0.0 243.84
+RPP cable5     -80. 40. 410. 518.81845771841 0.0 243.84
 XYP body32     1250.
 RPP body33     -440. 180. -150. 100. 244. 425.
 RPP body31     -440. 220. 555. 630. 120. 190.
@@ -1275,10 +1266,7 @@ RCC crvshldi   0.0 195. 15.8 0.0 0.0 180. 11.85
 $end_transform 
 RPP CRYOSTA1   300. 490. 100. 410. 120. 424.
 RPP CRYOSTA2   180. 320. 100. 450. 120. 424.
-RPP yswitch    190. 310. 60. 95. 240. 280.
-RPP duct2      90. 180. 310. 340. 660. 690.
 RPP duct4      90. 180. 160. 191. 660. 690.
-RPP pumps      -340. 90. 35. 410. 370. 730.
 RPP maze1      180. 490. 100. 410. 424. 730.
 RPP maze2      40. 210. 100. 160. 370. 730.
 RPP maze3      -440. -340. 285. 410. 490. 730.
@@ -1288,18 +1276,9 @@ RPP body7      -440. -80. 46.5 411.5 244. 366.
 RPP body17     -290. -110. 125. 299. 0.0 244.
 RPP body18     -380. -80. -150. -90. 0.0 244.
 RPP body42     -440. -80. 300. 411.5 244. 424.
-RPP body43     120. 670. -150. 470. 730. 850.
-RPP body52     20. 570. -80. 470. 850. 970.
-RPP body44     120. 520. -30. 100. 120. 520.
-RPP piftop3    -610. -440. -120. 597.4548783415 487.68 730.
 RPP duct8      490. 1040. 350. 410. 700. 730.
-RPP body46     -610. 120. -80. 470. 730. 850.
-RPP maze5      40. 120. 35. 140. 370. 730.
-RPP body47     90. 180. 160. 410. 370. 730.
 RPP body48     120. 490. -150. -85. 655. 735.
-RPP body50     120. 520. 35. 100. 520. 650.
-RPP body49     670. 840. 290. 470. 730. 850.
-RPP maze7      120.0 210.0 100.0 410.0 120.0 370.0
+RPP maze7      120. 210. 100. 410. 120. 370.
 RPP yswitch1   190. 310. 95. 100. 240. 280.
 RPP maze8      -610. -520. -40. 40. 490. 730.
 RPP body51     40. 557. 410. 520. 0.0 424.
@@ -1321,7 +1300,6 @@ GUIDE001     5 +guideo -guide -guidf -guidg
 GUIDE101     5 +guideooo -guideo -guidfo -guidgo
                | +guidgooo -guideo -guidgo -guidfo
                | +guidfooo -guidfo -guidgo -guideo
-               | +yswitch -guideooo -guidfooo -guidgooo -body29 -b4cshld4
 STFLANGE     5 +eeeeeee -cryptbAe
                | +fffffff1 -cryptbAe
                | +fffffff2 -cryptbAe
@@ -1336,16 +1314,16 @@ WATERTUB     5 +watertb2 -cryptbAe -M13_xmic -TARGET
 HARPRING     5 +harpring
 DDDDRING     5 +ddddring
 PYRAST01     5 +M11s47
-               | +wpyram +sphst -cryptbAe -cryptbBe -ft00 -guideooo -M11s47 -M11s48 -M11s49 -M11s52 -eedm1
+               | +wpyram +sphst -cryptbAe -cryptbBe -ft00 -guideooo -M11s47 -M11s48 -M11s49 -M11s52 -eedm1 
                -M11s57 -cabltra1
-               | +ft08 +M11w07 +M13_z17 +sphst -wpyram -M11e14 -surrM11 -M13_1 -M11s48 -M11s50 -cm076 -M11s57
+               | +ft08 +M11w07 +M13_z17 +sphst -wpyram -M11e14 -surrM11 -M13_1 -M11s48 -M11s50 -cm076 -M11s57 
                -M11e69
                | +M11w06 +M11w07 +sphst -wpyram -M11s50 -M11e23 -cm076 -M11s57
                | +M11w06 +M11w07 +cm076 +sphst -ft00 -cut4 -M11s47 -M11s50 -M11e23
                | +cm045 +M11w06 +cut4 +sphst -ft00 -M11s47 -M11e23 -eedm1
-               | +M13_z17 +M13_z70 +cm076 -ft00 -wpyram -M11e14 -M13_1 -body5 -M11s46 -M11s47 -M11s48 -M11s52
+               | +M13_z17 +M13_z70 +cm076 -ft00 -wpyram -M11e14 -M13_1 -body5 -M11s46 -M11s47 -M11s48 -M11s52 
                +M11s47
-               | +ft08 +M13_ymin +M13_z16 +M13_z70 +sphst -cryptbAe -harpseal -ddddddd -ft00 -wpyram -body5
+               | +ft08 +M13_ymin +M13_z16 +M13_z70 +sphst -cryptbAe -harpseal -ddddddd -ft00 -wpyram -body5 
                -M11s48 -body8 -M11s49 -cabltra1
                | +xz +cut4 +cm076 +sphst -cm045 -wpyram -M13_z70 -M11e23 -M11s52
                | +M11e42 +M13_z70 +cm076 +sphst -wpyram
@@ -1354,23 +1332,20 @@ PYRAST01     5 +M11s47
                | +M11s57 -TARGET
                | +M11s50 -body13
                | +ft08 +M11w07 +M11w19 +cut15 -cm132 -M11w06 -cut4 -M11s50
-               | +surrM11 +cut4 +M13_z64 -body38 -ft04 -M11w06 -M11e14 -ft07_6 -M11e69 -TARGET -b4cshld1
+               | +surrM11 +cut4 +M13_z64 -body38 -ft04 -M11w06 -M11e14 -ft07_6 -M11e69 -TARGET -b4cshld1 
                -pbshield -b4cshld2 -srcpit1 -srcpit2 -srcpit3
-               | +(+(+body23 -body24 -cryptbAe -body31) |  +wste2 |  +cste_out) -guideooo -guidgooo -guidfooo
-               -yswitch -(+(+body24 |  +cryptbAe) +cut8) -TARGET -b4cshld1 -pbshield -b4cshld2 -CRYOSTAT
-               -CRYOSTA1 -CRYOSTA2 -maze1 -srcpit1 -srcpit2 -srcpit3
-               | +(+ueenesol |  +usenesol) -guideooo -guidgooo -guidfooo -yswitch -b4cshld2 -CRYOSTAT -CRYOSTA1
-               -CRYOSTA2 -maze1 -b4cshld1 -srcpit1 -srcpit3
+               | +(+(+body23 -body24 -cryptbAe -body31) |  +wste2 |  +cste_out) -guideooo -guidgooo -guidfooo  -(+
+               (+body24 |  +cryptbAe) +cut8) -TARGET -b4cshld1 -pbshield -b4cshld2 -CRYOSTAT -CRYOSTA1 -CRYOSTA2 
+               -maze1 -srcpit1 -srcpit2 -srcpit3
+               | +(+ueenesol |  +usenesol) -guideooo -guidgooo -guidfooo  -b4cshld2 -CRYOSTAT -CRYOSTA1 -CRYOSTA2 
+               -maze1 -b4cshld1 -srcpit1 -srcpit3
                | +M11s48 -cryptbAe
                | +ft08 +M13_xmax -ft00 -M13_z15 -M13B3
                | +body8 +M11s49
                | +M11w06 +ft04half -M11w04 -M11w05 -M11w07 -ft03
                | +M11w02 +M11w04 +ft04half -M11B2 -M11w01 -M11w03 -M11w07 -ft03
                | +(+body22) -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -maze1
-               | +b4cshld4 -guideooo
-               | +body44 -yswitch -yswitch1 -guidgooo -guidfooo
                | +body51 -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -srcpit1 -srcpit2 -srcpit3 -TARGET -pbshield -b4cshld2
-               | +body50
 INGOT01      5 +M11w17 -magpipe2 -BL1A
                | +M11s46
                | +M11e14 +M11e1 -M11s54
@@ -1422,23 +1397,18 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                | +M11n3 -M11Q6 -M11Q6i
                | +(+ncon |  +swcon1 |  +swcon2 |  +M11e23 |  +swcon4 |  +wcon1 |  +wcon2 |  +wcon3 |  +con_hand) 
                -body51 -guideooo -guidgooo -guidfooo -cable1 -cable2 -cable3 -cable4 -body31 -body23 -cabltra0 
-               -cabltra1 -maze1 -maze7 -body44 -CRYOSTA2 -cable5
-               | +(+body14 |  +body25 |  +body27 |  +body28 |  +body29 |  +body30 -m11cover -nepyramE -body22 |  
-               +body33 |  +immovab -cryptbAe -stopbeam |  +body43 |  +souttop1 -wpyram -M11w06 -M11w45 -M11s37 
-               -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6 -B1A13 -cste_out) -souttop2 -souttop5 
-               -souttop7 -body51 -guideooo -guidfooo -guidgooo -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -pumps -maze1 -maze2 
-               -maze3 -maze4 -maze5 -maze6 -maze7 -body44 -body47 -ueenesol -body22 -body48 -duct8 -body50
+               -cabltra1 -maze1 -maze7 -CRYOSTA2 -cable5
+               | +(+body14 |  +body28 |  +body33 |  +immovab -cryptbAe -stopbeam |  +souttop1 -wpyram -M11w06 
+               -M11w45 -M11s37 -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6 -B1A13 -cste_out) -souttop2 
+               -souttop5 -souttop7 -body51 -guideooo -guidfooo -guidgooo -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -maze1 
+               -maze2 -maze3 -maze4 -maze6 -maze7 -ueenesol -body22 -body48 -duct8
                | +(+M13bridg -immovab -M13_z64 -M13_z80 -T1hole5 -T1hole6 |  +M13_z6 +M13_z71 +spyram1 -ft07 |  
                +M13_z84 |  +M11e69 -M11e70 |  +ft08 +ft07_6 -ft07 -M11B1)
                | +body7
                | +body17
                | +body18
-               | +body42 -pumps
-               | +body46
-               | +body49 -duct8
-               | +body47 -duct2 -duct4
+               | +body42
                | +body45
-               | +body52
 TRANSM01     5 +M11e09 -M11B2i -M11B2x
                | +M11e48 -M11B2 -M11B2h
                | +M11e10
@@ -1484,7 +1454,7 @@ M11ST01      5 +M11Q6 -M11Q6x
 SPL11C01     5 +spyram +ft08 -ft07
                | +m11cover -body22
                | +nepyram -ft08 -body1
-               | +nepyramE -eedm3 -sphst -duct8 -body44  -body22
+               | +nepyramE -eedm3 -sphst -duct8   -body22
                | +nepyramC +body1 -magpipe4 -M11Q7h -M11B2h -M11n3 -M11n6 -eedm2 -eedm3
                | +M11e18b
                | +M11e21
@@ -1518,7 +1488,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M11e53 -M11e55
                | +ft01 +M11s12 -ft00 -M11s11 -M11s10 -M11e53
                | +M11s11 +M11s08 +M11s09 -M11e53
-               | +ft02 +M11s19 +surrM11 -ft01 -nepyram -M11e09 -M11e50 -M11w18 -M11w19 -M11s5 -M11s7 -M11s41
+               | +ft02 +M11s19 +surrM11 -ft01 -nepyram -M11e09 -M11e50 -M11w18 -M11w19 -M11s5 -M11s7 -M11s41 
                -M11s50
                | +ft02 +M11s10 +surrM11 -ft01 -M11B1 -M11s01 -M11e50 -M11w19 -M11s19 -ft7_04 -M11s41 -M11s43
                | +ft02 +M11w20 +cut5 -ft01 -M11B1 -M11s10 -M11s15 -M11w19 -M11s6 -ft7_04 -cut14 -M11s41
@@ -1547,42 +1517,42 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M11e08 +ft03 +M11w4 +M11e07 -ft02 -M11e62
                | +M11w4 +M11w8 -M11w5 -M11w7 +ft03 -ft02
                | +M11w2 +M11w8 -M11w3 -M11w7 +ft03 -ft02
-               | +ft04 +M11w03 +M11e01 +surrM11 -ft03 -nepyram -M11B2 -M11B2i -M11SX3 -M11SX3i -M11e09 -M11e10
+               | +ft04 +M11w03 +M11e01 +surrM11 -ft03 -nepyram -M11B2 -M11B2i -M11SX3 -M11SX3i -M11e09 -M11e10 
                -M11e21
                | +ft04 +M11w03 +M11e02 -M11B2 -M11SX3 -M11SX3i -M11Q5 -M11Q5i -ft03 -M11e01
                | +M11e08 +ft04 +M11w05 -ft03 -M11w03 -M11w04
                | +M11e08 +ft04 -M11w06 -M11w07 -ft03 -M11w05
-               | +ft04half +M11e08 +M11w03 +M11e04 +M11e05 +M11e06 +surrM11 -ft03 -magpipe3 -M11Q5 -M11Q5i
+               | +ft04half +M11e08 +M11w03 +M11e04 +M11e05 +M11e06 +surrM11 -ft03 -magpipe3 -M11Q5 -M11Q5i 
                -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 -M11Q4i -M11F1 -M11e02 -M11e11
                | +ft08 +M11w01 +surrM11 -ft03 -nepyram -nepyramD -M11B2 -M11B2h -M11w07 -M11B2i -M11B2x -magpipe4
                | +M11SX3x +M11SX25 +ft04half -magpipe3
-               | +ft04half +M11B2h +M11e01 +surrM11 -ft04 -nepyram -magpipe4 -M11Q7h -M11B2 -M11B2x -M11B2i
+               | +ft04half +M11B2h +M11e01 +surrM11 -ft04 -nepyram -magpipe4 -M11Q7h -M11B2 -M11B2x -M11B2i 
                -M11SX3 -magpipe3 -M11e09
                | +ft04half +M11w03 +M11e02 -M11B2 -M11B2x -M11SX3 -M11SX3i -magpipe3 -M11Q5 -M11Q5i -ft04 -M11e01
                | +ft04half +M11e08 +M11w05 -ft04 -M11Q5i -M11Q3i -M11Q4 -M11w03 -M11w04
                | +ft04half +M11e08 -ft04 -M11w06 -M11w07 -M11w05
                | +ft05 +M11B2h +surrM11 -ft04half -M11B2 -M11B2x -M11B2i -M11w07 -M11w03 -M11s2
                | +ft05 +surrM11 +cut -ft04half -M11w6 -cut1
-               | +ft05 +M11w2 +M11e47 -ft04half -magpipe3 -M11Q5 -M11Q5i -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4
+               | +ft05 +M11w2 +M11e47 -ft04half -magpipe3 -M11Q5 -M11Q5i -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 
                -M11Q4i -M11w5 -M11w6
                | +ft08 +M11e08 +M11e07 -ft04half -magpipe3 -M11Q3 -M11F1 -M11w07 -M11e47 -body36
-               | +ft06 +M11e02 +M11w2 +M11w6 +surrM11 -ft05 -nepyram -M11B2 -M11B2i -M11SX3 -M11SX3i -M11Q5
+               | +ft06 +M11e02 +M11w2 +M11w6 +surrM11 -ft05 -nepyram -M11B2 -M11B2i -M11SX3 -M11SX3i -M11Q5 
                -M11Q5i -M11e09 -M11e10 -M11e48
                | +ft06 +M11B2h +M11e42 +surrM11 -ft05 -M11B2 -M11B2i -M11w07 -M11w2
                | +ft07 +M11w1 -ft05 -M11B2 -M11w01 -M11w2 -M11w07 -M11s2
-               | +ft06 +M11w3 +M11e47 -ft05 -M11Q5 -M11Q5i -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 -M11Q4i
+               | +ft06 +M11w3 +M11e47 -ft05 -M11Q5 -M11Q5i -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 -M11Q4i 
                -M11w4 -M11w6
                | +ft06 +M11w4 +M11w8 -ft05 -M11Q4i -M11w5 -M11w7
                | +ft06 +M11w2 +M11w8 -ft05 -M11Q4 -M11w3 -M11w7
                | +surrM11 -ft06 -nepyram -M11s11 -M11w2 -M11B2 +M11w1 -M11s2
                | +cut +cut1 -ft06 -M11e07 -M11e10 -M11w1 +ft08 -M11e09
-               | +ft07 +ft07_4 +surrM11 -ft06 -M11B1 -M11e10 -M11e1 -M11e21 -M11e18b -M11w22 -M11w23 -ft07_05
+               | +ft07 +ft07_4 +surrM11 -ft06 -M11B1 -M11e10 -M11e1 -M11e21 -M11e18b -M11w22 -M11w23 -ft07_05 
                -ft07_01 -ft07_06 -M11w41 -M11s21 -B1A05a -B1A05b -B1A07 -B1A08 -M11w53
-               | +ft07 +M11e07 +ft07_3 +surrM11 -ft06 -M11B1 -M11e14 -ft07_05 -ft07_01 -ft07_2 -M11w42 -M11w43
+               | +ft07 +M11e07 +ft07_3 +surrM11 -ft06 -M11B1 -M11e14 -ft07_05 -ft07_01 -ft07_2 -M11w42 -M11w43 
                -body36
                | +ft07 +M11w07 +ft07_1 +ft07_2 -ft06 -M11B1 -cut4 -cut15 -(+body34 +body35)
                | +ft07 +ft07_2 -ft06 -M11e14 -M11e65 -ft07_1 -cut4 -(+body34 +body35)
-               | +ft07 +ft07_2 -ft06 -M11B1 -M11e08 -M11w07 -M11e10 -M11e11 -M11e21 -ft07_05 -ft07_01 -(+body34
+               | +ft07 +ft07_2 -ft06 -M11B1 -M11e08 -M11w07 -M11e10 -M11e11 -M11e21 -ft07_05 -ft07_01 -(+body34 
                +body35) -body36
                | +ft08 +M11s11 +M11w1 -ft07 -nepyram -M11B2 -M11w07 -M11w01 -M11s2
                | +surrM11 +cut5 -ft07 -cut1 -cut7 +ft08
@@ -1592,12 +1562,12 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +ft08 +M11e07 +cut7 -ft07 -M11B1 -ft07_05 -ft07_01 -cut4 -ft07_6 -cut15 -body36 -body38
                | +M11SX3x +M11SX25 -ft04half -magpipe3
                | +M11w1 +M11w2 +surrM11 -ft06 -nepyram -M11B2 -M11e48 -M11e09
-               | +ft05 +M11w03 +M11e02 +M11w6 +surrM11 -ft02 -nepyram -magpipe4 -M11B2 -M11B2x -M11B2i -M11SX3
+               | +ft05 +M11w03 +M11e02 +M11w6 +surrM11 -ft02 -nepyram -magpipe4 -M11B2 -M11B2x -M11B2i -M11SX3 
                -M11SX3i -magpipe3 -M11Q5 -M11Q5i -M11e09 -M11e10 -M11Q7h
                | +ft05 +M11w2 +cut -ft04half -M11Q5i -M11w03 -M11w1
                | +M11e01 +M11w6 +cut1 -M11e02 -M11e09 -M11e10 -ft04half +ft06
                | +M11Q7h -M11Q6 -M11Q6i -magpipe4 -M11Q7 -M11n3 -surrM11 -sphco
-               | +ft08 +M11e43 +cut1 -ft00 -M11B2h -M11s11 -surrM11 -body1 -eedm3 -sphco -M11n3 -M11B2x -magpipe4
+               | +ft08 +M11e43 +cut1 -ft00 -M11B2h -M11s11 -surrM11 -body1 -eedm3 -sphco -M11n3 -M11B2x -magpipe4 
                -M11Q6 -M11Q6i
                | +M11B2h +M11w01 -ft04 -magpipe4 -M11Q7h -M11B2 -M11B2x -M11B2i -M11n3 -eedm3
                | +M11B2h -M11B2 -M11w01 -surrM11
@@ -1672,25 +1642,24 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M11S1_0 +M11S1_1
                | +M11S1_0 -ft07_4 -M11S1_3
                | +M11SX3x -M11B2x -magpipe3 -M11B1i
-               | +surround -cryptbAe -harpseal -ddddddd -cryptbBe -immovab -nepyramC -nepyramD -nepyramE -M11Q6
-               -M11Q6i -M11Q7 -M11Q7h -magpipe2 -guideooo -guidfooo -guidgooo -flothick -flothin -cyclwall
-               -nortwall -woody -soutwall -piftop1 -piftop2 -M11e14 -M11e21 -M11e26 -M11e27 -M11e28 -M11e37
-               -M11e38 -M11s01 -M11s03 -M11s04 -M11s05 -M11s06 -M11n1 -M11n2 -M11n3 -M11n6 -M11w17 -M11e50
-               -M11e52 -M11w18 -M11e56 -M11e57 -M11e58 -M11e59 -ft7_04 -M11e66 -M11e67 -M11e68 -souttop1
-               -souttop2 -cyclwal1 -surrM11 -BL1A -M11e48 -M11s21 -sureast1 -sureast2 -sw02 -sw03 -M11w21
-               -ceiling -m11cover -surrM13 -M13Q1 -M13pipe -M11s22 -M11s23 -M11s25 -M11s27 -spyram1 -M11s28
-               -M11s29 -M11s30 -M11s31 -M11s32 -M11s33 -M11s34 -body44 -M11s35 -M11s36 -M11w46 -M11w47 -M11w48
-               -M11s37 -M11s38 -M11s39 -M13_z79 -M11s40 -M13bridg -M13_z82 -M11s41 -sw12 -sw14 -sw15 -pif35
-               -pif38 -pillar03 -pillar04 -pillar05 -pillar06 -souttop3 -souttop5 -souttop7 -souttop8 -souttop9
-               -soutto10 -soutto11 -surrpif -soil -M11s3 -M11s42 -M11s43 -M11w49 -M11w50 -B1AM632 -B1AM663
-               -B1AQ7i -B1AQ7 -B1AQ8i -B1AQ8 -B1AM71 -sw3 -B1A01 -B1A05 -B1A06 -B1A07 -B1A08 -M11s45 -B1A11
-               -B1A06b -B1A13 -B1A15 -M11s46 -M11s47 -M11s48 -M11s49 -M11w51 -M11e39 -M11s51 -M11s52 -M11w54
-               -eedm1 -eedm2 -eedm3 -M11s57 -M11e60 -M11e64 -B1A9 -M11e69 -sphco -wcon1 -wcon2 -wcon3 -swcon1
-               -swcon2 -M11e23 -con_hand -wste2 -targend -magpipe4 -nshield1 -nshield2 -nshield3 -usenesol
-               -ueenesol -cste_out -M11w45 -T1hole5 -T1hole6 -body14 -body22 -(+body23 -body24 -cryptbAe) -ncon
-               -body25 -body27 -body28 -body29 -M11e23 -body30 -swcon4 -body33 -body7 -body17 -body18 -body42
-               -body43 -body46 -body49 -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -srcpit -srcpit1 -srcpit2 -srcpit3 -body20
-               -body45 -body52
+               | +surround -cryptbAe -harpseal -ddddddd -cryptbBe -immovab -nepyramC -nepyramD -nepyramE -M11Q6 
+               -M11Q6i -M11Q7 -M11Q7h -magpipe2 -guideooo -guidfooo -guidgooo -flothick -flothin -cyclwall 
+               -nortwall -woody -soutwall -piftop1 -piftop2 -M11e14 -M11e21 -M11e26 -M11e27 -M11e28 -M11e37 
+               -M11e38 -M11s01 -M11s03 -M11s04 -M11s05 -M11s06 -M11n1 -M11n2 -M11n3 -M11n6 -M11w17 -M11e50 
+               -M11e52 -M11w18 -M11e56 -M11e57 -M11e58 -M11e59 -ft7_04 -M11e66 -M11e67 -M11e68 -souttop1 
+               -souttop2 -cyclwal1 -surrM11 -BL1A -M11e48 -M11s21 -sureast1 -sureast2 -sw02 -sw03 -M11w21 
+               -ceiling -m11cover -surrM13 -M13Q1 -M13pipe -M11s22 -M11s23 -M11s25 -M11s27 -spyram1 -M11s28 
+               -M11s29 -M11s30 -M11s31 -M11s32 -M11s33 -M11s34 -M11s35 -M11s36 -M11w46 -M11w47 -M11w48 -M11s37 
+               -M11s38 -M11s39 -M13_z79 -M11s40 -M13bridg -M13_z82 -M11s41 -sw12 -sw14 -sw15 -pif35 -pif38 
+               -pillar03 -pillar04 -pillar05 -pillar06 -souttop3 -souttop5 -souttop7 -souttop8 -souttop9 
+               -soutto10 -soutto11 -surrpif -soil -M11s3 -M11s42 -M11s43 -M11w49 -M11w50 -B1AM632 -B1AM663 
+               -B1AQ7i -B1AQ7 -B1AQ8i -B1AQ8 -B1AM71 -sw3 -B1A01 -B1A05 -B1A06 -B1A07 -B1A08 -M11s45 -B1A11 
+               -B1A06b -B1A13 -B1A15 -M11s46 -M11s47 -M11s48 -M11s49 -M11w51 -M11e39 -M11s51 -M11s52 -M11w54 
+               -eedm1 -eedm2 -eedm3 -M11s57 -M11e60 -M11e64 -B1A9 -M11e69 -sphco -wcon1 -wcon2 -wcon3 -swcon1 
+               -swcon2 -M11e23 -con_hand -wste2 -targend -magpipe4 -nshield1 -nshield2 -nshield3 -usenesol 
+               -ueenesol -cste_out -M11w45 -T1hole5 -T1hole6 -body14 -body22 -(+body23 -body24 -cryptbAe) -ncon 
+               -body28 -M11e23 -swcon4 -body33 -body7 -body17 -body18 -body42 -CRYOSTAT -CRYOSTA1 -CRYOSTA2 
+               -srcpit -srcpit1 -srcpit2 -srcpit3 -body45 -maze7
                | +BL1Ax +B1A05a -BL1A
                | +BL1Ax +B1A05b -BL1A
                | +cm081 +M13_xmax +M13_z6 +M13_z48 -ft02
@@ -1700,9 +1669,9 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +ft06 +M13_z6 +M13_z48 +M13_z60 -cm081 -spyram -M13_z64
                | +cm203 +M13_z59 +M13_z65 -ft06 -M13_xmin
                | +cm203 +M13_z60 +M13_z61 +M13_z66 -ft06 -M13_xmin -M13_z64 -M13_z65 -M13B1
-               | +ft06 +M11w20 +surrM11 +B1A09 -ft02 -magpipe3 -M11Q3 -M11SX2 -M11SX2i -M11F1 -M11B1 -M11B1i
-               -M11B1x -M11SX1 -M11SX1i -magpipe2 -magpii2 -M11e08 -M11e10 -M11e11 -M11e14 -M11e17 -M11e18
-               -M11e21 -M11e18b -M11w12 -M11w19 -M11e18b1 -ft7_04 -BL1A -cut4 -M11s43 -B1A05b -M11s45 -M11s50
+               | +ft06 +M11w20 +surrM11 +B1A09 -ft02 -magpipe3 -M11Q3 -M11SX2 -M11SX2i -M11F1 -M11B1 -M11B1i 
+               -M11B1x -M11SX1 -M11SX1i -magpipe2 -magpii2 -M11e08 -M11e10 -M11e11 -M11e14 -M11e17 -M11e18 
+               -M11e21 -M11e18b -M11w12 -M11w19 -M11e18b1 -ft7_04 -BL1A -cut4 -M11s43 -B1A05b -M11s45 -M11s50 
                -M11e24 -M11e25 -ft7_5 -M11e63 -(+body34 +body35)
                | +ft06 +cut5 -ft03 -cut14 -B1A05 -B1A05a -B1A09 -cut19
                | +ft06 +M11e19 -cm071 -M11e16 -M11e1 -cut14
@@ -1721,7 +1690,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M13B3 +M11s49 -body8
                | +M13B3 +M11s49 -M13_z45 -body8
                | +M13B3 +M11s51 -body8
-               | +ft08 +M13_xmax +M13_z15 +M13_z31 +M13_z48 +M13_z64 -cryptbAe -cm045 -M13_ymin -M13_z16 -M13B3
+               | +ft08 +M13_xmax +M13_z15 +M13_z31 +M13_z48 +M13_z64 -cryptbAe -cm045 -M13_ymin -M13_z16 -M13B3 
                -body4 -M11s48 -body8
                | +M13_z27 +M13B3 +cm106 -cm101 -M13_z16 -M13_z34
                | +cm081 +M13_z27 -cm045 -M13_z16 -M13_z34
@@ -1733,12 +1702,12 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +ft08 +M11w19 -ft02 -M11e08 -M11w07 -M11e11
                | +ft06 +B1A09 +cut18 -ft02 -M11SX1 -M11SX1i -M11e17 -M11w20 -M13_z36
                | +ft06 +cut18 -cm071 -M11Q2 -M11e1 -B1A09
-               | +ft06 +M13_z72 -ft02 -M11s11 -M11s03 -M11w20 -M11e18b1 -ft7_04 -BL1A -B1A05 -B1A05b -M11s45
+               | +ft06 +M13_z72 -ft02 -M11s11 -M11s03 -M11w20 -M11e18b1 -ft7_04 -BL1A -B1A05 -B1A05b -M11s45 
                -M11w52
                | +M11w19 +M11s55 -cm1
                | +ft06 +M11w12 -M11w19 -cm076
                | +ft06 +M11w19 +cut13 -cut4 -cut15 -cm076 -M11s55 -(+body34 +body35)
-               | +ft06 +cut19 -M11SX1 -M11SX1i -M11Q2 -magpipe2 -M11s03 -M11w20 -M11e18b1 -ft7_04 -BL1A -cut4
+               | +ft06 +cut19 -M11SX1 -M11SX1i -M11Q2 -magpipe2 -M11s03 -M11w20 -M11e18b1 -ft7_04 -BL1A -cut4 
                -B1A05a -B1A05b -cut18 -cm076
                | +ft07 +M11s1 +cut4 -M11Q2 -M11Q1 -magpipe2 -M11e1 -BL1A -cut8 -cm076
                | +M11s54 -M11Q1 -M11w22 -M11w31 -M11S1_0 -cm076 -M11w53
@@ -1749,7 +1718,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +ft02 +M13_z3 +M13_z31 +M13_z38 -cm045 -M13_z60
                | +ft02 +M13_z13 +M13_z38 -cm045 -M13_z31
                | +ft02 +M13_z7 -cm045 -M13_z3 -M13_z60
-               | +ft08 +M13_z27 +M13_z64 -cryptbAe -harpseal -ddddddd -eeeeeee -fffffff1 -fffffff2 -M13_xmin
+               | +ft08 +M13_z27 +M13_z64 -cryptbAe -harpseal -ddddddd -eeeeeee -fffffff1 -fffffff2 -M13_xmin 
                -M13_ymin -cm106
                | +ft08 +M13B3 -M13_z27 -M13_z34 -M13B1 -cm106
                | +ft06 +M13_z16 +M13_z34 -cryptbAe -ddddddd -M13_ymin -cm106
@@ -1767,16 +1736,16 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M11w58
                | +cabltra1 -M11e23
                | +cabltra0 -sw14 -M11e23
-               | +ft08 +M11s11 +sphco -ft00 -soutwall -M11s03 -M11s04 -M13_z72 -M11w46 -M11w47 -M13_z79 -M11s40
+               | +ft08 +M11s11 +sphco -ft00 -soutwall -M11s03 -M11s04 -M13_z72 -M11w46 -M11w47 -M13_z79 -M11s40 
                -M13_z82 -M11w49 -M11w50 -B1A05 -B1A07 -M11w54
-               | +ft08 +M13_z11 +M13_z72 +sphco -ft00 -BL1A -M13_ymax -B1AM632 -B1AM663 -B1AQ7i -B1AQ7 -B1AQ8i
+               | +ft08 +M13_z11 +M13_z72 +sphco -ft00 -BL1A -M13_ymax -B1AM632 -B1AM663 -B1AQ7i -B1AQ7 -B1AQ8i 
                -B1AQ8 -B1AM71
-               | +ft08 +M13_xmin +sphco -ft00 -immovab -BL1A -cut7 -sw02 -B1AM632 -B1AM663 -B1AQ7i -B1AQ7 -B1AQ8i
+               | +ft08 +M13_xmin +sphco -ft00 -immovab -BL1A -cut7 -sw02 -B1AM632 -B1AM663 -B1AQ7i -B1AQ7 -B1AQ8i 
                -B1AQ8
                | +ft02 +sphco -ft00 -woody -M11s01 -M11e50 -M11e52 -M11w18 -cut1 -M11e48 -M11s43
                | +ft06 +M13_z10 -ft00 -M13_z3 -M13_z13
                | +ft08 +sphco -cm194 -M11s11 -M11s21 -M13_z72 -B1A07 -B1A08 -B1A15 -B1A9
-               | +surround +nepyram +cut1 +sureasb +sphco -nepyramC -M11Q6 -M11Q6i -M11Q7h -flothin -M11s11
+               | +surround +nepyram +cut1 +sureasb +sphco -nepyramC -M11Q6 -M11Q6i -M11Q7h -flothin -M11s11 
                -M11n3 -surrM11 -body1 -eedm3
                | +ft08 +sphco -ft02 -woody -M11e21 -M11e26 -BL1A -cut1 -M11e48 -body1 -M11s43 -B1A08 -B1A15 -B1A9
                | +cm203 +M13_z70 +M13_z72 -ft02 -M11s25 -M11s27 -M11s30 -body6 -M11s36 -M11s37 -cut19
@@ -1812,15 +1781,15 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +cable4
                | +body31 -targend -M11s48 -cryptbBe
                | +cut8 +cste_out +body24 -cryptbBe -TARGET
-               | +(+ncon |  +body29 |  +body33) +body41 -guidgooo -guidfooo
+               | +(+ncon |  |  +body33) +body41 -guidgooo -guidfooo
                | +BL1A01x -BL1A
                | +body48
                | +cable5
-SURRPIF      5 +surrpif -cryptbAe -pif00 -piftop1 -piftop2 -piftop3 -sw01 -souttop2 -souttop5 -BL1A -BL1Aii -sw03
+SURRPIF      5 +surrpif -cryptbAe -pif00 -piftop1 -piftop2  -sw01 -souttop2 -souttop5 -BL1A -BL1Aii -sw03
                -sw05 -sw06 -sw07 -sw12 -sw13 -sw14 -sw15 -sw16 -sw17 -pif01 -pif02 -pif03 -pif04 -pif05 -pif06
                -pillar02 -pillar01 -pif09 -pif10 -pif11 -pif12 -pif13 -pif14 -pif15 -pif17 -pif19 -pif20 -pif21
                -pif22 -pif23 -pif24 -pif25 -pif26 -pif27 -pif28 -pif29 -pif30 -pif31 -pif32 -pif33 -pif34 -pif35
-               -pif36 -pif37 -pif38 -pif39 -souttop3 -pif16 -fffffff3 -body46
+               -pif36 -pif37 -pif38  -souttop3 -pif16 -fffffff3
                | +pif12 -pif18 -pif24
 SUREAST      5 +M11e66 +ft07_5
                | +M11e67 -M11e3 -M11e68
@@ -1961,7 +1930,7 @@ WALLS        5 +pif00
                | +sw03
                | +sw02 -BL1A -sw3
                | +ceiling
-               | +souttop2 -wpyram -swcon1 -swcon2 -M11e23 -pumps -maze4
+               | +souttop2 -wpyram -swcon1 -swcon2 -M11e23 -maze4
                | +sw16 -sw05
                | +sw17
                | +sw15 -immovab -sphco -swcon2 -swcon4 -cable1 -cable2 -cable3 -cable4 -body31 -cabltra0 -cabltra1
@@ -1992,7 +1961,6 @@ WALLS        5 +pif00
                | +pif35
                | +pif37
                | +pif38
-               | +pif39
                | +pillar03
                | +pillar04
                | +pillar05
@@ -2015,8 +1983,6 @@ WALLS        5 +pif00
                | +sw06 -sw05 -sw07
                | +sw07 -sw06
                | +pif16
-               | +piftop3 -maze4 -maze8
-               | +body20
 FLOOR        5 +flothin
                | +flothick
 SOIL         5 +soil -flothick
@@ -2157,7 +2123,6 @@ VACTNK       5 +vactnko -vactnki -hvactnko
                | +hvactnko -hvactnki -vactnki -CRYOSTAT
 NSHLD        5 +b4cshld1 -hvactnko -srcpit
                | +b4cshld2 -hvactnko -srcpit -CRYOSTAT
-               | +b4cshld5 -guideooo
 PBSHIELD     5 +pbshield
 CRSTEEL      5 +b8 -b9
                | +b10 -b11
@@ -2203,21 +2168,11 @@ CRAL         5 +b2 -crgdvaco -b1
                | +b29 -b28
 CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
                -connflg3 -connflg4 -guideooo
-               | +CRYOSTA1 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
-               -connflg3 -connflg4 -guideooo -guidfooo -guidgooo -yswitch -b4cshld4 -b4cshld5
-               | +CRYOSTA2 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
-               -connflg3 -connflg4 -guideooo -b4cshld4 -b4cshld5
-               | +duct2
-               | +maze1 -CRYOSTAT
-               | +maze2
-               | +maze3
-               | +maze4 -pumps
-               | +duct4
-               | +maze6
-               | +maze5
+               | +CRYOSTA1 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o 
+               -connflg3 -connflg4 -guideooo -guidfooo -guidgooo
+               | +CRYOSTA2 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o 
+               -connflg3 -connflg4 -guideooo
                | +maze7
-               | +pumps
-               | +maze8
 CRHEX        5 +hex -crguide
 CRHE3        5 +he3 -hex
 CRGDVAC      5 +crhshldi -crguideo -he3 -b29 -crhld2o -crvld2o +CRYOSTAT
@@ -2245,7 +2200,6 @@ CRLD2PIP     5 +crhld2o -crhld2i
 CRLD2        5 +crhld2i
                | +crvld2i
 B1ABLCK      5 +b1ablck
-PBSHLD       5 +yswitch1 -guideooo
 END
 GEOEND
 *GEOEND         1420.     1420.  debugtoz    -1850.    -1850.debugfromzDEBUG
@@ -2439,7 +2393,6 @@ ASSIGNMA      COPPER     CRHEX
 ASSIGNMA      He3_1K     CRHE3
 ASSIGNMA    Stainles   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
-ASSIGNMA       NEWPB    PBSHLD
 #if DLAY 
 RADDECAY          1.                  1.
 * Comment dt = 3600*24*365*8/12 = 8 months; 10 microAmp p/s
