@@ -5,9 +5,9 @@
 *
       SUBROUTINE USIMBS ( MREG, NEWREG, FIMP )
 
-      INCLUDE '(DBLPRC)'
-      INCLUDE '(DIMPAR)'
-      INCLUDE '(IOUNIT)'
+      INCLUDE 'dblprc.inc'
+      INCLUDE 'dimpar.inc'
+      INCLUDE 'iounit.inc'
 *
 *----------------------------------------------------------------------*
 *                                                                      *
@@ -36,8 +36,8 @@
 *                                                                      *
 *----------------------------------------------------------------------*
 *
-      INCLUDE '(TRACKR)'
-      INCLUDE '(FLKMAT)'
+      INCLUDE 'trackr.inc'
+      INCLUDE 'flkmat.inc'
 *      CHARACTER(len=8) :: MNAM
 *
       FIMP   = ONEONE

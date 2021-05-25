@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export FLUPRO=$HOME/fluka
-WD=$SCRATCH
+WD=$SCRATCH/flukasims
 
 #rm ranucn*
 #rm run.sh.*
@@ -13,8 +13,8 @@ WD=$SCRATCH
 #rm i${WD}/ucn*_fort.22
 #{ ls ${WD}/ucn*_fort.23; echo ; echo ucn_23.rnc; } | $FLUPRO/flutil/usrsuw
 #rm ucn_*_fort.23
-{ ls -f ${WD}/ucn*_fort.24; echo ; echo ucn_24.bnn; } | $FLUPRO/flutil/usbsuw &
-{ ls -f ${WD}/ucn*_fort.25; echo ; echo ucn_25.bnn; } | $FLUPRO/flutil/usbsuw &
+{ ls -f ${WD}/ucn*_fort.24; echo ; echo ucn_24.bnn; } | $FLUPRO/bin/usbsuw &
+{ ls -f ${WD}/ucn*_fort.25; echo ; echo ucn_25.bnn; } | $FLUPRO/bin/usbsuw &
 #rm ${WD}/ucn*_fort.24
 #head README.md -n16 > READMEn.md
 #python sum_flux_energy.py | tail -n27 >> READMEn.md

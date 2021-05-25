@@ -1,10 +1,13 @@
 #!/bin/sh
 
-module load gcc/9.1.0
+module unload StdEnv/2020
+module load nixpkgs/16.09
+module load gcc/7.3.0
 export FLUPRO=$HOME/fluka
 export FLUFOR=gfortran
 rm -f usimbs.o
-$FLUPRO/flutil/fff usimbs.f
+rm -f fluscw.o
+$FLUPRO/bin/fff usimbs.f
+$FLUPRO/bin/fff fluscw.f
 rm -f myfluka.map myfluka
-$FLUPRO/flutil/ldpmqmd -o myfluka usimbs.o
-module load gcc/5.4.0
+$FLUPRO/bin/ldpmqmd -o myfluka usimbs.o fluscw.o
