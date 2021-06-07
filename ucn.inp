@@ -1,13 +1,13 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-*#define BL1U 
+#define BL1U 
 *#define BL1U1 
 *#define BL1U2 
 *#define BL1U3 
 *#define BL1A 
 *#define BL1A1 
-#define BL1A2 
+*#define BL1A2 
 *#define BL1A3 
 *#define BL1A4 
 #undef DLAY 
@@ -30,7 +30,7 @@ START           200.
 #elif BL1U3 
 START          2000.
 #else  
-START          1000.
+START          2000.
 #endif  
 #else  
 RANDOMIZ          1.        8.
@@ -1076,7 +1076,7 @@ RPP cable2     -502.5644469627 -442.5644469627 488.81845771841 703.25969507007
               190. 243.84
 RPP cable3     -442.5644469627 -105. 488.81845771841 518.81845771841 190. 243.84
 RPP cable4     -110. -80. 299.50072002258 518.81845771841 0.0 243.84
-RPP cable5     -80.0 40.0 410.0 518.81845771841 0.0 243.84
+RPP cable5     -80. 40. 410. 518.81845771841 0.0 243.84
 XYP body32     1250.
 RPP body33     -440. 180. -150. 100. 244. 425.
 RPP body31     -440. 220. 555. 630. 120. 190.
@@ -1276,14 +1276,15 @@ $end_transform
 RPP CRYOSTA1   300. 490. 100. 410. 120. 424.
 RPP CRYOSTA2   180. 320. 100. 450. 120. 424.
 RPP yswitch    190. 310. 60. 95. 240. 280.
-RPP duct2      90. 180. 310. 340. 660. 690.
-RPP duct4      90. 180. 160. 191. 660. 690.
-RPP pumps      -340. 90. 35. 410. 370. 730.
+RPP duct2      90. 180. 350. 410. 600. 720.
+RPP pumps      -350. 90. 35. 410. 370. 730.
 RPP maze1      180. 490. 100. 410. 424. 730.
 RPP maze2      40. 210. 100. 160. 370. 730.
-RPP maze3      -440. -340. 285. 410. 490. 730.
-RPP maze4      -520. -440. -40. 410. 490. 730.
+RPP maze3      -440. -350. 285. 410. 490. 730.
+RPP maze4      -530. -440. -80. 410. 490. 730.
 RPP maze6      120. 150. -85. 100. 700. 730.
+RPP maze11     370.0 400.0 -85.0 5.0 700.0 730.0
+RPP maze12     340.0 370.0 -20.0 100.0 700.0 730.0
 RPP body7      -440. -80. 46.5 411.5 244. 366.
 RPP body17     -290. -110. 125. 299. 0.0 244.
 RPP body18     -380. -80. -150. -90. 0.0 244.
@@ -1291,17 +1292,19 @@ RPP body42     -440. -80. 300. 411.5 244. 424.
 RPP body43     120. 670. -150. 470. 730. 850.
 RPP body52     20. 570. -80. 470. 850. 970.
 RPP body44     120. 520. -30. 100. 120. 520.
-RPP piftop3    -610. -440. -120. 597.4548783415 487.68 730.
-RPP duct8      490. 1040. 350. 410. 700. 730.
-RPP body46     -610. 120. -80. 470. 730. 850.
+RPP piftop3    -590. -440. -140. 597.4548783415 487.68 730.
+RPP duct8      490. 1040. 230. 290. 700. 730.
+RPP body46     -610. 120. -105. 445. 730. 850.
 RPP maze5      40. 120. 35. 140. 370. 730.
 RPP body47     90. 180. 160. 410. 370. 730.
 RPP body48     120. 490. -150. -85. 655. 735.
 RPP body50     120. 520. 35. 100. 520. 650.
 RPP body49     670. 840. 290. 470. 730. 850.
-RPP maze7      120.0 210.0 100.0 410.0 120.0 370.0
+RPP maze7      120. 210. 100. 410. 120. 370.
 RPP yswitch1   190. 310. 95. 100. 240. 280.
-RPP maze8      -610. -520. -40. 40. 490. 730.
+RPP maze8      -590. -530. -80. 40. 490. 730.
+RPP maze9      -448. -440. -140. -80. 640. 730.
+RPP maze10     -590. -530. 40. 130. 700. 730.
 RPP body51     40. 557. 410. 520. 0.0 424.
 END
 BLCKHOLE     5 +blckhole -surround
@@ -1427,7 +1430,8 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                +body33 |  +immovab -cryptbAe -stopbeam |  +body43 |  +souttop1 -wpyram -M11w06 -M11w45 -M11s37 
                -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6 -B1A13 -cste_out) -souttop2 -souttop5 
                -souttop7 -body51 -guideooo -guidfooo -guidgooo -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -pumps -maze1 -maze2 
-               -maze3 -maze4 -maze5 -maze6 -maze7 -body44 -body47 -ueenesol -body22 -body48 -duct8 -body50
+               -maze3 -maze4 -maze5 -maze6 -maze7 -maze11 -maze12  -body44 -body47 -ueenesol -body22 -body48 
+               -duct8 -body50
                | +(+M13bridg -immovab -M13_z64 -M13_z80 -T1hole5 -T1hole6 |  +M13_z6 +M13_z71 +spyram1 -ft07 |  
                +M13_z84 |  +M11e69 -M11e70 |  +ft08 +ft07_6 -ft07 -M11B1)
                | +body7
@@ -1436,7 +1440,7 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                | +body42 -pumps
                | +body46
                | +body49 -duct8
-               | +body47 -duct2 -duct4
+               | +body47 -duct2
                | +body45
                | +body52
 TRANSM01     5 +M11e09 -M11B2i -M11B2x
@@ -2015,7 +2019,7 @@ WALLS        5 +pif00
                | +sw06 -sw05 -sw07
                | +sw07 -sw06
                | +pif16
-               | +piftop3 -maze4 -maze8
+               | +piftop3 -maze4 -maze8 -maze9 -maze10
                | +body20
 FLOOR        5 +flothin
                | +flothick
@@ -2203,21 +2207,24 @@ CRAL         5 +b2 -crgdvaco -b1
                | +b29 -b28
 CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
                -connflg3 -connflg4 -guideooo
-               | +CRYOSTA1 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
+               | +CRYOSTA1 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o 
                -connflg3 -connflg4 -guideooo -guidfooo -guidgooo -yswitch -b4cshld4 -b4cshld5
-               | +CRYOSTA2 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
+               | +CRYOSTA2 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o 
                -connflg3 -connflg4 -guideooo -b4cshld4 -b4cshld5
                | +duct2
                | +maze1 -CRYOSTAT
                | +maze2
                | +maze3
                | +maze4 -pumps
-               | +duct4
                | +maze6
                | +maze5
                | +maze7
                | +pumps
                | +maze8
+               | +maze9
+               | +maze10
+               | +maze11
+               | +maze12
 CRHEX        5 +hex -crguide
 CRHE3        5 +he3 -hex
 CRGDVAC      5 +crhshldi -crguideo -he3 -b29 -crhld2o -crvld2o +CRYOSTAT

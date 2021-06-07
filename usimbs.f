@@ -5,9 +5,9 @@
 *
       SUBROUTINE USIMBS ( MREG, NEWREG, FIMP )
 
-      INCLUDE '(DBLPRC)'
-      INCLUDE '(DIMPAR)'
-      INCLUDE '(IOUNIT)'
+      INCLUDE 'dblprc.inc'
+      INCLUDE 'dimpar.inc'
+      INCLUDE 'iounit.inc'
 *
 *----------------------------------------------------------------------*
 *                                                                      *
@@ -36,16 +36,16 @@
 *                                                                      *
 *----------------------------------------------------------------------*
 *
-      INCLUDE '(TRACKR)'
-      INCLUDE '(FLKMAT)'
+      INCLUDE 'trackr.inc'
+      INCLUDE 'flkmat.inc'
 *      CHARACTER(len=8) :: MNAM
 *
       FIMP   = ONEONE
 
 *     UCN target
-*      X0 = 436
-*      Y0 = 596
-*      Z0 = 144
+      X0 = 436
+      Y0 = 596
+      Z0 = 144
 
 *     BL1A
 *      X0 = 207.6
@@ -58,9 +58,9 @@
 *      Z0 = 137.16
 
 *     BL1A2
-      X0 = -250.0
-      Y0 = 958.92
-      Z0 = 137.16
+*      X0 = -250.0
+*      Y0 = 958.92
+*      Z0 = 137.16
   
 *     BL1A3
 *      X0 = 100.0
