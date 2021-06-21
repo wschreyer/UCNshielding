@@ -30,7 +30,7 @@ START           200.
 #elif BL1U3 
 START          2000.
 #else  
-START          2000.
+START          1000.
 #endif  
 #else  
 RANDOMIZ          1.        8.
@@ -85,6 +85,7 @@ AUXSCORE      USRBIN    PHOTON              shineg
 USRBIN           10.   DOSE-EQ      -25.      400.      200.      270.shinen
 USRBIN         -100.     -200.      250.      100.       80.        4. &
 AUXSCORE      USRBIN   NEUTRON              shineg
+USERWEIG                              1.
 BIASING          0.0                  2.  BLCKHOLE  COLLIMAT          USER
 BIASING          0.0                  2.  GGUIDE01  SPL11C01          USER
 BIASING          0.0                  2.        T1  NOSPLTCO          USER
@@ -1276,28 +1277,30 @@ $end_transform
 RPP CRYOSTA1   300. 490. 100. 410. 120. 424.
 RPP CRYOSTA2   180. 320. 100. 450. 120. 424.
 RPP yswitch    190. 310. 60. 95. 240. 280.
-RPP duct2      90. 180. 350. 410. 600. 720.
+RPP duct2      90. 180. 350. 410. 610. 730.
 RPP pumps      -350. 90. 35. 410. 370. 730.
 RPP maze1      180. 490. 100. 410. 424. 730.
-RPP maze2      40. 210. 100. 160. 370. 730.
+RPP maze2      40. 210. 100. 160. 370. 670.
 RPP maze3      -440. -350. 285. 410. 490. 730.
 RPP maze4      -530. -440. -80. 410. 490. 730.
-RPP maze6      120. 150. -85. 100. 700. 730.
-RPP maze11     370.0 400.0 -85.0 5.0 700.0 730.0
-RPP maze12     340.0 370.0 -20.0 100.0 700.0 730.0
+RPP maze6      180. 210. -55. 35. 700. 730.
+RPP maze14     150. 180. -55. -25. 700. 730.
+RPP maze11     370. 400. -150. -25. 700. 730.
+RPP maze12     310. 340. -55. 35. 700. 730.
+RPP maze13     340. 370. -55. -25. 700. 730.
 RPP body7      -440. -80. 46.5 411.5 244. 366.
 RPP body17     -290. -110. 125. 299. 0.0 244.
 RPP body18     -380. -80. -150. -90. 0.0 244.
 RPP body42     -440. -80. 300. 411.5 244. 424.
 RPP body43     120. 670. -150. 470. 730. 850.
-RPP body52     20. 570. -80. 470. 850. 970.
+RPP body52     20. 570. -80. 470. 850. 910.
 RPP body44     120. 520. -30. 100. 120. 520.
 RPP piftop3    -590. -440. -140. 597.4548783415 487.68 730.
 RPP duct8      490. 1040. 230. 290. 700. 730.
 RPP body46     -610. 120. -105. 445. 730. 850.
-RPP maze5      40. 120. 35. 140. 370. 730.
+RPP maze5      120. 150. -150. -25. 655. 730.
 RPP body47     90. 180. 160. 410. 370. 730.
-RPP body48     120. 490. -150. -85. 655. 735.
+RPP body48     180. 490. 35. 100. 650. 730.
 RPP body50     120. 520. 35. 100. 520. 650.
 RPP body49     670. 840. 290. 470. 730. 850.
 RPP maze7      120. 210. 100. 410. 120. 370.
@@ -1306,6 +1309,7 @@ RPP maze8      -590. -530. -80. 40. 490. 730.
 RPP maze9      -448. -440. -140. -80. 640. 730.
 RPP maze10     -590. -530. 40. 130. 700. 730.
 RPP body51     40. 557. 410. 520. 0.0 424.
+RPP body53     -530. -527.5 300. 390. 550. 730.
 END
 BLCKHOLE     5 +blckhole -surround
 COLLIMAT     5 +collimao -collimai
@@ -1400,10 +1404,10 @@ INGOT01      5 +M11w17 -magpipe2 -BL1A
                +body34 +body35 | +body36 | +body37 | +body38 -cste_out)
 PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                | +nepyram +surrM11 +sphco -M11B2 -M11B2i -M11w07
-               | +M11w06 +M13_z70 +sphco -ft00 -guideooo -guidfooo -guidgooo -souttop1 -souttop2 -sw12 -sw19 
+               | +M11w06 +M13_z70 +sphco -ft00 -guideooo -guidfooo -guidgooo -souttop1 -souttop2 -sw12 -sw19
                -sw20 -eedm1 -eedm2 -sphst
                | +nepyram +surrM11 -M11B2 -sphco
-               | +cut1 +body1 +sphco -ft00 -nepyramC -nepyramD -nepyramE -M11Q6 -M11Q6i -M11Q7 -guidfooo -M11n3 
+               | +cut1 +body1 +sphco -ft00 -nepyramC -nepyramD -nepyramE -M11Q6 -M11Q6i -M11Q7 -guidfooo -M11n3
                -M11n6 -M13_z70 -eedm2 -eedm3
                | +wpyram +souttop1 -sphst
                | +M11e42 +M11s11 +sphco -ft04 -nepyramC -nepyramE -surrM11 -body1 -M13_z70 -eedm3 -sphst
@@ -1423,16 +1427,16 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -M11e23 -eedm2 -sphst
                | +M11w06 +M11w07 +souttop1 +sphco -wpyram -body6 -sphst
                | +M13_ymin +sphco -M11w06 -ft20
                | +M11n3 -M11Q6 -M11Q6i
-               | +(+ncon |  +swcon1 |  +swcon2 |  +M11e23 |  +swcon4 |  +wcon1 |  +wcon2 |  +wcon3 |  +con_hand) 
-               -body51 -guideooo -guidgooo -guidfooo -cable1 -cable2 -cable3 -cable4 -body31 -body23 -cabltra0 
+               | +(+ncon |  +swcon1 |  +swcon2 |  +M11e23 |  +swcon4 |  +wcon1 |  +wcon2 |  +wcon3 |  +con_hand)
+               -body51 -guideooo -guidgooo -guidfooo -cable1 -cable2 -cable3 -cable4 -body31 -body23 -cabltra0
                -cabltra1 -maze1 -maze7 -body44 -CRYOSTA2 -cable5
-               | +(+body14 |  +body25 |  +body27 |  +body28 |  +body29 |  +body30 -m11cover -nepyramE -body22 |  
-               +body33 |  +immovab -cryptbAe -stopbeam |  +body43 |  +souttop1 -wpyram -M11w06 -M11w45 -M11s37 
-               -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6 -B1A13 -cste_out) -souttop2 -souttop5 
-               -souttop7 -body51 -guideooo -guidfooo -guidgooo -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -pumps -maze1 -maze2 
-               -maze3 -maze4 -maze5 -maze6 -maze7 -maze11 -maze12  -body44 -body47 -ueenesol -body22 -body48 
-               -duct8 -body50
-               | +(+M13bridg -immovab -M13_z64 -M13_z80 -T1hole5 -T1hole6 |  +M13_z6 +M13_z71 +spyram1 -ft07 |  
+               | +(+body14 |  +body25 |  +body27 |  +body28 |  +body29 |  +body30 -m11cover -nepyramE -body22 |
+               +body33 |  +immovab -cryptbAe -stopbeam |  +body43 |  +souttop1 -wpyram -M11w06 -M11w45 -M11s37
+               -M11s38 -M11s39 -T1hole3 -T1hole4 -T1hole5 -T1hole6 -B1A13 -cste_out) -souttop2 -souttop5
+               -souttop7 -body51 -guideooo -guidfooo -guidgooo -CRYOSTAT -CRYOSTA1 -CRYOSTA2 -pumps -maze1 -maze2
+               -maze3 -maze4 -maze5 -maze6 -maze7 -maze11 -maze12 -maze13 -maze14  -body44 -body47 -ueenesol
+               -body22 -body48 -duct8 -body50
+               | +(+M13bridg -immovab -M13_z64 -M13_z80 -T1hole5 -T1hole6 |  +M13_z6 +M13_z71 +spyram1 -ft07 |
                +M13_z84 |  +M11e69 -M11e70 |  +ft08 +ft07_6 -ft07 -M11B1)
                | +body7
                | +body17
@@ -1818,7 +1822,6 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +cut8 +cste_out +body24 -cryptbBe -TARGET
                | +(+ncon |  +body29 |  +body33) +body41 -guidgooo -guidfooo
                | +BL1A01x -BL1A
-               | +body48
                | +cable5
 SURRPIF      5 +surrpif -cryptbAe -pif00 -piftop1 -piftop2 -piftop3 -sw01 -souttop2 -souttop5 -BL1A -BL1Aii -sw03
                -sw05 -sw06 -sw07 -sw12 -sw13 -sw14 -sw15 -sw16 -sw17 -pif01 -pif02 -pif03 -pif04 -pif05 -pif06
@@ -2139,6 +2142,7 @@ PIT          5 +srcpit -reflecto -TARGET -vactnko -hvactnko
                | +srcpit1 -b4cshld1 -b4cshld2
                | +srcpit2 -b4cshld1 -TARGET -pbshield -body24 -cryptbAe
                | +srcpit3 -b4cshld1 -TARGET -pbshield
+               | +b4cshld2 -hvactnko -srcpit -CRYOSTAT -b4cshld1
 HEIIISOV     5 +vacsepi -heiibott -hebottup -hebottlo -hguideo
                | +vacsepli -hebottlo -heiibott -hebottup -hepos
                | +hvacsepi -hguideo -CRYOSTAT
@@ -2160,8 +2164,8 @@ VACTNK       5 +vactnko -vactnki -hvactnko
                | +vactnklo -vactnkli -vactnki -ld2pos
                | +hvactnko -hvactnki -vactnki -CRYOSTAT
 NSHLD        5 +b4cshld1 -hvactnko -srcpit
-               | +b4cshld2 -hvactnko -srcpit -CRYOSTAT
                | +b4cshld5 -guideooo
+NSHLD2       5 +body53
 PBSHIELD     5 +pbshield
 CRSTEEL      5 +b8 -b9
                | +b10 -b11
@@ -2207,15 +2211,15 @@ CRAL         5 +b2 -crgdvaco -b1
                | +b29 -b28
 CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
                -connflg3 -connflg4 -guideooo
-               | +CRYOSTA1 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o 
+               | +CRYOSTA1 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
                -connflg3 -connflg4 -guideooo -guidfooo -guidgooo -yswitch -b4cshld4 -b4cshld5
-               | +CRYOSTA2 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o 
+               | +CRYOSTA2 -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo -connflg1 -connflg2 -connld2o
                -connflg3 -connflg4 -guideooo -b4cshld4 -b4cshld5
                | +duct2
                | +maze1 -CRYOSTAT
                | +maze2
                | +maze3
-               | +maze4 -pumps
+               | +maze4 -pumps -body53
                | +maze6
                | +maze5
                | +maze7
@@ -2225,6 +2229,9 @@ CRYOSTAT     5 +CRYOSTAT -b5 -b6 -b7 -b12 -b8 -b10 -b13 -b41 -crgdvaco -connboxo
                | +maze10
                | +maze11
                | +maze12
+               | +maze13
+               | +maze14
+               | +body48
 CRHEX        5 +hex -crguide
 CRHE3        5 +he3 -hex
 CRGDVAC      5 +crhshldi -crguideo -he3 -b29 -crhld2o -crvld2o +CRYOSTAT
@@ -2447,6 +2454,7 @@ ASSIGNMA      He3_1K     CRHE3
 ASSIGNMA    Stainles   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
 ASSIGNMA       NEWPB    PBSHLD
+ASSIGNMA    BORAPOLY    NSHLD2
 #if DLAY 
 RADDECAY          1.                  1.
 * Comment dt = 3600*24*365*8/12 = 8 months; 10 microAmp p/s
