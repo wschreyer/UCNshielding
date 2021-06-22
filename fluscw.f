@@ -70,6 +70,7 @@
 
       FLUSCW = ONEONE
       LSCZER = .FALSE.
+      RETURN
 
       ! weight neutron dose scoring with SNOOPY response curve
       IF (Ij == 8 .AND. ISCRNG == 2 .AND. JSCRNG < 7) THEN
