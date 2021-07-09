@@ -2,7 +2,7 @@ TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
 *#define BL1U 
-*#define BL1U1 
+#define BL1U1 
 *#define BL1U2 
 *#define BL1U3 
 *#define BL1A 
@@ -10,7 +10,7 @@ GLOBAL                                                                DEPRBODY
 *#define BL1A2 
 *#define BL1A3 
 *#define BL1A4 
-#define BL1A5
+*#define BL1A5
 #undef DLAY 
 #undef DRAW 
 #define FARM 
@@ -29,7 +29,7 @@ START          5000.
 #elif BL1A5
 START          5000.
 #elif BL1U1 
-START           500.
+START          5000.
 #elif BL1U2 
 START           200.
 #elif BL1U3 
