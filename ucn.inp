@@ -2,8 +2,8 @@ TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
 *#define BL1U 
-#define BL1U1 
-*#define BL1U2 
+*#define BL1U1 
+#define BL1U2 
 *#define BL1U3 
 *#define BL1A 
 *#define BL1A1 
@@ -31,7 +31,7 @@ START          5000.
 #elif BL1U1 
 START          5000.
 #elif BL1U2 
-START           200.
+START          1000.
 #elif BL1U3 
 START          2000.
 #else  
