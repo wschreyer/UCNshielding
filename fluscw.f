@@ -70,6 +70,7 @@
 
       FLUSCW = ONEONE
       LSCZER = .FALSE.
+      RETURN
 
       ! weight neutron dose scoring with SNOOPY response curve
       IF (Ij == 8 .AND. ISCRNG == 2 .AND. JSCRNG < 7) THEN
@@ -91,6 +92,9 @@
             FLUSCW = 0.
          ENDIF
       ENDIF
+
+      ! RPG applies safety factor 2 to all Snoopy readings
+      FLUSCW = FLUSCW*2.
 
       RETURN
 *=== End of function Fluscw ===========================================*
