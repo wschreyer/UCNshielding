@@ -8,8 +8,8 @@ GLOBAL                                                                DEPRBODY
 *#define BL1A 
 *#define BL1A1 
 *#define BL1A2 
-#define BL1A3 
-*#define BL1A4 
+*#define BL1A3 
+#define BL1A4 
 #undef DLAY 
 #undef DRAW 
 #define FARM 
@@ -24,7 +24,9 @@ START           500.
 #elif BL1A3
 START         10000.
 #elif BL1A4 
-START           500.
+START          5000.
+#elif BL1A5 
+START          5000.
 #elif BL1U1 
 START           500.
 #elif BL1U2 
@@ -47,7 +49,7 @@ BEAM            -.48                 0.0   -0.1295   -0.3533          PROTON
 BEAMPOS        206.9     964.2    137.16        1.       0.0
 #elif BL1A1 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMPOS        -600.    958.92    137.16        1.       0.0
+BEAMPOS        -770.    958.92    137.16        1.       0.0
 #elif BL1A2 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS        -250.    958.92    137.16        1.       0.0
@@ -56,7 +58,10 @@ BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         100.    958.92    137.16        1.       0.0
 #elif BL1A4 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMPOS         700.    958.92    137.16        1.       0.0
+BEAMPOS         400.    958.92    137.16        1.       0.0
+#elif BL1A5 
+BEAM            -.48                 0.0       0.0       0.0          PROTON
+BEAMPOS         600.    958.92    137.16        1.       0.0
 #elif BL1U1 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
