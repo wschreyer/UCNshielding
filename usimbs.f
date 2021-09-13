@@ -102,14 +102,16 @@
       IF (Z1 .LT. -Z0) Z1 = -Z0
       IF (Z2 .LT. -Z0) Z2 = -Z0
 
-      IF (Ytrack(0) .GT. 1000) Y1 = 1000 - Y0
-      IF (Ytrack(Ntrack) .GT. 1000) Y2 = 1000 - Y0
+*      IF (Ytrack(0) .GT. 1000) Y1 = 1000 - Y0
+*      IF (Ytrack(Ntrack) .GT. 1000) Y2 = 1000 - Y0
+      IF (Y1 .GT. 0.) Y1 = 0.
+      IF (Y2 .GT. 0.) Y2 = 0.
   
-      R1 = sqrt(X1**2 + Y1**2 + Z1**2)
-      R2 = sqrt(X2**2 + Y2**2 + Z2**2)
+      R1 = sqrt(Y1**2 + Z1**2)
+      R2 = sqrt(Y2**2 + Z2**2)
 
-      IF ( R1 .LT. 10.0 ) R1 = 10.0
-      IF ( R2 .LT. 10.0 ) R2 = 10.0
+      IF ( R1 .LT. 20.0 ) R1 = 20.0
+      IF ( R2 .LT. 20.0 ) R2 = 20.0
 *      IF ( R1 .GT. 900.0 ) R1 = 900.0
 *      IF ( R2 .GT. 900.0 ) R2 = 900.0
       

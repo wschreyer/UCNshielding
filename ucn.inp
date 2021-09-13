@@ -11,12 +11,12 @@ GLOBAL                                                                DEPRBODY
 *#define BL1A3 
 *#define BL1A4 
 *#define BL1A5 
-#undef DLAY 
+*#define DLAY
 #define FARM 
 #if FARM 
 RANDOMIZ          1.    MYSEED
 #if BL1A 
-START         50000.
+START        400000.
 #elif BL1A1 
 START         10000.
 #elif BL1A2 
@@ -42,7 +42,7 @@ START        400000.
 #endif  
 #if BL1U 
 BEAM            -.48                         -0.88      -2.5          PROTON
-BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
+BEAMAXES         0.0       0.0        1..961261696-.27563736       0.0
 BEAMPOS        420.5600.746257   144.145
 #elif BL1A 
 BEAM            -.48                 0.0   -0.1295   -0.3533          PROTON
@@ -64,15 +64,15 @@ BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         600.    958.92    137.16        1.       0.0
 #elif BL1U1 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
+BEAMAXES         0.0       0.0        1..961261696-.27563736       0.0
 BEAMPOS        -600.    888.24   144.145
 #elif BL1U2 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
+BEAMAXES         0.0       0.0        1..961261696-.27563736       0.0
 BEAMPOS        -250.     787.9   144.145
 #elif BL1U3 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1..961261696-.275637355.55714E-5
+BEAMAXES         0.0       0.0        1..961261696-.27563736       0.0
 BEAMPOS         100.     687.5   144.145
 #endif  
 DEFAULTS                                                              PRECISIO
@@ -93,8 +93,7 @@ USRBIN           10.   DOSE-EQ      -25.      400.      200.      270.shinen
 USRBIN         -100.     -200.      250.      100.       80.        4. &
 AUXSCORE      USRBIN   NEUTRON              shineg
 USERWEIG                             -1.
-BIASING           2.                  2.  BLCKHOLE  @LASTREG          USER
-BIASING           3.                  2.  BLCKHOLE  @LASTREG          USER
+BIASING          0.0                  2.  BLCKHOLE  @LASTREG          USER
 GEOBEGIN                                                              COMBNAME
     0    0          
 $start_transform -anticam
@@ -1232,8 +1231,9 @@ RPP bl632_69   -611. -551. 224. 406. 488. 579.
 RPP bl632_70   -611. -551. 41. 223. 488. 579.
 RPP bl632_71   -611. -551. 224. 406. 580. 671.
 RPP bl632_72   -611. -551. 41. 223. 580. 671.
-RPP bl632_73   -611. -551. 224. 406. 672. 763.
-RPP bl632_74   -611. -551. 41. 223. 672. 763.
+RPP bl632_73   -611. -551. 224. 406. 672. 762.
+RPP bl632_74   -611. -551. 41. 223. 672. 762.
+PLA bl63274a   0.0 -1. 2. 0.0 41. 733.
 RPP bl632_75   -500. -440. -171. -80. 488. 669.
 RPP bl632_76   -592. -501. -140. -80. 488. 669.
 RPP bl632_77   -621. -440. -140. -80. 670. 761.
@@ -2210,6 +2210,7 @@ SURRPIF      5 +surrpif -cryptbAe -pif00 -piftop1 -piftop2 -sw01 -souttop2 -BL1A
                -pif39 -souttop3 -pif16 -fffffff3 -bl126413 -bl126414 -bl632_69 -bl632_70 -bl632_71 -bl632_72
                -bl632_73 -bl632_74 -bl632_75 -bl632_76 -bl632_77 -bl186420 -bl321_30 -bl321_31
                | +pif12 -pif18 -pif24
+               | +bl632_74 -bl63274a
 SUREAST      5 +M11e66 +ft07_5
                | +M11e67 -M11e3 -M11e68
                | +M11e6 +sureast1 -M11e37 -M11e38 -M11e39 -M11e60 -M11e64 -M11n2
@@ -2405,7 +2406,7 @@ WALLS        5 +pif00
                | +bl632_71
                | +bl632_72
                | +bl632_73
-               | +bl632_74
+               | +bl632_74 +bl63274a
                | +bl632_75
                | +bl632_76
                | +bl632_77
@@ -2761,8 +2762,8 @@ ASSIGNMA       INGOT   INGOT01
 ASSIGNMA    CONCRETE  TRANSM01
 ASSIGNMA    CONCRETE  SPL11C01
 ASSIGNMA    ENESOLUT   M11ST01
-ASSIGNMA      VACUUM  GGUIDE01
-ASSIGNMA    Stainles  GUIDE001
+ASSIGNMA         AIR  GGUIDE01
+ASSIGNMA         AIR  GUIDE001
 ASSIGNMA         AIR  GUIDE101
 ASSIGNMA       NEWPB   TgtShld
 ASSIGNMA         AIR    TgtGap
@@ -2775,33 +2776,33 @@ ASSIGNMA       WATER  TgtWater
 ASSIGNMA    A36STEEL    TgtArm
 ASSIGNMA       NEWPB  TgtArmPb
 ASSIGNMA      VACUUM    TgtVac
-ASSIGNMA         B4C     NSHLD
-ASSIGNMA    GRAPHITE  REFLECTO
-ASSIGNMA    ALUMINUM  LD2OBOTT
-ASSIGNMA     D2O300K      LD2O
-ASSIGNMA    ALUMINUM    VACTNK
-ASSIGNMA      VACUUM    ISOVAC
-ASSIGNMA     Al20KHI    THSHLD
-ASSIGNMA     Al20KHI  LD2BOTTL
-ASSIGNMA      D2_16K       LD2
-ASSIGNMA     Al20KHI    VACSEP
-ASSIGNMA      VACUUM  HEIIISOV
-ASSIGNMA     Al20KHI  HEIIBOTT
-ASSIGNMA    HELIUM1K      HEII
-ASSIGNMA    HELIUM1K    CRHEII
-ASSIGNMA     Al20KHI   CRGUIDE
-ASSIGNMA      VACUUM   CRGDVAC
-ASSIGNMA     Al20KHI  CRSHIELD
-ASSIGNMA    ALUMINUM  CRVACTNK
-ASSIGNMA      D2_16K     CRLD2
-ASSIGNMA     Al20KHI  CRLD2PIP
-ASSIGNMA    ALUMINUM      CRAL
-ASSIGNMA      VACUUM   CRYOVAC
-ASSIGNMA      COPPER     CRHEX
-ASSIGNMA      He3_1K     CRHE3
-ASSIGNMA    Stainles   CRSTEEL
+ASSIGNMA         AIR     NSHLD
+ASSIGNMA         AIR  REFLECTO
+ASSIGNMA         AIR  LD2OBOTT
+ASSIGNMA         AIR      LD2O
+ASSIGNMA         AIR    VACTNK
+ASSIGNMA         AIR    ISOVAC
+ASSIGNMA         AIR    THSHLD
+ASSIGNMA         AIR  LD2BOTTL
+ASSIGNMA         AIR       LD2
+ASSIGNMA         AIR    VACSEP
+ASSIGNMA         AIR  HEIIISOV
+ASSIGNMA         AIR  HEIIBOTT
+ASSIGNMA         AIR      HEII
+ASSIGNMA         AIR    CRHEII
+ASSIGNMA         AIR   CRGUIDE
+ASSIGNMA         AIR   CRGDVAC
+ASSIGNMA         AIR  CRSHIELD
+ASSIGNMA         AIR  CRVACTNK
+ASSIGNMA         AIR     CRLD2
+ASSIGNMA         AIR  CRLD2PIP
+ASSIGNMA         AIR      CRAL
+ASSIGNMA         AIR   CRYOVAC
+ASSIGNMA         AIR     CRHEX
+ASSIGNMA         AIR     CRHE3
+ASSIGNMA         AIR   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
-ASSIGNMA       NEWPB    PBSHLD
+ASSIGNMA         AIR    PBSHLD
 #if DLAY 
 RADDECAY          1.                  1.
 * Comment dt = 3600*24*365*8/12 = 8 months; 10 microAmp p/s
