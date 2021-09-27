@@ -1,80 +1,80 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-#define BL1U
-*#define BL1U1
-*#define BL1U2
-*#define BL1U3
-*#define BL1A
-*#define BL1A1
-*#define BL1A2
-*#define BL1A3
-*#define BL1A4
-*#define BL1A5
-*#define DLAY
-#define FARM
-#if FARM
+*#define BL1U 
+*#define BL1U1 
+*#define BL1U2 
+*#define BL1U3 
+#define BL1A 
+*#define BL1A1 
+*#define BL1A2 
+*#define BL1A3 
+*#define BL1A4 
+*#define BL1A5 
+*#define DLAY 
+#define FARM 
+#if FARM 
 RANDOMIZ          1.    MYSEED
-#if BL1A
+#if BL1A 
 START        500000.
-#elif BL1A1
+#elif BL1A1 
 START         10000.
-#elif BL1A2
+#elif BL1A2 
 START          1000.
-#elif BL1A3
+#elif BL1A3 
 START         10000.
-#elif BL1A4
+#elif BL1A4 
 START          5000.
-#elif BL1A5
+#elif BL1A5 
 START          5000.
-#elif BL1U1
+#elif BL1U1 
 START          5000.
-#elif BL1U2
+#elif BL1U2 
 START          1000.
-#elif BL1U3
+#elif BL1U3 
 START          2000.
-#else
+#else  
 START          8000.
-#endif
-#else
+#endif  
+#else  
 RANDOMIZ          1.        8.
 START        400000.
-#endif
-#if BL1U
+#endif  
+#if BL1U 
 BEAM            -.48                         -0.88      -2.5          PROTON
-BEAMAXES         0.0       0.0        1. 0.9612617-0.2756374       0.0
+BEAMAXES         0.0       0.0        1. 0.9612617 -.2756374       0.0
 BEAMPOS        420.5600.746257   144.145
-#elif BL1A
+#elif BL1A 
 BEAM            -.48                 0.0   -0.1295   -0.3533          PROTON
 BEAMPOS        206.9     964.2    137.16        1.       0.0
-#elif BL1A1
+#elif BL1A1 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS        -770.    958.92    137.16        1.       0.0
-#elif BL1A2
+#elif BL1A2 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS        -250.    958.92    137.16        1.       0.0
-#elif BL1A3
+#elif BL1A3 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         100.    958.92    137.16        1.       0.0
-#elif BL1A4
+#elif BL1A4 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         400.    958.92    137.16        1.       0.0
-#elif BL1A5
+#elif BL1A5 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         600.    958.92    137.16        1.       0.0
-#elif BL1U1
+#elif BL1U1 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1. 0.9612617-0.2756374       0.0
+BEAMAXES         0.0       0.0        1. 0.9612617 -.2756374       0.0
 BEAMPOS        -600.    888.24   144.145
-#elif BL1U2
+#elif BL1U2 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1. 0.9612617-0.2756374       0.0
+BEAMAXES         0.0       0.0        1. 0.9612617 -.2756374       0.0
 BEAMPOS        -250.     787.9   144.145
-#elif BL1U3
+#elif BL1U3 
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1. 0.9612617-0.2756374       0.0
+BEAMAXES         0.0       0.0        1. 0.9612617 -.2756374       0.0
 BEAMPOS         100.     687.5   144.145
-#endif
+#endif  
 DEFAULTS                                                              PRECISIO
 USRBIN           10.   DOSE-EQ      -24.     1450.     1450.     1300.global
 USRBIN        -1250.    -1800.       0.0       54.       65.       26. &
@@ -112,7 +112,7 @@ RPP eeeeeee    382.5 425. -10.8 10.8 -26.035 26.035
 RPP fffffff1   432.205 453.795 -26.035 26.035 -26.035 26.035
 RPP fffffff2   474.105 495.695 -26.035 26.035 -26.035 26.035
 RPP fffffff3   930. 1050. -40. 40. -23. 23.
-$end_transform
+$end_transform 
 RCC cryptbBe   320. 596.314 144.145 -201.2 0.0 0.0 8.3312
 RCC cryptbBi   320. 596.314 144.145 -200. 0.0 0.0 7.62
 RCC targarm1   320. 596.314 144.145 -120. 0.0 0.0 7.4549
@@ -157,22 +157,22 @@ PLA B123_      1. 0.0 1. 856.78712386385 0.0 137.91828830715
 $start_transform m0
 RCC M11Q6      13.632531977578 -3.130600426539 0.0 0.0 26.035 0.0 33.2
 RCC M11Q6i     13.632531977578 3.5373995734611 0.0 0.0 12.7 0.0 40.2
-RCC M11Q6x     13.632531977578 -3.130600426539 0.0 0.0 100.0 0.0 15.0
-RCC magpipe4   13.632531977578 -140. 0.0 0.0 342.0 0.0 10.56
-RCC magpii4    13.632531977578 -140. 0.0 0.0 342.0 0.0 10.16
+RCC M11Q6x     13.632531977578 -3.130600426539 0.0 0.0 100. 0.0 15.
+RCC magpipe4   13.632531977578 -140. 0.0 0.0 342. 0.0 10.56
+RCC magpii4    13.632531977578 -140. 0.0 0.0 342. 0.0 10.16
 RPP M11Q7      -32.36746802242 59.632531977578 49.869399573461 95.869399573461
               -45.72 45.72
-BOX M11Q7h     19.28464076381134 250.9687437389083 -137.16 0. 0. 243.84
-              97.88101659156699 -35.62577653904999 0. 13.76463001910866
-              37.81801016464912 0.
-$end_transform
+BOX M11Q7h     19.28464076381134 250.9687437389083 -137.16 0.0 0.0 243.84
+              97.88101659156699 -35.62577653904999 0.0 13.76463001910866
+              37.81801016464912 0.0
+$end_transform 
 $start_transform bend1
 RPP M11B2      -162.8545391604 162.1454608396 -67.15 47.150000000000006 -98.425
               98.425
 RPP M11B2x     -58.6165 58.6165 -94.4224326702465 74.0568720102465 -10.795 10.75
 BOX M11B2h     134.07764912101 -397.2048388504 -103.425 0.0 0.0 209.095
               248.53207345812 0.0 0.0 0.0 93.302546281154 0.0
-$end_transform
+$end_transform 
 RCC M11B2i     817. 207. 98.742 0.0 0.0 76.835 84.328
 $start_transform m2
 RCC M11SX3     0.0 0.0 0.0 0.0 35.56 0.0 21.59
@@ -180,66 +180,66 @@ RCC M11SX3i    0.0 8.89 0.0 0.0 17.78 0.0 29.21
 RCC M11SX3x    0.0 -440.121 0.0 0.0 475.681 0.0 10.4775
 RCC magpipe3   .68608180473109 -510.7942631743 0.0 -.4681771901554 640. 0.0 5.48
 RCC magpii3    .68608180473109 -510.7942631743 0.0 -.4681771901554 640. 0.0 5.08
-$end_transform
+$end_transform 
 $start_transform m3
 RPP M11Q5      -28.4675 28.4675 -40.3215 40.3215 -28.4675 28.4675
 RPP M11Q5i     -40.5 40.5 -20.5 20.5 -40.5 40.5
-$end_transform
+$end_transform 
 $start_transform m4
 RCC M11SX25    0.0 0.0 0.0 0.0 26.035 0.0 32.766
 RCC M11SX25i   0.0 6.668 0.0 0.0 12.7 0.0 39.751
-$end_transform
+$end_transform 
 $start_transform m5
 RPP M11Q3      -28.4675 28.4675 -40.3225 40.3225 -28.4675 28.4675
 RPP M11Q3i     -40.5 40.5 -20.3205 20.3205 -40.5 40.5
 RPP M11Q4      -30. 33.309163151977 61.3225 92.3225 -37.21112403334
               30.150284379677
 RPP M11Q4i     -15.95348674619 18.554276502846 46.3205 106.3205 -40.5 40.5
-$end_transform
+$end_transform 
 $start_transform m6
 RCC M11SX2     0.0 0.0 0.0 0.0 35.56 0.0 21.59
 RCC M11SX2i    0.0 8.89 0.0 0.0 17.78 0.0 29.21
-$end_transform
+$end_transform 
 $start_transform m6
 RPP M11F1      -52.911 +46.911 47.75 109.75 -42.91 42.91
-$end_transform
+$end_transform 
 $start_transform bend2
 RPP M11B1      -40.64 40.64 -108. 108. -83.82 76.2
 RPP M11B1i     -61.435 61.435 -77.47 77.47 -31.115 31.115
 RPP M11B1x     -61.435 61.435 -77.47 77.47 -8.941 8.941
-$end_transform
+$end_transform 
 $start_transform m8
 RCC M11SX1     0.0 0.0 0.0 0.0 26.035 0.0 32.76
 RCC M11SX1i    0.0 6.668 0.0 0.0 12.7 0.0 39.751
 RCC M11SX1x    0.0 0.0 0.0 0.0 26.035 0.0 15.5575
-$end_transform
+$end_transform 
 $start_transform m9
 RPP M11Q2      -31.75 31.75 -34.76 34.76 -44.45 44.45
-$end_transform
+$end_transform 
 $start_transform m10
 RPP M11Q1      -31.75 31.75 -34.76 34.76 -44.45 44.45
 RCC magpipe2   -1.279085876018 -146. 0.0 3.4361474221293 344.68060830036 0.0
               5.48
 RCC magpii2    -1.279085876018 -146. 0.0 3.4361474221293 344.68060830036 0.0
               5.08
-$end_transform
+$end_transform 
 $start_transform ucnguide
-RCC guide      0.0 0.0 0.0 0.0 200. 0.0 4.9
-RCC guideo     0.0 0.0 0.0 0.0 200. 0.0 5.1
-RCC guideooo   0.0 0.0 0.0 0.0 200. 0.0 8.
+RCC guide      0.0 0.0 0.0 0.0 190. 0.0 4.9
+RCC guideo     0.0 0.0 0.0 0.0 190. 0.0 5.1
+RCC guideooo   0.0 0.0 0.0 0.0 190. 0.0 8.
 RPP b4cshld4   -30. 30. 65. 70. -35. 65.
 RPP b4cshld5   -30. 30. 188. 190. -66.5 65.
-$end_transform
+$end_transform 
 $start_transform ucnguidf
 RCC guidf      0.0 0.0 0.0 0.0 400. 0.0 4.9
 RCC guidfo     0.0 0.0 0.0 0.0 400. 0.0 5.1
 RCC guidfooo   0.0 0.0 0.0 0.0 400. 0.0 8.
-$end_transform
+$end_transform 
 $start_transform ucnguidg
 RCC guidg      0.0 0.0 0.0 0.0 -500. 0.0 4.9
 RCC guidgo     0.0 0.0 0.0 0.0 -500. 0.0 5.1
 RCC guidgooo   0.0 0.0 0.0 0.0 -500. 0.0 8.
-$end_transform
+$end_transform 
 RPP pif00      -566.9595941066 -440. -848.1515935959 82.991570696776 0.0 243.84
 RPP nedm       -326.4731378783 153.61442247626 -710.1098926342 -618.4687634243
               0.0 250.
@@ -335,11 +335,11 @@ PLA M11e36     -61.52198837567 78.83555635817 0.0 1376.3697989194
 $start_transform M11ee
 RPP M11e37     5.5214459631925 97.914999018801 -195.0688941966 -8.347094097192
               0.0 243.84
-$end_transform
+$end_transform 
 $start_transform M11ee
 RPP M11e38     5.9216376494539 67.164883155699 -381.3864600086 -183.8473416115
               0.0 243.84
-$end_transform
+$end_transform 
 PLA M11e34     -9.495604714794 3.135839775943 0.0 1424.3263543252
               -32.50599851917 121.92
 PLA M11e9      45.137528427367 89.233421583332 0.0 1329.5223223578
@@ -398,7 +398,7 @@ $start_transform m9
 RPP M11n3      672.78898936594 824.78898936594 406.95451316818 558.95451316818
               -137.16 105.84
 PLA M11n3a     0.928 0.371 0.0 824.75018510078 406.74240272712 0.0
-$end_transform
+$end_transform 
 RPP M11n6      725. 786. -550. -91. 0.0 220.
 RPP M11w15     648. 737. 284. 339.93202017798 0.0 91.44
 RPP M11w17     165.13418734303 337.62800064971 870.73398589764 1058.1673316929
@@ -491,14 +491,14 @@ PLA ft07_4     -94.73952593366 32.006596599211 0.0 397.31071802068
               897.93330040391 210.
 $start_transform M11ee
 RPP M11e66     -103.9311659469 0.0 -61.72883634745 0.0 182.88 243.84
-$end_transform
+$end_transform 
 PLA ft07_5     88.984696545594 45.625911286117 0.0 1344.9150539047
               100.97361945351 210.
 RPP M11e67     1344.8819152966 1462.438950141 102.03262150129 368.20310320635
               182.88 243.84
 $start_transform M11ee
 RPP M11e68     -103.9311659469 -58.52455478759 0.0 12.596153924552 182.88 243.84
-$end_transform
+$end_transform 
 RPP M11w45     435.77707238975 558.2726619015 925.1056546586 1058.1673316929
               147.32 304.8
 RPP souttop1   -370. 1530.7350354556 780. 1340.4063358212 243.84 609.6
@@ -532,7 +532,7 @@ XZP cut9       224.50287046272
 $start_transform M11ee
 RPP M11e49     5.573767960203 228.42418034285 -398.4803182696 5.5435584813973
               60.96 243.84
-$end_transform
+$end_transform 
 RPP sw02       -422.0290073411 -330.9815798364 869.66193856801 1117.0162145556
               0.0 243.84
 RPP sw03       -513.2994081376 -330.9815798364 1117.0162145556 1179.4487362731
@@ -656,12 +656,12 @@ XZP M13_z69    921.40422753157
 $start_transform m13q
 RPP M13Q2      -22.45 22.45 -145.3215 -91. -22.45 22.45
 RPP M13Q2i     -43.689 43.689 -134. -103. -43.689 43.689
-$end_transform
+$end_transform 
 $start_transform m13
 RPP M13Q1      -26.5 26.5 -90. -45. -35.56 50.8
 RCC M13pipe    .08482258759273 3.2602755468143 0.0 0.0 -170. 0.0 9.4
 RCC M13pii     .08482258759273 3.2602755468143 0.0 0.0 -170. 0.0 9.
-$end_transform
+$end_transform 
 YZP M13_z70    337.62800064971
 XZP M13_z71    870.73398589764
 XZP M13_z72    1058.1673316929
@@ -877,12 +877,12 @@ RCC B1AM632x   -306.0468071938 949. 137.15 0.0 31. 0.0 3.5
 RCC B1AM663x   -245. 949. 137.15 0.0 31. 0.0 3.5
 $start_transform 1aq
 RPP B1AQ7i     8.5 42. -32.329 32.329 -32.329 32.329
-$end_transform
+$end_transform 
 $start_transform 1aq
 RPP B1AQ7      0.0 50.5 -19.05 19.05 -19.05 19.05
 RPP B1AQ8i     79. 112. -32.329 32.329 -32.329 32.329
 RPP B1AQ8      70.5 121. -19.05 19.02 -19.05 19.05
-$end_transform
+$end_transform 
 RPP B1AM71     -3.900537622186 26.544264038014 948.98000092289 979.98000092289
               132.15 142.15
 RCC B1AM71x    -306.0468071938 949. 137.15 0.0 31. 0.0 3.5
@@ -933,15 +933,15 @@ XZP body5      622.60614662842
 $start_transform twiz1
 PLA body9      0.18652403600873491 0.98245039772551157 6.1232339957367771E-17
               0.0 0.0 0.0
-$end_transform
+$end_transform 
 $start_transform twiz2
 PLA body10     0.11753739745783824 0.99306845695493096 6.1232339957367944E-17
               0.0 0.0 0.0
-$end_transform
+$end_transform 
 $start_transform twiz3
 PLA body11     -0.15643446504023029 0.98768834059513444 6.1232339957367451E-17
               0.0 0.0 0.0
-$end_transform
+$end_transform 
 XYP crypend8   140.27
 XYP crypend9   148.02
 RPP M11s46     310. 558.2726619015 716.18729331824 778.92240465765 0.0 60.96
@@ -958,7 +958,7 @@ YZP body13     571.19656097151
 $start_transform M11ee
 BOX M11e39     15.181984641532 -364.4603199553 0.0 0.0 0.0 15.24 103.36080590001
               -69.34847198043 0.0 51.270104866892 76.415805659217 0.0
-$end_transform
+$end_transform 
 RPP pif16      -837.1076103784 -747.1675377602 234.04852462612 296.70361765521
               0.0 182.88
 RPP M11s51     176.57602086278 221.48252055848 622.20485564924 706.65686280796
@@ -1005,12 +1005,12 @@ $start_transform M11ee
 BOX M11e60     15.181984641532 -364.4603199553 15.24 0.0 0.0 60.96
               154.57818160449 -103.71204638395 0.0 51.270104866892
               76.415805659217 0.0
-$end_transform
+$end_transform 
 $start_transform M11ee
 BOX M11e64     15.181984641532 -364.4603199553 76.2 0.0 0.0 106.68
               154.57818160449 -103.71204638395 0.0 33.876378777712
               50.491232343613 0.0
-$end_transform
+$end_transform 
 RPP M11w57     337.62800064971 435.77707238975 870.73398589764 1058.1673316929
               213.36 243.84
 RPP M11w58     337.62800064971 435.77707238975 1043.3842330342 1058.1673316929
@@ -1100,6 +1100,9 @@ RPP seg29      113. 245. -36. 96. 457. 523.
 RPP seg30      113. 245. 23. 89. 524. 656.
 RPP seg31      245.6 377.6 23. 89. 524. 656.
 RPP seg32      378. 510. 23. 89. 524. 656.
+RPP seg33      295. 427. 626. 692. 157. 289.
+RPP seg34      295. 427. 559. 625. 157. 289.
+RPP seg35      428. 494. 515. 647. 157. 289.
 RPP tsh0956    294. 566. 449.5 493.5 116. 132.5
 RPP tsh0950    294. 579. 410.5 493.5 132.5 351.5
 PLA tsh0950a   -0.342 -0.94 0.0 414. 410.5 0.0
@@ -1177,7 +1180,7 @@ RPP bl632_15   662. 753. -90. -29. 0.0 182.
 $start_transform m9
 RPP bl632_16   700.16783436145 791.16783436145 561.45904011387 622.45904011387
               -137.16 44.84
-$end_transform
+$end_transform 
 RPP bl632_17   -273. -71. -163. -72. 0.0 60.
 RPP bl632_18   -273. -71. -163. -72. 61. 121.
 RPP bl632_19   -273. -71. -163. -72. 122. 182.
@@ -1331,7 +1334,7 @@ RPP target5    3.45 6.35 -3.85 3.85 -2.8 2.8
 RPP target5c   3.37 6.44 -3.94 3.94 -2.89 2.89
 RPP TgtCase    -7.1 7.1 -4.6 4.799999999999999 -3.4 3.4
 RPP TgtWindw   -7.1 -6.73 -2.3 3.5 -1.7 1.7
-$end_transform
+$end_transform 
 $start_transform BeamPos
 RPP AlPlate1   -121. 75.6 -102.3 95.50000000000001 -28.3 -27.
 RPP PbLayer1   -121. 75.6 -102.3 95.50000000000001 -28.3 -10.5
@@ -1358,7 +1361,7 @@ RPP TgtArm1    -51.8 -16.2 -6.9 6.9 -3.4 3.4
 RCC TgtArm2    -51.8 0.0 0.0 -69.2 0.0 0.0 7.2
 RPP TgtArmPb   -49.9 -29.3 0.6 5.1 -2. 3.4000000000000004
 RPP TARGET     -121. 75.6 -102.3 95.5 -28.3 12.4
-$end_transform
+$end_transform 
 $start_transform SourceRot
 RPP ld2o       -48.5 48.5 -39.6 57.3 18.3 118.2
 RPP ld2obott   -48.8 48.8 -39.9 57.6 18. 118.5
@@ -1407,7 +1410,7 @@ RCC ld2pipei   0.0 -28.6 93. 0.0 -173. 0.0 2.14
 RPP reflecto   -68. 68. -55. 77. 18. 146.
 RPP b4cshld1   -70. 70. -57. 79. 18. 146.
 RCC b4cshld2   0.0 -65. 83. 0.0 -150. 0.0 17.2
-$end_transform
+$end_transform 
 $start_transform CryoPos
 RCC hex        0.0 95. 0.0 0.0 50. 0.0 8.25
 RCC he3        0.0 95. 0.0 0.0 50. 0.0 8.6
@@ -1472,7 +1475,7 @@ RCC crvld2o    0.0 195. 15.3 0.0 0.0 180. 2.5
 RCC crvld2i    0.0 195. 15.3 0.0 0.0 180. 2.14
 RCC crvshldo   0.0 195. 15.8 0.0 0.0 180. 12.
 RCC crvshldi   0.0 195. 15.8 0.0 0.0 180. 11.85
-$end_transform
+$end_transform 
 RPP yswitch    203. 265. 42. 96. 240. 280.
 RPP yswitch1   203. 265. 91. 96. 240. 280.
 END
@@ -1573,6 +1576,9 @@ PYRAST01     5 +M11s47
                | +seg30
                | +seg31
                | +seg32
+               | +seg33
+               | +seg34
+               | +seg35
 INGOT01      5 +M11w17 -magpipe2 -BL1A
                | +M11s46
                | +M11e14 +M11e1 -M11s54
@@ -1957,8 +1963,8 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M11e08 +ft04 -M11w06 -M11w07 -ft03 -M11w05
                | +ft04half +M11e08 +M11w03 +M11e04 +M11e05 +M11e06 +surrM11 -ft03 -magpipe3 -M11Q5 -M11Q5i
                -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 -M11Q4i -M11F1 -M11e02 -M11e11
-               | +ft08 +M11w01 +surrM11 -ft03 -nepyram  -M11B2 -M11B2h -M11w07 -M11B2i -M11B2x -magpipe4
-               -M11n3 -bl1864_3 -bl632_23 -bl322_9
+               | +ft08 +M11w01 +surrM11 -ft03 -nepyram -M11B2 -M11B2h -M11w07 -M11B2i -M11B2x -magpipe4 -M11n3
+               -bl1864_3 -bl632_23 -bl322_9
                | +M11SX3x +M11SX25 +ft04half -magpipe3
                | +ft04half +M11B2h +M11e01 +surrM11 -ft04 -nepyram -magpipe4 -M11Q7h -M11B2 -M11B2x -M11B2i
                -M11SX3 -magpipe3 -M11e09
@@ -2074,44 +2080,44 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +M11S1_0 +M11S1_1
                | +M11S1_0 -ft07_4 -M11S1_3
                | +M11SX3x -M11B2x -magpipe3 -M11B1i
-               | +surround -cryptbAe -harpseal -ddddddd -cryptbBe -immovab  -M11Q6 -M11Q6i -M11Q7
-               -magpipe2 -guideooo -guidfooo -guidgooo -flothick -flothin -cyclwall -nortwall -woody -soutwall
-               -piftop1 -piftop2 -M11e14 -M11e21 -M11e26 -M11e27 -M11e28 -M11e37 -M11e38 -M11s01 -M11s03 -M11s04
-               -M11s05 -M11s06 -M11n1 -M11n2 -M11n3 -M11n6 -M11w17 -M11e50 -M11e52 -M11w18 -M11e56 -M11e57
-               -M11e58 -M11e59 -ft7_04 -M11e66 -M11e67 -M11e68 -souttop1 -souttop2 -cyclwal1 -surrM11 -BL1A
-               -M11e48 -M11s21 -sureast1 -sureast2 -sw02 -sw03 -M11w21 -ceiling -m11cover -surrM13 -M13Q1
-               -M13pipe -M11s22 -M11s23 -M11s25 -M11s27 -spyram1 -M11s28 -M11s29 -M11s30 -M11s31 -M11s32 -M11s33
-               -M11s34 -M11s35 -M11s36 -M11w46 -M11w47 -M11w48 -M11s37 -M11s38 -M11s39 -M11s50 -M11s53 -M13_z79
-               -M11s40 -M13bridg -M13_z82 -M11s41 -sw12 -sw14 -sw15 -pif35 -pif38 -pillar03 -pillar04 -pillar05
-               -pillar06 -souttop3 -souttop7 -souttop8 -souttop9 -soutto10 -soutto11 -surrpif -soil -M11s3
-               -M11s42 -M11s43 -M11w49 -M11w50 -B1AM632 -B1AM663 -B1AQ7i -B1AQ7 -B1AQ8i -B1AQ8 -B1AM71 -sw3
-               -B1A01 -B1A05 -B1A06 -B1A07 -B1A08 -M11s45 -B1A11 -B1A06b -B1A13 -B1A15 -M11s46 -M11s47 -M11s48
-               -M11s49 -M11w51 -M11e39 -M11s51 -M11s52 -M11w54 -M11s57 -M11e60 -M11e64 -B1A9 -M11e69 -sphco
-               -wcon1 -wcon2 -wcon3 -swcon2 -wste2 -targend -magpipe4 -nshield2 -nshield3 -M11w45 -T1hole5
-               -T1hole6 -(+body23 -body24 -cryptbAe) -swcon4 -TARGET -tsh0673 -tsh0462 -tsh0781 -bl1mb37 -bl632_1
-               -M11e70 -M11e72 -seg1 -seg3 -seg4 -seg5 -bl1264_1 -tsh0956 -tsh0950 -tsh0950c -b4cshld1 -seg6
-               -bl321_1 -bl321_2 -seg7 -seg8 -seg9 -bl1864_1 -bl632_2 -bl322_1 -bl322_2 -bl321_3 -bl321_4
-               -tsh0644a -tsh0644b -tsh0788 -bl1864_2 -bl632_3 -bl322_3 -tsh0967 -tsh0962 -seg11 -seg12 -seg13
-               -seg14 -bl632_4 -bl1264_2 -bl1264_3 -bl321_5 -bl321_6 -bl632_5 -bl632_6 -bl632_7 -bl632_8 -bl632_9
-               -bl322_4 -bl322_5 -bl632_10 -bl632_11 -bl632_12 -bl3064_1 -bl3064_2 -bl632_13 -bl1264_4 -bl1264_5
-               -bl1264_6 -bl1264_7 -bl1264_8 -bl1264_9 -bl126410 -bl126411 -bl126412 -bl126413 -bl126414
-               -bl1864_3 -bl632_15 -bl632_16 -bl1864_4 -bl1864_5 -bl632_17 -bl632_18 -bl632_19 -bl632_20
-               -bl126415 -bl632_21 -bl322_6 -bl1864_6 -bl126416 -bl321_9 -bl321_10 -bl321_11 -bl632_22 -bl632_23
-               -seg15 -bl321_13 -bl321_14 -seg16 -seg17 -bl632_24 -bl321_15 -bl632_24 -bl632_25 -bl321_16
-               -bl321_17 -bl321_18 -bl322_7 -bl322_8 -bl322_9 -bl322_10 -bl321_19 -bl126417 -seg18 -seg19 -seg20
-               -bl1864_7 -bl1864_8 -bl126418 -bl1864_9 -bl186410 -bl1564 -bl186411 -bl126419 -bl126420 -bl632_26
-               -bl632_27 -bl632_28 -bl632_29 -tsh0972 -bl632_30 -bl632_31 -bl632_32 -bl632_33 -connboxo -connflg1
-               -connflg2 -b6 -connflg3 -b7 -b8 -b10 -b12 -b13 -b41 -connflg4 -connld2o -b4cshld4 -b4cshld5
-               -bl632_34 -bl632_35 -bl632_36 -bl632_37 -bl186412 -seg21 -seg22 -seg23 -seg24 -seg25 -seg26 -seg27
-               -seg28 -seg29 -bl632_38 -bl632_39 -bl632_40 -bl186413 -bl321_20 -bl321_21 -bl186414 -bl186415
-               -bl186416 -seg30 -seg31 -seg32 -bl632_42 -bl632_43 -bl632_44 -bl632_45 -bl632_46 -bl3064_3
-               -bl3064_4 -bl3064_5 -bl126421 -bl632_47 -bl632_48 -bl632_49 -bl632_50 -bl632_51 -bl632_52
-               -bl321_22 -bl321_23 -bl321_24 -bl321_25 -bl321_26 -bl321_27 -bl321_28 -bl321_29 -bl632_53
-               -bl632_54 -bl632_55 -bl632_56 -bl632_57 -bl632_58 -bl632_59 -bl632_60 -bl322_11 -bl186417
-               -bl186418 -bl186419 -bl632_61 -bl632_62 -bl632_63 -bl632_64 -bl632_65 -bl632_66 -bl632_67
-               -bl632_68 -bl126422 -bl632_78 -bl632_79 -bl632_80 -bl632_81 -bl632_82 -bl632_83 -bl632_84
-               -bl632_85 -bl632_86 -bl632_87 -bl632_88 -bl632_89 -bl632_90 -bl632_91 -bl632_92 -bl632_93
-               -bl632_94 -bl632_95 -M11B2i -M11B2x -bl321_32 -bl321_33 -bl321_34 -bl321_35
+               | +surround -cryptbAe -harpseal -ddddddd -cryptbBe -immovab -M11Q6 -M11Q6i -M11Q7 -magpipe2
+               -guideooo -guidfooo -guidgooo -flothick -flothin -cyclwall -nortwall -woody -soutwall -piftop1
+               -piftop2 -M11e14 -M11e21 -M11e26 -M11e27 -M11e28 -M11e37 -M11e38 -M11s01 -M11s03 -M11s04 -M11s05
+               -M11s06 -M11n1 -M11n2 -M11n3 -M11n6 -M11w17 -M11e50 -M11e52 -M11w18 -M11e56 -M11e57 -M11e58
+               -M11e59 -ft7_04 -M11e66 -M11e67 -M11e68 -souttop1 -souttop2 -cyclwal1 -surrM11 -BL1A -M11e48
+               -M11s21 -sureast1 -sureast2 -sw02 -sw03 -M11w21 -ceiling -m11cover -surrM13 -M13Q1 -M13pipe
+               -M11s22 -M11s23 -M11s25 -M11s27 -spyram1 -M11s28 -M11s29 -M11s30 -M11s31 -M11s32 -M11s33 -M11s34
+               -M11s35 -M11s36 -M11w46 -M11w47 -M11w48 -M11s37 -M11s38 -M11s39 -M11s50 -M11s53 -M13_z79 -M11s40
+               -M13bridg -M13_z82 -M11s41 -sw12 -sw14 -sw15 -pif35 -pif38 -pillar03 -pillar04 -pillar05 -pillar06
+               -souttop3 -souttop7 -souttop8 -souttop9 -soutto10 -soutto11 -surrpif -soil -M11s3 -M11s42 -M11s43
+               -M11w49 -M11w50 -B1AM632 -B1AM663 -B1AQ7i -B1AQ7 -B1AQ8i -B1AQ8 -B1AM71 -sw3 -B1A01 -B1A05 -B1A06
+               -B1A07 -B1A08 -M11s45 -B1A11 -B1A06b -B1A13 -B1A15 -M11s46 -M11s47 -M11s48 -M11s49 -M11w51 -M11e39
+               -M11s51 -M11s52 -M11w54 -M11s57 -M11e60 -M11e64 -B1A9 -M11e69 -sphco -wcon1 -wcon2 -wcon3 -swcon2
+               -wste2 -targend -magpipe4 -nshield2 -nshield3 -M11w45 -T1hole5 -T1hole6 -(+body23 -body24 -cryptbAe
+               ) -swcon4 -TARGET -tsh0673 -tsh0462 -tsh0781 -bl1mb37 -bl632_1 -M11e70 -M11e72 -seg1 -seg3 -seg4
+               -seg5 -bl1264_1 -tsh0956 -tsh0950 -tsh0950c -b4cshld1 -seg6 -bl321_1 -bl321_2 -seg7 -seg8 -seg9
+               -bl1864_1 -bl632_2 -bl322_1 -bl322_2 -bl321_3 -bl321_4 -tsh0644a -tsh0644b -tsh0788 -bl1864_2
+               -bl632_3 -bl322_3 -tsh0967 -tsh0962 -seg11 -seg12 -seg13 -seg14 -bl632_4 -bl1264_2 -bl1264_3
+               -bl321_5 -bl321_6 -bl632_5 -bl632_6 -bl632_7 -bl632_8 -bl632_9 -bl322_4 -bl322_5 -bl632_10
+               -bl632_11 -bl632_12 -bl3064_1 -bl3064_2 -bl632_13 -bl1264_4 -bl1264_5 -bl1264_6 -bl1264_7
+               -bl1264_8 -bl1264_9 -bl126410 -bl126411 -bl126412 -bl126413 -bl126414 -bl1864_3 -bl632_15
+               -bl632_16 -bl1864_4 -bl1864_5 -bl632_17 -bl632_18 -bl632_19 -bl632_20 -bl126415 -bl632_21 -bl322_6
+               -bl1864_6 -bl126416 -bl321_9 -bl321_10 -bl321_11 -bl632_22 -bl632_23 -seg15 -bl321_13 -bl321_14
+               -seg16 -seg17 -bl632_24 -bl321_15 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -bl321_18 -bl322_7
+               -bl322_8 -bl322_9 -bl322_10 -bl321_19 -bl126417 -seg18 -seg19 -seg20 -bl1864_7 -bl1864_8 -bl126418
+               -bl1864_9 -bl186410 -bl1564 -bl186411 -bl126419 -bl126420 -bl632_26 -bl632_27 -bl632_28 -bl632_29
+               -tsh0972 -bl632_30 -bl632_31 -bl632_32 -bl632_33 -connboxo -connflg1 -connflg2 -b6 -connflg3 -b7
+               -b8 -b10 -b12 -b13 -b41 -connflg4 -connld2o -b4cshld4 -b4cshld5 -bl632_34 -bl632_35 -bl632_36
+               -bl632_37 -bl186412 -seg21 -seg22 -seg23 -seg24 -seg25 -seg26 -seg27 -seg28 -seg29 -bl632_38
+               -bl632_39 -bl632_40 -bl186413 -bl321_20 -bl321_21 -bl186414 -bl186415 -bl186416 -seg30 -seg31
+               -seg32 -bl632_42 -bl632_43 -bl632_44 -bl632_45 -bl632_46 -bl3064_3 -bl3064_4 -bl3064_5 -bl126421
+               -bl632_47 -bl632_48 -bl632_49 -bl632_50 -bl632_51 -bl632_52 -bl321_22 -bl321_23 -bl321_24
+               -bl321_25 -bl321_26 -bl321_27 -bl321_28 -bl321_29 -bl632_53 -bl632_54 -bl632_55 -bl632_56
+               -bl632_57 -bl632_58 -bl632_59 -bl632_60 -bl322_11 -bl186417 -bl186418 -bl186419 -bl632_61
+               -bl632_62 -bl632_63 -bl632_64 -bl632_65 -bl632_66 -bl632_67 -bl632_68 -bl126422 -bl632_78
+               -bl632_79 -bl632_80 -bl632_81 -bl632_82 -bl632_83 -bl632_84 -bl632_85 -bl632_86 -bl632_87
+               -bl632_88 -bl632_89 -bl632_90 -bl632_91 -bl632_92 -bl632_93 -bl632_94 -bl632_95 -M11B2i -M11B2x
+               -bl321_32 -bl321_33 -bl321_34 -bl321_35 -seg33 -seg34 -seg35
                | +BL1Ax +B1A05a -BL1A
                | +BL1Ax +B1A05b -BL1A
                | +cm081 +M13_xmax +M13_z6 +M13_z48 -ft02
@@ -2233,7 +2239,8 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +surrM11 +cut4 -TARGET -M11e14 -tsh0637 +M13_z64 -M11s57 -M11s47 -M11s46 -M11s52 -M11e69
                -ft07_01 -b4cshld1 -body35 -tsh0640 -M11e71 -M11e70 -M11e72 -seg1 -seg2 -bl1264_1 -tsh0956
                -tsh0950 -tsh0950c -bl1864_3 -bl321_7 -bl321_8 -bl321_9 -bl321_10 -bl321_12 -bl632_22 -bl321_13
-               -bl321_14 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -crgdvaco -connboxo -connflg1 -b6
+               -bl321_14 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -crgdvaco -connboxo -connflg1 -b6 -seg33 -seg34
+               -seg35
                | +tsh0673a -pl1mb37
                | +tsh0673b
                | +tsh0781a
@@ -2241,13 +2248,13 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +bl1mb37 -pl1mb37 -tsh0673 -tsh0967
                | +tsh0950 -tsh0950a -crgdvaco -connboxo -connflg1
                | +tsh0950b -tsh0462
-               | +tsh0950c +tsh0950d -b4cshld1 -hvactnko
+               | +tsh0950c +tsh0950d -b4cshld1 -hvactnko -seg35
                | +tsh0788 -tsh0788a
                | +tsh0967 +pl1mb37 -bl1mb37
                | +bl1mb30 -bl1mb30a
                | +M11n3 -M11n3a -bl632_15 -M11n6
-               | +d2oibott -vactnko -hvactnko
-               | +d2oibolo -vactnklo -d2oibott
+               | +d2oibott -vactnko -hvactnko -seg33 -seg34 -seg35
+               | +d2oibolo -vactnklo -d2oibott -seg33 -seg34 -seg35
 SURRPIF      5 +surrpif -cryptbAe -pif00 -piftop1 -piftop2 -sw01 -souttop2 -BL1A -BL1Aii -sw03 -sw05 -sw06 -sw07
                -sw12 -sw13 -sw14 -sw15 -sw16 -sw17 -pif01 -pif02 -pif03 -pif04 -pif05 -pif06 -pillar02 -pillar01
                -pif09 -pif10 -pif11 -pif12 -pif13 -pif14 -pif15 -pif17 -pif19 -pif20 -pif21 -pif22 -pif23 -pif24
@@ -2547,49 +2554,49 @@ TgtArm       5 +TgtArm1 -BeamL -TgtArmU -TgtArmD -TgtWtrIn -TgtWtrOu -TgtArmPb
 TgtArmPb     5 +TgtArmPb -BeamL
 TgtVac       5 +BeamVac -CryptF +PbLayer2
                | +BeamWndF
-LD2OBOTT     5 +ld2obott -ld2o -d2oibott
-               | +d2oilow -d2oibolo -d2oibott -ld2pos
-               | +ld2oi -d2oibott
-               | +d2oilow -d2oibolo -d2oibott -ld2pos
-LD2O         5 +ld2o -ld2oi -d2oilow
-REFLECTO     5 +reflecto -ld2obott -ld2oi -vactnko -hvactnko -d2oibott -tsh0640 -tsh0637 -tsh0673
-LD2          5 +ld2 -ld2i -ld2ilow
-               | +ld2low -ld2ilow -ld2i -ld2pos
-               | +ld2pipei +tsh0950a
-LD2BOTTL     5 +ld2bottl -ld2 -ld2ibott -ld2pipei
-               | +ld2i -ld2ibott
-               | +ld2ilow -ld2ibolo -ld2ibott -hepos
-               | +ld2botlo -ld2low -ld2 -ld2pos -ld2pos
-               | +ld2pipeo -ld2pipei +tsh0950a
-HEIIBOTT     5 +heiibott -heii -heiilow -heiiup
-               | +hebottlo -heiilow -heii -heiiup -hepos
-               | +hebottup -heiiup -heii -heiilow -hguide
-               | +hguideo -hguide -heiiup +tsh0950a
-HEII         5 +heii
-               | +heiiup
-               | +heiilow
-               | +hguide +tsh0950a
-HEIIISOV     5 +vacsepi -heiibott -hebottup -hebottlo -hguideo
-               | +vacsepli -hebottlo -heiibott -hebottup -hepos
-               | +hvacsepi -hguideo
-ISOVAC       5 +vactnki -thshldo -hthshldo
-               | +vactnkli -thshldlo -thshldo -hthshldo -ld2pos
-               | +ld2ibott -vacsepo -hvacsepo
-               | +ld2ibolo -vacseplo -vacsepo -hvacsepo
-               | +thshldi -ld2bottl -vacsepo -hvacsepo -ld2pipeo
-               | +thshldli -ld2botlo -ld2bottl -vacsepo -ld2pos
-               | +hvactnki -hthshldo -thshldo +tsh0950a
-               | +hthshldi -hvacsepo -vacsepo -ld2bottl -hguideo -ld2pipeo +tsh0950a
-VACSEP       5 +vacsepo -vacsepi -vacsepli -hvacsepo
-               | +vacseplo -vacsepli -vacsepi -hepos
-               | +hvacsepo -hvacsepi -vacsepi -hguideo
-THSHLD       5 +thshldo -thshldi -hthshldo
-               | +thshldlo -thshldli -thshldi -ld2pos
-               | +hthshldo -hthshldi -thshldi +tsh0950a
-VACTNK       5 +vactnko -vactnki -hvactnko
-               | +vactnklo -vactnkli -vactnki -ld2pos
-               | +hvactnko -hvactnki -vactnki +tsh0950a
-NSHLD        5 +b4cshld1 -hvactnko -reflecto -tsh0640 -tsh0637 -tsh0673
+LD2OBOTT     5 +ld2obott -ld2o -d2oibott -seg33 -seg34 -seg35
+               | +d2oilow -d2oibolo -d2oibott -ld2pos -seg33 -seg34 -seg35
+               | +ld2oi -d2oibott -seg33 -seg34 -seg35
+LD2O         5 +ld2o -ld2oi -d2oilow -seg33 -seg34 -seg35
+REFLECTO     5 +reflecto -ld2obott -ld2oi -vactnko -hvactnko -d2oibott -tsh0640 -tsh0637 -tsh0673 -seg33 -seg34
+               -seg35
+LD2          5 +ld2 -ld2i -ld2ilow -seg33 -seg34 -seg35
+               | +ld2low -ld2ilow -ld2i -ld2pos -seg33 -seg34 -seg35
+               | +ld2pipei +tsh0950a -seg33 -seg34 -seg35
+LD2BOTTL     5 +ld2bottl -ld2 -ld2ibott -ld2pipei -seg33 -seg34 -seg35
+               | +ld2i -ld2ibott -seg33 -seg34 -seg35
+               | +ld2ilow -ld2ibolo -ld2ibott -hepos -seg33 -seg34 -seg35
+               | +ld2botlo -ld2low -ld2 -ld2pos -ld2pos -seg33 -seg34 -seg35
+               | +ld2pipeo -ld2pipei +tsh0950a -seg33 -seg34 -seg35
+HEIIBOTT     5 +heiibott -heii -heiilow -heiiup -seg33 -seg34 -seg35
+               | +hebottlo -heiilow -heii -heiiup -hepos -seg33 -seg34 -seg35
+               | +hebottup -heiiup -heii -heiilow -hguide -seg33 -seg34 -seg35
+               | +hguideo -hguide -heiiup +tsh0950a -seg33 -seg34 -seg35
+HEII         5 +heii -seg33 -seg34 -seg35
+               | +heiiup -seg33 -seg34 -seg35
+               | +heiilow -seg33 -seg34 -seg35
+               | +hguide +tsh0950a -seg33 -seg34 -seg35
+HEIIISOV     5 +vacsepi -heiibott -hebottup -hebottlo -hguideo -seg33 -seg34 -seg35
+               | +vacsepli -hebottlo -heiibott -hebottup -hepos -seg33 -seg34 -seg35
+               | +hvacsepi -hguideo -seg33 -seg34 -seg35
+ISOVAC       5 +vactnki -thshldo -hthshldo -seg33 -seg34 -seg35
+               | +vactnkli -thshldlo -thshldo -hthshldo -ld2pos -seg33 -seg34 -seg35
+               | +ld2ibott -vacsepo -hvacsepo -seg33 -seg34 -seg35
+               | +ld2ibolo -vacseplo -vacsepo -hvacsepo -seg33 -seg34 -seg35
+               | +thshldi -ld2bottl -vacsepo -hvacsepo -ld2pipeo -seg33 -seg34 -seg35
+               | +thshldli -ld2botlo -ld2bottl -vacsepo -ld2pos -seg33 -seg34 -seg35
+               | +hvactnki -hthshldo -thshldo +tsh0950a -seg33 -seg34 -seg35
+               | +hthshldi -hvacsepo -vacsepo -ld2bottl -hguideo -ld2pipeo +tsh0950a -seg33 -seg34 -seg35
+VACSEP       5 +vacsepo -vacsepi -vacsepli -hvacsepo -seg33 -seg34 -seg35
+               | +vacseplo -vacsepli -vacsepi -hepos -seg33 -seg34 -seg35
+               | +hvacsepo -hvacsepi -vacsepi -hguideo -seg33 -seg34 -seg35
+THSHLD       5 +thshldo -thshldi -hthshldo -seg33 -seg34 -seg35
+               | +thshldlo -thshldli -thshldi -ld2pos -seg33 -seg34 -seg35
+               | +hthshldo -hthshldi -thshldi +tsh0950a -seg33 -seg34 -seg35
+VACTNK       5 +vactnko -vactnki -hvactnko -seg33 -seg34 -seg35
+               | +vactnklo -vactnkli -vactnki -ld2pos -seg33 -seg34 -seg35
+               | +hvactnko -hvactnki -vactnki +tsh0950a -seg33 -seg34 -seg35
+NSHLD        5 +b4cshld1 -hvactnko -reflecto -tsh0640 -tsh0637 -tsh0673 -seg33 -seg34 -seg35
                | +b4cshld5 -guideooo
 CRSTEEL      5 +b8 -b9
                | +b10 -b11
@@ -2807,8 +2814,8 @@ ASSIGNMA       INGOT   INGOT01
 ASSIGNMA    CONCRETE  TRANSM01
 ASSIGNMA    CONCRETE  SPL11C01
 ASSIGNMA    ENESOLUT   M11ST01
-ASSIGNMA      VACUUM  GGUIDE01
-ASSIGNMA    Stainles  GUIDE001
+ASSIGNMA         AIR  GGUIDE01
+ASSIGNMA         AIR  GUIDE001
 ASSIGNMA         AIR  GUIDE101
 ASSIGNMA       NEWPB   TgtShld
 ASSIGNMA         AIR    TgtGap
@@ -2821,35 +2828,35 @@ ASSIGNMA       WATER  TgtWater
 ASSIGNMA    A36STEEL    TgtArm
 ASSIGNMA       NEWPB  TgtArmPb
 ASSIGNMA      VACUUM    TgtVac
-ASSIGNMA         B4C     NSHLD
-ASSIGNMA    GRAPHITE  REFLECTO
-ASSIGNMA    ALUMINUM  LD2OBOTT
-ASSIGNMA     D2O300K      LD2O
-ASSIGNMA    ALUMINUM    VACTNK
-ASSIGNMA      VACUUM    ISOVAC
-ASSIGNMA     Al20KHI    THSHLD
-ASSIGNMA     Al20KHI  LD2BOTTL
-ASSIGNMA      D2_16K       LD2
-ASSIGNMA     Al20KHI    VACSEP
-ASSIGNMA      VACUUM  HEIIISOV
-ASSIGNMA     Al20KHI  HEIIBOTT
-ASSIGNMA    HELIUM1K      HEII
-ASSIGNMA    HELIUM1K    CRHEII
-ASSIGNMA     Al20KHI   CRGUIDE
-ASSIGNMA      VACUUM   CRGDVAC
-ASSIGNMA     Al20KHI  CRSHIELD
-ASSIGNMA    ALUMINUM  CRVACTNK
-ASSIGNMA      D2_16K     CRLD2
-ASSIGNMA     Al20KHI  CRLD2PIP
-ASSIGNMA    ALUMINUM      CRAL
-ASSIGNMA      VACUUM   CRYOVAC
-ASSIGNMA      COPPER     CRHEX
-ASSIGNMA      He3_1K     CRHE3
-ASSIGNMA    Stainles   CRSTEEL
+ASSIGNMA         AIR     NSHLD
+ASSIGNMA         AIR  REFLECTO
+ASSIGNMA         AIR  LD2OBOTT
+ASSIGNMA         AIR      LD2O
+ASSIGNMA         AIR    VACTNK
+ASSIGNMA         AIR    ISOVAC
+ASSIGNMA         AIR    THSHLD
+ASSIGNMA         AIR  LD2BOTTL
+ASSIGNMA         AIR       LD2
+ASSIGNMA         AIR    VACSEP
+ASSIGNMA         AIR  HEIIISOV
+ASSIGNMA         AIR  HEIIBOTT
+ASSIGNMA         AIR      HEII
+ASSIGNMA         AIR    CRHEII
+ASSIGNMA         AIR   CRGUIDE
+ASSIGNMA         AIR   CRGDVAC
+ASSIGNMA         AIR  CRSHIELD
+ASSIGNMA         AIR  CRVACTNK
+ASSIGNMA         AIR     CRLD2
+ASSIGNMA         AIR  CRLD2PIP
+ASSIGNMA         AIR      CRAL
+ASSIGNMA         AIR   CRYOVAC
+ASSIGNMA         AIR     CRHEX
+ASSIGNMA         AIR     CRHE3
+ASSIGNMA         AIR   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
 ASSIGNMA       NEWPB    PBSHLD
 ASSIGNMA         AIR  SURROUND
-#if DLAY
+#if DLAY 
 RADDECAY          1.                  1.
 * Comment dt = 3600*24*365*8/12 = 8 months; 10 microAmp p/s
 IRRPROFI   21024000.  .6242E14
@@ -2884,7 +2891,7 @@ USRBIN           0.0  ACTIVITY      -29.     1420.     1410.     1290.A0
 USRBIN        -1220.    -1800.       0.0      176.      214.       86. &
 RESNUCLE          3.      -30.                        TACOAT          R0
 RESNUCLE          3.      -31.                        TACOAT          respromp
-#endif
+#endif  
 ROT-DEFI         0.0               139.5                              m0
 ROT-DEFI         0.0                 0.0      918.     101.9    137.16m0
 ROT-DEFI         0.0              169.13                              m2
