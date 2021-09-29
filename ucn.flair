@@ -322,9 +322,9 @@ Material: NEWPB
 End
 
 # Material
-Material: MANGANES
+Material: CHLORINE
 	alpha: 0
-	color: #B050D0
+	color: #503010
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -362,9 +362,9 @@ Material: CADMIUM
 End
 
 # Material
-Material: CHLORINE
+Material: MANGANES
 	alpha: 0
-	color: #503010
+	color: #B050D0
 	fuzz: 0.0
 	ior: 1.0
 	shine: 10.0
@@ -655,7 +655,7 @@ End
 Geometry:
 	Frame.bsplit: 0.5
 	Frame.tsplit: 0.5
-	Frame.vsplit: 0.5
+	Frame.vsplit: 0.505654281099
 End
 
 # Geometry plot "GeoViewer Red plot"
@@ -666,27 +666,27 @@ Plot: Red
 	basisv: 0 0 1
 	boundaries: 1
 	cbcolors: 0
-	cblog: 0
+	cblog: False
 	cbpalette: FLUKA
 	cbround: 0
 	cbtics: 0
 	coord: X-Z
 	cpd: 0
-	extends: 1780.48 958.909
+	extends: 858.642 438.188
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 55.073 180 314.078
+	origin: 288.146 -20 623.082
 	subtype: Material
 	title: GeoViewer Red plot
-	x2log: 0
+	x2log: False
 	x2tics: 0
-	xlog: 0
-	y2log: 0
+	xlog: False
+	y2log: False
 	y2tics: 0
-	ylog: 0
-	zlog: 0
+	ylog: False
+	zlog: False
 	ztics: 0
 End
 
@@ -704,12 +704,12 @@ Plot: Green
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 602.083 324.263
+	extends: 1248.48 637.133
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 20.091 505.648 148
+	origin: 180.017 232.002 290
 	subtype: Material
 	title: GeoViewer Green plot
 	x2log: 0
@@ -736,12 +736,12 @@ Plot: Blue
 	cbtics: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 977.233 524.96
+	extends: 241.97 120.568
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: 140 425.09 326.261
+	origin: 600 324.467 374.669
 	subtype: Material
 	title: GeoViewer Blue plot
 	x2log: 0
@@ -768,12 +768,12 @@ Plot: Magenta
 	cbtics: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1452.97 780.521
+	extends: 1210.81 603.32
 	grid: 0
 	index: 0
 	labels: 1
 	layer: Media
-	origin: -378.484 15.1881 680
+	origin: -242.837 -105.66 725
 	proj: Z
 	subtype: Material
 	title: GeoViewer Magenta plot
@@ -849,7 +849,7 @@ Plot: floor_level01
 	bzmax: 200
 	bzmin: 0.
 	cbcolors: 8
-	cblog: 1
+	cblog: True
 	cbmax: 5000000.0
 	cbmin: 0.05
 	cbpalette: FLUKA2
@@ -877,17 +877,17 @@ set rmargin at screen 0.8
 	swap: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: 0
+	x2log: False
 	x2tics: 0
-	xlog: 0
+	xlog: False
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: 0
+	y2log: False
 	y2tics: 0
-	ylog: 0
+	ylog: False
 	yrebin: 1
-	zlog: 0
+	zlog: False
 	zrebin: 1
 	ztics: 0
 End
@@ -1404,7 +1404,7 @@ Plot: BL1A
 	bymax: 945
 	bymin: 850.
 	cbcolors: 8
-	cblog: 1
+	cblog: True
 	cbmax: 5000000.0
 	cbmin: 0.05
 	cbpalette: FLUKA2
@@ -1432,17 +1432,865 @@ set rmargin at screen 0.8
 	swap: 1
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
-	x2log: 0
+	x2log: False
 	x2tics: 0
-	xlog: 0
+	xlog: False
 	xmax: -1200
 	xmin: 1400
 	xrebin: 1
-	y2log: 0
+	y2log: False
 	y2tics: 0
-	ylog: 0
+	ylog: False
 	yrebin: 1
-	zlog: 0
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal01
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 50
+	bzmin: 0.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 615.78470881704186
+	lw.0: 0
+	max: 7.82022136E-04
+	min: 1.45823924E-27
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal02
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 100
+	bzmin: 50.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 22867.008771303856
+	lw.0: 0
+	max: 4.16754298E-02
+	min: 4.91217831E-27
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal03
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 150
+	bzmin: 100.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 412561.01108923316
+	lw.0: 0
+	max: 1.22472417
+	min: 1.62532008E-25
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal04
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 200
+	bzmin: 150.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 129111.75427932832
+	lw.0: 0
+	max: 0.294806927
+	min: 7.93932418E-26
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal05
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 250
+	bzmin: 200.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 16139.897182258817
+	lw.0: 0
+	max: 1.61861423E-02
+	min: 6.41129907E-27
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal06
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 300
+	bzmin: 250.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 5776.4869585744345
+	lw.0: 0
+	max: 4.01886506E-03
+	min: 2.92468351E-27
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal07
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 350
+	bzmin: 300.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1386.5235988344598
+	lw.0: 0
+	max: 1.01472379E-03
+	min: 4.01643229E-28
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal08
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 400
+	bzmin: 350.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 126.14075563200562
+	lw.0: 0
+	max: 5.44037684E-05
+	min: 1.43275195E-29
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal09
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 450.
+	bzmin: 400.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 12.990894469629888
+	lw.0: 0
+	max: 4.28583326E-06
+	min: 1.89995942E-30
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal10
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 500.
+	bzmin: 450.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 4.0348898537647999
+	lw.0: 0
+	max: 6.69588474E-07
+	min: 3.35213403E-28
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal11
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 550.
+	bzmin: 500.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 2.7565682227692299
+	lw.0: 0
+	max: 5.26166559E-07
+	min: 7.41687583E-30
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal12
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 600
+	bzmin: 550.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 2.2409204447669988
+	lw.0: 0
+	max: 4.20336534E-07
+	min: 2.55017970E-30
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal13
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 650.
+	bzmin: 600.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1.9229416975774027
+	lw.0: 0
+	max: 3.39067270E-07
+	min: 1.72370017E-27
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal14
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 700.
+	bzmin: 650.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1.7554876720257071
+	lw.0: 0
+	max: 2.97161336E-07
+	min: 8.87712245E-23
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal15
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 750.
+	bzmin: 700.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 1.4537109556498784
+	lw.0: 0
+	max: 2.41430428E-07
+	min: 1.78188485E-20
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
+	zrebin: 1
+	ztics: 0
+End
+
+# USRBIN plot "Prompt radiation (uSv/h)"
+Plot: horizontal16
+	Format: .svg
+	Type:   USRBIN
+	axes: Auto
+	bzmax: 800.
+	bzmin: 750.
+	cbcolors: 16
+	cblog: True
+	cbmax: 10000000.0
+	cbmin: 0.1
+	cbpalette: Matlab
+	cbround: 0
+	cbtics: 1
+	commands:
+set lmargin at screen 0.1
+set rmargin at screen 0.8
+	cpd: 2
+	datafile: ucn_24.bnn
+	det: 1
+	errors: 0
+	geo: -Auto-
+	grid: 0
+	hist: 2D Projection
+	index: 0
+	int: 6.3436145517308626E-002
+	lw.0: 0
+	max: 9.65196811E-09
+	min: 1.28304179E-19
+	norm: 3*40*6.24e12*3600/1e6
+	proj: Z
+	ps.0: 0
+	pt.0: 0
+	swap: 0
+	title: Prompt radiation (uSv/h)
+	with.0: errorbars
+	x2log: False
+	x2tics: 0
+	xlog: False
+	xmax: -1200
+	xmin: 1400
+	xrebin: 1
+	y2log: False
+	y2tics: 0
+	ylog: False
+	ymax: 1400
+	ymin: -1500
+	yrebin: 1
+	zlog: False
 	zrebin: 1
 	ztics: 0
 End
