@@ -1294,8 +1294,6 @@ RPP bl321_16   449. 509. 189. 280. 215. 245.
 RPP bl321_17   449. 509. 97. 188. 215. 245.
 RPP bl321_18   586. 646. 323. 414. 215. 245.
 RPP bl321_19   571. 662. 46. 76. 184. 244.
-RPP bl321_20   275. 366. -376. -316. 520. 548.
-RPP bl321_21   367. 458. -376. -316. 520. 548.
 RPP bl321_22   480. 571. 220. 280. 675. 703.
 RPP bl321_23   572. 663. 220. 280. 675. 703.
 RPP bl321_24   664. 755. 220. 280. 675. 703.
@@ -1777,8 +1775,6 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -sphst
                | +bl632_37
                | +bl186412
                | +bl186413
-               | +bl321_20
-               | +bl321_21
                | +bl186414
                | +bl186415
                | +bl186416
@@ -1803,15 +1799,6 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -sphst
                | +bl321_27
                | +bl321_28
                | +bl321_29
-               | +bl632_53
-               | +bl632_54
-               | +bl632_55
-               | +bl632_56
-               | +bl632_57
-               | +bl322_11
-               | +bl632_58
-               | +bl632_59
-               | +bl632_60
                | +bl186417
                | +bl186418
                | +bl186419
@@ -1856,6 +1843,15 @@ PYRACO01     5 +M11w07 +surrM11 +M13_ymin +sphco -sphst
                | +bl632_98
                | +bl632_99
                | +bl126423
+HDCONC       5 +bl632_53
+               | +bl632_54
+               | +bl632_55
+               | +bl632_56
+               | +bl632_57
+               | +bl322_11
+               | +bl632_58
+               | +bl632_60
+               | +bl632_59
 TRANSM01     5 +M11e09 -M11B2i -M11B2x
                | +M11e48 -M11B2 -M11B2h
                | +M11e10
@@ -2113,7 +2109,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -tsh0972 -bl632_30 -bl632_31 -bl632_32 -bl632_33 -connboxo -connflg1 -connflg2 -b6 -connflg3 -b7
                -b8 -b10 -b12 -b13 -b41 -connflg4 -connld2o -b4cshld4 -b4cshld5 -bl632_34 -bl632_35 -bl632_36
                -bl632_37 -bl186412 -seg21 -seg22 -seg23 -seg24 -seg25 -seg26 -seg27 -seg28 -seg29
-                 -bl186413 -bl321_20 -bl321_21 -bl186414 -bl186415 -bl186416 -seg30 -seg31
+               -bl186413   -bl186414 -bl186415 -bl186416 -seg30 -seg31
                -seg32 -bl632_42 -bl632_43 -bl632_44   -bl3064_3 -bl3064_4 -bl3064_5 -bl126421 -bl632_47 -bl632_48
                -bl632_49 -bl632_50 -bl632_51 -bl632_52 -bl321_22 -bl321_23 -bl321_24 -bl321_25 -bl321_26
                -bl321_27 -bl321_28 -bl321_29 -bl632_53 -bl632_54 -bl632_55 -bl632_56 -bl632_57 -bl632_58
@@ -2688,6 +2684,11 @@ COMPOUND     .304245  HYDROGEN    .00287    CARBON   .498628    OXYGENCONCRETE
 COMPOUND     .009179    SODIUM   7.17E-4  MAGNESIU   .010261  ALUMINUMCONCRETE
 COMPOUND    0.150505   SILICON   .007114  POTASSIU   .014882   CALCIUMCONCRETE
 COMPOUND     .001599      IRON                                        CONCRETE
+MATERIAL                            3.30                              HDCONC
+COMPOUND     .304245  HYDROGEN    .00287    CARBON   .498628    OXYGENHDCONC
+COMPOUND     .009179    SODIUM   7.17E-4  MAGNESIU   .010261  ALUMINUMHDCONC
+COMPOUND    0.150505   SILICON   .007114  POTASSIU   .014882   CALCIUMHDCONC
+COMPOUND     .001599      IRON                                        HDCONC
 MATERIAL                              4.                              HEMACONC
 COMPOUND      -62.13      IRON     -1.76   SILICON     -0.58  ALUMINUMHEMACONC
 COMPOUND       -5.54   CALCIUM     -0.49  MAGNESIU     -0.03    SODIUMHEMACONC
@@ -2859,6 +2860,7 @@ ASSIGNMA    Stainles   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
 ASSIGNMA       NEWPB    PBSHLD
 ASSIGNMA         AIR  SURROUND
+ASSIGNMA      HDCONC    HDCONC
 #if DLAY 
 RADDECAY          1.                  1.
 * Comment dt = 3600*24*365*8/12 = 8 months; 10 microAmp p/s
