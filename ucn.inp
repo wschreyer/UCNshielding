@@ -1059,8 +1059,10 @@ PLA body41     30.488052818558 95.239060449654 0.0 -196.5111021457
 RPP bl1mb37    477. 652. 687. 778.5 245. 367.
 PLA pl1mb37    -0.766 -0.643 0.0 554. 687. 0.0
 RPP tsh0637    512. 580. 495. 711. 116. 169.
-RPP tsh0640    512.0 580.0 495.0 678.0 169.0 243.84
-RPP tsh0673    512.0 567.0 495.0 686.0 245.0 298.0
+RPP tsh0640    512. 567. 495. 678. 169. 243.84
+RPP tsh0673    512. 559. 495. 688. 245. 298.
+RPP tsh0673a   538. 559. 658. 688. 245. 298.
+RPP tsh0673b   537. 559. 495. 519. 245. 298.
 RPP tsh0462    568. 659. 438. 684. 266. 396.
 RPP tsh0967    267. 558. 587. 711. 298. 352.
 RPP tsh0962    294. 554. 494.6 586. 298. 352.
@@ -1307,6 +1309,7 @@ RPP bl321_33   603. 694. -25. 35. 704. 735.
 RPP bl321_34   144. 205. -128. -37. 704. 735.
 RPP handstk1   559.5 579.99830508576 450. 683.5 0.0 115.
 RPP handstk2   545. 570. 147. 199. 0.0 122.
+RPP ndoor      110.0 112.5 93.0 161.0 369.0 612.0
 $start_transform BeamRot
 RPP GapBeam    -130. 5. -6.9 7.299999999999999 -10.5 9.8
 RPP GapBeamR   -60. 8.7 6.3 10.3 -6.9 9.800000000000002
@@ -1531,7 +1534,7 @@ PYRAST01     5 +M11s47
                | +tsh0637 +cut15
                | +tsh0637 +cut4
                | +tsh0640
-               | +tsh0673
+               | +tsh0673 -tsh0673a -tsh0673b
                | +tsh0462
                | +tsh0781 -tsh0781a
                | +seg1
@@ -2115,7 +2118,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -bl632_68 -bl126422 -bl632_78 -bl632_79 -bl632_80 -bl632_81 -bl632_82 -bl632_83 -bl632_84 
                -bl632_85 -bl632_86 -bl632_87 -bl632_88 -bl632_89 -bl632_90 -bl632_91 -bl632_92 -bl632_93 
                -bl632_94 -bl632_95 -M11B2i -M11B2x -bl321_32 -bl321_33 -bl321_34 -bl632_41 -bl632_96 -bl632_97 
-               -bl632_98 -bl632_99 -seg33 -seg34 -seg35 -bl126423
+               -bl632_98 -bl632_99 -seg33 -seg34 -seg35 -bl126423 -ndoor
                | +BL1Ax +B1A05a -BL1A
                | +BL1Ax +B1A05b -BL1A
                | +cm081 +M13_xmax +M13_z6 +M13_z48 -ft02
@@ -2238,7 +2241,10 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -ft07_01 -b4cshld1 -body35 -tsh0640 -M11e71 -M11e70 -M11e72 -seg1 -seg2 -bl1264_1 -tsh0956 
                -tsh0950 -tsh0950c -bl1864_3 -bl321_7 -bl321_8 -bl321_9 -bl321_10 -bl321_12 -bl632_22 -bl321_13 
                -bl321_14 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -crgdvaco -connboxo -connflg1 -b6 -handstk2
+               | +tsh0673a -pl1mb37
+               | +tsh0673b
                | +tsh0781a
+               | +tsh0673a -bl1mb37
                | +bl1mb37 -pl1mb37 -tsh0673 -tsh0967
                | +tsh0950 -tsh0950a -crgdvaco -connboxo -connflg1
                | +tsh0950b -tsh0462
@@ -2659,6 +2665,7 @@ CRLD2PIP     5 +crhld2o -crhld2i -tsh0950a
 CRLD2        5 +crhld2i -tsh0950a
                | +crvld2i
 PBSHLD       5 +yswitch1 -guideooo
+BORAPOLY     5 +ndoor
 END
 GEOEND
 *GEOEND         1420.     1420.  debugtoz    -1850.    -1850.debugfromzDEBUG
@@ -2850,6 +2857,7 @@ ASSIGNMA    Stainles   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
 ASSIGNMA       NEWPB    PBSHLD
 ASSIGNMA         AIR  SURROUND
+ASSIGNMA    BORAPOLY  BORAPOLY
 #if DLAY 
 RADDECAY          1.                  1.
 * Comment dt = 3600*24*365*8/12 = 8 months; 10 microAmp p/s
