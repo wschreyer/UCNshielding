@@ -3,10 +3,6 @@
 #SBATCH --account=rrg-rpicker
 #SBATCH --time=480
 #SBATCH --mem=1000M
-#PBS -l walltime=08:00:00
-
-module load nixpkgs/16.09
-module load gcc/7.3.0
 
 echo "Running on `hostname`"
 SCR=$SCRATCH/flukasims
