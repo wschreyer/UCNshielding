@@ -34,7 +34,7 @@ START          1000.
 #elif BL1U3
 START          2000.
 #else
-START         50000.
+START          4000.
 #endif
 #else
 RANDOMIZ          1.        8.
@@ -1073,6 +1073,7 @@ RPP tsh0671    340.0 484.0 700.0 715.0 117.0 170.0
 RPP tsh0700    299.0 314.0 648.0 692.0 120.0 153.0
 RPP tsh0632    300.0 314.0 586.5 647.5 120.0 133.0
 RPP tsh0704    300.0 312.0 494.0 555.0 120.0 153.0
+RPP steel1     471.0 512.0 494.0 699.0 156.6 297.0
 RPP seg1       294. 426. 383. 449. 0.0 132.
 RPP seg2       427. 559. 383. 449. 0.0 132.
 RPP seg3       161. 293. 386. 518. 0.0 66.
@@ -1414,7 +1415,7 @@ RCC hthshldi   0 -32.5 77.4 0 -150.0 0 13.85
 RCC ld2pipeo   0 -29.0 87.4 0 -173.0 0 2.5
 RCC ld2pipei   0 -28.6 87.4 0 -173.0 0 2.14
 RPP reflecto   -68.0 68.0 -55.0 77.0 12.4 132.9
-RPP b4cshld1   -70.0 70.0 -57.0 79.0 12.4 132.855
+RPP b4cshld1   -70.0 70.0 -57.0 79.0 12.4 132.9
 RCC b4cshld2   0 -65.0 77.4 0 -150.0 0 17.2
 $end_transform
 $start_transform CryoPos
@@ -1586,6 +1587,7 @@ PYRAST01     5 +M11s47
                | +tsh0700
                | +tsh0632
                | +tsh0704
+               | +steel1 -b4cshld1 -body35
 INGOT01      5 +M11w17 -magpipe2 -BL1A
                | +M11s46
                | +M11e14 +M11e1 -M11s54
@@ -2128,8 +2130,8 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -bl186418 -bl186419 -bl632_61 -bl632_62 -bl632_63 -bl632_64 -bl632_65 -bl632_66 -bl632_67
                -bl632_68 -bl126422 -bl632_78 -bl632_79 -bl632_80 -bl632_81 -bl632_82 -bl632_83 -bl632_84
                -bl632_85 -bl632_86 -bl632_87 -bl632_88 -bl632_89 -bl632_90 -bl632_91 -bl632_92 -bl632_93
-               -bl632_94 -bl632_95 -M11B2i -M11B2x -bl321_32 -bl321_33 -bl321_34 -bl321_35 -handstk4 -tsh0700 
-               -tsh0632 -tsh0704
+               -bl632_94 -bl632_95 -M11B2i -M11B2x -bl321_32 -bl321_33 -bl321_34 -bl321_35 -handstk4 -tsh0700
+               -tsh0632 -tsh0704 -steel1
                | +BL1Ax +B1A05a -BL1A
                | +BL1Ax +B1A05b -BL1A
                | +cm081 +M13_xmax +M13_z6 +M13_z48 -ft02
@@ -2251,16 +2253,16 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                | +surrM11 +cut4 -TARGET -M11e14 -tsh0637 +M13_z64 -M11s57 -M11s47 -M11s46 -M11s52 -M11e69
                -ft07_01 -b4cshld1 -body35 -tsh0640 -M11e71 -M11e70 -M11e72 -seg1 -seg2 -bl1264_1 -tsh0956
                -tsh0950 -tsh0950c -bl1864_3 -bl321_7 -bl321_8 -bl321_9 -bl321_10 -bl321_12 -bl632_22 -bl321_13
-               -bl321_14 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -crgdvaco -connboxo -connflg1 -b6 -handstk2 
-               -handstk3 -tsh0671
+               -bl321_14 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -crgdvaco -connboxo -connflg1 -b6 -handstk2
+               -handstk3 -tsh0671 -steel1
                | +tsh0673a -pl1mb37
                | +tsh0673b
                | +tsh0781a
                | +tsh0673a -bl1mb37
-               | +bl1mb37 -pl1mb37 -tsh0673 -tsh0967
+               | +bl1mb37 -pl1mb37 -tsh0673 -tsh0967 -steel1
                | +tsh0950 -tsh0950a -crgdvaco -connboxo -connflg1
                | +tsh0950b -tsh0462 -handstk4
-               | +tsh0950c +tsh0950d -b4cshld1 -hvactnko
+               | +tsh0950c +tsh0950d -b4cshld1 -hvactnko -steel1
                | +tsh0788 -tsh0788a
                | +tsh0967 +pl1mb37 -bl1mb37
                | +bl1mb30 -bl1mb30a
