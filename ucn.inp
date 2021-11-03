@@ -1,11 +1,11 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-#define BL1U
+*#define BL1U
 *#define BL1U1
 *#define BL1U2
 *#define BL1U3
-*#define BL1A
+#define BL1A
 *#define BL1A1
 *#define BL1A2
 *#define BL1A3
@@ -420,12 +420,9 @@ PLA M11e55     -22.56633830191 97.420533644831 0.0 680.22303486664
 RPP M11w18     648. 1013.2339350275 398.55550499161 526.27929608513 0.0 60.96
 RPP M11e56     1316.7821982393 1499.4786503748 332.36232686393 383.21725374846
               0.0 76.2
-RPP M11e57     1316.3353765505 1534.4240592732 379.64379262022 566.12907268919
-              0.0 60.96
-RPP M11e58     1286.5042438985 1534.4240592732 596.50821218645 906.68701119518
-              0.0 60.96
-RPP M11e59     1195.1394616678 1374.5276195442 718.73525005081 875.93355755486
-              0.0 60.96
+RPP M11e57     1258.0 1534.4240592732 379.64379262022 566.12907268919 0 60.96
+RPP M11e58     1258.0 1534.4240592732 596.50821218645 906.68701119518 0 60.96
+RPP M11e59     1165.0 1374.5276195442 690.0 875.93355755486 0 60.96
 RPP M11s9      609.18239676898 663.44202318117 750.16200595669 819.46287344558
               0.0 30.48
 RPP M11s13     558.2726619015 634.52297865957 686.05052048976 787.45574385598
@@ -1073,7 +1070,6 @@ RPP tsh0671    340.0 484.0 700.0 715.0 117.0 170.0
 RPP tsh0700    299.0 314.0 648.0 692.0 120.0 153.0
 RPP tsh0632    300.0 314.0 586.5 647.5 120.0 133.0
 RPP tsh0704    300.0 312.0 494.0 555.0 120.0 153.0
-RPP steel1     471.0 512.0 494.0 699.0 156.6 297.0
 RPP seg1       294. 426. 383. 449. 0.0 132.
 RPP seg2       427. 559. 383. 449. 0.0 132.
 RPP seg3       161. 293. 386. 518. 0.0 66.
@@ -1106,6 +1102,9 @@ RPP seg29      113. 245. -36. 96. 457. 523.
 RPP seg30      113. 245. 23. 89. 524. 656.
 RPP seg31      245.6 377.6 23. 89. 524. 656.
 RPP seg32      378. 510. 23. 89. 524. 656.
+RPP seg33      295. 427. 626. 692. 157. 289.
+RPP seg34      295. 427. 559. 625. 157. 289.
+RPP seg35      428. 494. 515. 647. 157. 289.
 RPP tsh0956    294. 566. 449.5 493.5 116. 132.5
 RPP tsh0950    294. 579. 410.5 493.5 132.5 351.5
 PLA tsh0950a   -0.342 -0.94 0.0 414. 410.5 0.0
@@ -1583,11 +1582,13 @@ PYRAST01     5 +M11s47
                | +seg30
                | +seg31
                | +seg32
+               | +seg33
+               | +seg34
+               | +seg35
                | +tsh0671
                | +tsh0700
                | +tsh0632
                | +tsh0704
-               | +steel1 -b4cshld1 -body35
 INGOT01      5 +M11w17 -magpipe2 -BL1A
                | +M11s46
                | +M11e14 +M11e1 -M11s54
@@ -2131,7 +2132,7 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -bl632_68 -bl126422 -bl632_78 -bl632_79 -bl632_80 -bl632_81 -bl632_82 -bl632_83 -bl632_84
                -bl632_85 -bl632_86 -bl632_87 -bl632_88 -bl632_89 -bl632_90 -bl632_91 -bl632_92 -bl632_93
                -bl632_94 -bl632_95 -M11B2i -M11B2x -bl321_32 -bl321_33 -bl321_34 -bl321_35 -handstk4 -tsh0700
-               -tsh0632 -tsh0704 -steel1
+               -tsh0632 -tsh0704 -seg33 -seg34 -seg35
                | +BL1Ax +B1A05a -BL1A
                | +BL1Ax +B1A05b -BL1A
                | +cm081 +M13_xmax +M13_z6 +M13_z48 -ft02
@@ -2254,21 +2255,21 @@ SURROUND     5 +ft01 +M11s10 +M11w2 +surrM11 -nepyram -M11e09 -M11s01 -M11s07 -M
                -ft07_01 -b4cshld1 -body35 -tsh0640 -M11e71 -M11e70 -M11e72 -seg1 -seg2 -bl1264_1 -tsh0956
                -tsh0950 -tsh0950c -bl1864_3 -bl321_7 -bl321_8 -bl321_9 -bl321_10 -bl321_12 -bl632_22 -bl321_13
                -bl321_14 -bl632_24 -bl632_25 -bl321_16 -bl321_17 -crgdvaco -connboxo -connflg1 -b6 -handstk2
-               -handstk3 -tsh0671 -steel1
+               -handstk3 -tsh0671 -seg33 -seg34 -seg35
                | +tsh0673a -pl1mb37
                | +tsh0673b
                | +tsh0781a
                | +tsh0673a -bl1mb37
-               | +bl1mb37 -pl1mb37 -tsh0673 -tsh0967 -steel1
+               | +bl1mb37 -pl1mb37 -tsh0673 -tsh0967
                | +tsh0950 -tsh0950a -crgdvaco -connboxo -connflg1
                | +tsh0950b -tsh0462 -handstk4
-               | +tsh0950c +tsh0950d -b4cshld1 -hvactnko -steel1
+               | +tsh0950c +tsh0950d -b4cshld1 -hvactnko -seg35
                | +tsh0788 -tsh0788a
                | +tsh0967 +pl1mb37 -bl1mb37
                | +bl1mb30 -bl1mb30a
                | +M11n3 -M11n3a -bl632_15 -M11n6
-               | +d2oibott -vactnko -hvactnko
-               | +d2oibolo -vactnklo -d2oibott
+               | +d2oibott -vactnko -hvactnko -seg33 -seg34 -seg35
+               | +d2oibolo -vactnklo -d2oibott -seg33 -seg34 -seg35
 SURRPIF      5 +surrpif -cryptbAe -pif00 -piftop1 -piftop2 -sw01 -souttop2 -BL1A -BL1Aii -sw03 -sw05 -sw06 -sw07
                -sw12 -sw13 -sw14 -sw15 -sw16 -sw17 -pif01 -pif02 -pif03 -pif04 -pif05 -pif06 -pillar02 -pillar01
                -pif09 -pif10 -pif11 -pif12 -pif13 -pif14 -pif15 -pif17 -pif19 -pif20 -pif21 -pif22 -pif23 -pif24
@@ -2568,49 +2569,49 @@ TgtArm       5 +TgtArm1 -BeamL -TgtArmU -TgtArmD -TgtWtrIn -TgtWtrOu -TgtArmPb
 TgtArmPb     5 +TgtArmPb -BeamL
 TgtVac       5 +BeamVac -CryptF +PbLayer2
                | +BeamWndF
-LD2OBOTT     5 +ld2obott -ld2o -d2oibott
-               | +d2oilow -d2oibolo -d2oibott -ld2pos
-               | +ld2oi -d2oibott
-               | +d2oilow -d2oibolo -d2oibott -ld2pos
-LD2O         5 +ld2o -ld2oi -d2oilow
-REFLECTO     5 +reflecto -ld2obott -ld2oi -vactnko -hvactnko -d2oibott -tsh0640 -tsh0637 -tsh0673
-LD2          5 +ld2 -ld2i -ld2ilow
-               | +ld2low -ld2ilow -ld2i -ld2pos
-               | +ld2pipei +tsh0950a
-LD2BOTTL     5 +ld2bottl -ld2 -ld2ibott -ld2pipei
-               | +ld2i -ld2ibott
-               | +ld2ilow -ld2ibolo -ld2ibott -hepos
-               | +ld2botlo -ld2low -ld2 -ld2pos -ld2pos
-               | +ld2pipeo -ld2pipei +tsh0950a
-HEIIBOTT     5 +heiibott -heii -heiilow -heiiup
-               | +hebottlo -heiilow -heii -heiiup -hepos
-               | +hebottup -heiiup -heii -heiilow -hguide
-               | +hguideo -hguide -heiiup +tsh0950a
-HEII         5 +heii
-               | +heiiup
-               | +heiilow
-               | +hguide +tsh0950a
-HEIIISOV     5 +vacsepi -heiibott -hebottup -hebottlo -hguideo
-               | +vacsepli -hebottlo -heiibott -hebottup -hepos
-               | +hvacsepi -hguideo
-ISOVAC       5 +vactnki -thshldo -hthshldo
-               | +vactnkli -thshldlo -thshldo -hthshldo -ld2pos
-               | +ld2ibott -vacsepo -hvacsepo
-               | +ld2ibolo -vacseplo -vacsepo -hvacsepo
-               | +thshldi -ld2bottl -vacsepo -hvacsepo -ld2pipeo
-               | +thshldli -ld2botlo -ld2bottl -vacsepo -ld2pos
-               | +hvactnki -hthshldo -thshldo +tsh0950a
-               | +hthshldi -hvacsepo -vacsepo -ld2bottl -hguideo -ld2pipeo +tsh0950a
-VACSEP       5 +vacsepo -vacsepi -vacsepli -hvacsepo
-               | +vacseplo -vacsepli -vacsepi -hepos
-               | +hvacsepo -hvacsepi -vacsepi -hguideo
-THSHLD       5 +thshldo -thshldi -hthshldo
-               | +thshldlo -thshldli -thshldi -ld2pos
-               | +hthshldo -hthshldi -thshldi +tsh0950a
-VACTNK       5 +vactnko -vactnki -hvactnko
-               | +vactnklo -vactnkli -vactnki -ld2pos
-               | +hvactnko -hvactnki -vactnki +tsh0950a
-NSHLD        5 +b4cshld1 -hvactnko -reflecto -tsh0640 -tsh0637 -tsh0673
+LD2OBOTT     5 +ld2obott -ld2o -d2oibott -seg33 -seg34 -seg35
+               | +d2oilow -d2oibolo -d2oibott -ld2pos -seg33 -seg34 -seg35
+               | +ld2oi -d2oibott -seg33 -seg34 -seg35
+LD2O         5 +ld2o -ld2oi -d2oilow -seg33 -seg34 -seg35
+REFLECTO     5 +reflecto -ld2obott -ld2oi -vactnko -hvactnko -d2oibott -tsh0640 -tsh0637 -tsh0673 -seg33 -seg34
+               -seg35
+LD2          5 +ld2 -ld2i -ld2ilow -seg33 -seg34 -seg35
+               | +ld2low -ld2ilow -ld2i -ld2pos -seg33 -seg34 -seg35
+               | +ld2pipei +tsh0950a -seg33 -seg34 -seg35
+LD2BOTTL     5 +ld2bottl -ld2 -ld2ibott -ld2pipei -seg33 -seg34 -seg35
+               | +ld2i -ld2ibott -seg33 -seg34 -seg35
+               | +ld2ilow -ld2ibolo -ld2ibott -hepos -seg33 -seg34 -seg35
+               | +ld2botlo -ld2low -ld2 -ld2pos -ld2pos -seg33 -seg34 -seg35
+               | +ld2pipeo -ld2pipei +tsh0950a -seg33 -seg34 -seg35
+HEIIBOTT     5 +heiibott -heii -heiilow -heiiup -seg33 -seg34 -seg35
+               | +hebottlo -heiilow -heii -heiiup -hepos -seg33 -seg34 -seg35
+               | +hebottup -heiiup -heii -heiilow -hguide -seg33 -seg34 -seg35
+               | +hguideo -hguide -heiiup +tsh0950a -seg33 -seg34 -seg35
+HEII         5 +heii -seg33 -seg34 -seg35
+               | +heiiup -seg33 -seg34 -seg35
+               | +heiilow -seg33 -seg34 -seg35
+               | +hguide +tsh0950a -seg33 -seg34 -seg35
+HEIIISOV     5 +vacsepi -heiibott -hebottup -hebottlo -hguideo -seg33 -seg34 -seg35
+               | +vacsepli -hebottlo -heiibott -hebottup -hepos -seg33 -seg34 -seg35
+               | +hvacsepi -hguideo -seg33 -seg34 -seg35
+ISOVAC       5 +vactnki -thshldo -hthshldo -seg33 -seg34 -seg35
+               | +vactnkli -thshldlo -thshldo -hthshldo -ld2pos -seg33 -seg34 -seg35
+               | +ld2ibott -vacsepo -hvacsepo -seg33 -seg34 -seg35
+               | +ld2ibolo -vacseplo -vacsepo -hvacsepo -seg33 -seg34 -seg35
+               | +thshldi -ld2bottl -vacsepo -hvacsepo -ld2pipeo -seg33 -seg34 -seg35
+               | +thshldli -ld2botlo -ld2bottl -vacsepo -ld2pos -seg33 -seg34 -seg35
+               | +hvactnki -hthshldo -thshldo +tsh0950a -seg33 -seg34 -seg35
+               | +hthshldi -hvacsepo -vacsepo -ld2bottl -hguideo -ld2pipeo +tsh0950a -seg33 -seg34 -seg35
+VACSEP       5 +vacsepo -vacsepi -vacsepli -hvacsepo -seg33 -seg34 -seg35
+               | +vacseplo -vacsepli -vacsepi -hepos -seg33 -seg34 -seg35
+               | +hvacsepo -hvacsepi -vacsepi -hguideo -seg33 -seg34 -seg35
+THSHLD       5 +thshldo -thshldi -hthshldo -seg33 -seg34 -seg35
+               | +thshldlo -thshldli -thshldi -ld2pos -seg33 -seg34 -seg35
+               | +hthshldo -hthshldi -thshldi +tsh0950a -seg33 -seg34 -seg35
+VACTNK       5 +vactnko -vactnki -hvactnko -seg33 -seg34 -seg35
+               | +vactnklo -vactnkli -vactnki -ld2pos -seg33 -seg34 -seg35
+               | +hvactnko -hvactnki -vactnki +tsh0950a -seg33 -seg34 -seg35
+NSHLD        5 +b4cshld1 -hvactnko -reflecto -tsh0640 -tsh0637 -tsh0673 -seg33 -seg34 -seg35
                | +b4cshld5 -guideooo
 CRSTEEL      5 +b8 -b9
                | +b10 -b11
@@ -2846,31 +2847,31 @@ ASSIGNMA       WATER  TgtWater
 ASSIGNMA    A36STEEL    TgtArm
 ASSIGNMA       NEWPB  TgtArmPb
 ASSIGNMA      VACUUM    TgtVac
-ASSIGNMA         B4C     NSHLD
-ASSIGNMA    GRAPHITE  REFLECTO
-ASSIGNMA    ALUMINUM  LD2OBOTT
-ASSIGNMA     D2O300K      LD2O
-ASSIGNMA    ALUMINUM    VACTNK
-ASSIGNMA      VACUUM    ISOVAC
-ASSIGNMA     Al20KHI    THSHLD
-ASSIGNMA     Al20KHI  LD2BOTTL
-ASSIGNMA      D2_16K       LD2
-ASSIGNMA     Al20KHI    VACSEP
-ASSIGNMA      VACUUM  HEIIISOV
-ASSIGNMA     Al20KHI  HEIIBOTT
-ASSIGNMA    HELIUM1K      HEII
-ASSIGNMA    HELIUM1K    CRHEII
-ASSIGNMA     Al20KHI   CRGUIDE
-ASSIGNMA      VACUUM   CRGDVAC
-ASSIGNMA     Al20KHI  CRSHIELD
-ASSIGNMA    ALUMINUM  CRVACTNK
-ASSIGNMA      D2_16K     CRLD2
-ASSIGNMA     Al20KHI  CRLD2PIP
-ASSIGNMA    ALUMINUM      CRAL
-ASSIGNMA      VACUUM   CRYOVAC
-ASSIGNMA      COPPER     CRHEX
-ASSIGNMA      He3_1K     CRHE3
-ASSIGNMA    Stainles   CRSTEEL
+ASSIGNMA         AIR     NSHLD
+ASSIGNMA         AIR  REFLECTO
+ASSIGNMA         AIR  LD2OBOTT
+ASSIGNMA         AIR      LD2O
+ASSIGNMA         AIR    VACTNK
+ASSIGNMA         AIR    ISOVAC
+ASSIGNMA         AIR    THSHLD
+ASSIGNMA         AIR  LD2BOTTL
+ASSIGNMA         AIR       LD2
+ASSIGNMA         AIR    VACSEP
+ASSIGNMA         AIR  HEIIISOV
+ASSIGNMA         AIR  HEIIBOTT
+ASSIGNMA         AIR      HEII
+ASSIGNMA         AIR    CRHEII
+ASSIGNMA         AIR   CRGUIDE
+ASSIGNMA         AIR   CRGDVAC
+ASSIGNMA         AIR  CRSHIELD
+ASSIGNMA         AIR  CRVACTNK
+ASSIGNMA         AIR     CRLD2
+ASSIGNMA         AIR  CRLD2PIP
+ASSIGNMA         AIR      CRAL
+ASSIGNMA         AIR   CRYOVAC
+ASSIGNMA         AIR     CRHEX
+ASSIGNMA         AIR     CRHE3
+ASSIGNMA         AIR   CRSTEEL
 ASSIGNMA    TUNGSTEN    Target
 ASSIGNMA    BORAPOLY  BORAPOLY
 #if DLAY
