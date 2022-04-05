@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#SBATCH --account=rrg-rpicker
+###SBATCH --account=rrg-rpicker
 #SBATCH --time=480
 #SBATCH --mem=1000M
 
@@ -14,7 +14,7 @@ TMP=${SLURM_TMPDIR-$SCR}
 echo $TMP
 WD=$SCRATCH/UCNshielding
 
-sed -e "s/MYSEED/`date +%N | head -c 6`/g" ucn.inp > $TMP/ucn$ID.inp
+sed -e "s/SEEDYSEED/`date +%N`/g" ucn.inp > $TMP/ucn$ID.inp
 cd ${SCR}
 time $FLUPRO/bin/rfluka -N0 -M1 -e ${WD}/myfluka $TMP/ucn$ID
 rm -f $TMP/ucn$ID.inp

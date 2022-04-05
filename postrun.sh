@@ -11,8 +11,8 @@ WD=$SCRATCH/flukasims
 #{ ls ${WD}/ucn*_fort.22; echo ; echo ucn_22.bnn; } | $FLUPRO/flutil/usbsuw
 #{ echo ucn_22.bnn; echo ucn_22.bnn.asc; } | $FLUPRO/flutil/usbrea
 #rm i${WD}/ucn*_fort.22
-#{ ls ${WD}/ucn*_fort.23; echo ; echo ucn_23.rnc; } | $FLUPRO/flutil/usrsuw
-#rm ucn_*_fort.23
+#{ ls -f ${WD}/ucn*_fort.21; echo ; echo ucn_21.rnc; } | $FLUPRO/bin/usrsuw &
+#{ ls -f ${WD}/ucn*_fort.22; echo ; echo ucn_22.rnc; } | $FLUPRO/bin/usrsuw &
 { ls -f ${WD}/ucn*_fort.24; echo ; echo ucn_24.bnn; } | $FLUPRO/bin/usbsuw &
 { ls -f ${WD}/ucn*_fort.25; echo ; echo ucn_25.bnn; } | $FLUPRO/bin/usbsuw &
 #rm ${WD}/ucn*_fort.24

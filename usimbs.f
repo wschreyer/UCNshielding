@@ -43,14 +43,19 @@
       FIMP   = ONEONE
 
 *     UCN target
-*      X0 = 436
-*      Y0 = 596
-*      Z0 = 144
+      X0 = 436
+      Y0 = 596
+      Z0 = 144
 
 *     BL1A
-      X0 = 207.6
-      Y0 = 964.2
-      Z0 = 137.16
+*      X0 = 207.6
+*      Y0 = 964.2
+*      Z0 = 137.16
+
+*     BL1A0
+*      X0 = -1100.0
+*      Y0 = 958.92
+*      Z0 = 137.16
 
 *     BL1A1
 *      X0 = -770.0
@@ -58,12 +63,12 @@
 *      Z0 = 137.16
 
 *     BL1A2
-*      X0 = -250.0
+*      X0 = -80.0
 *      Y0 = 958.92
 *      Z0 = 137.16
   
 *     BL1A3
-*      X0 = 100.0
+*      X0 = 70.0
 *      Y0 = 958.92
 *      Z0 = 137.16
 
@@ -99,37 +104,27 @@
       Y2 = Ytrack(Ntrack) - Y0
       Z2 = Ztrack(Ntrack) - Z0
 
-      IF (Z1 .LT. -Z0) Z1 = -Z0
-      IF (Z2 .LT. -Z0) Z2 = -Z0
+*      IF (Z1 .LT. -Z0) Z1 = -Z0
+*      IF (Z2 .LT. -Z0) Z2 = -Z0
 
 *      IF (Ytrack(0) .GT. 1000) Y1 = 1000 - Y0
 *      IF (Ytrack(Ntrack) .GT. 1000) Y2 = 1000 - Y0
-      IF (Y1 .GT. 0.) Y1 = 0.
-      IF (Y2 .GT. 0.) Y2 = 0.
+*      IF (Y1 .GT. 0.) Y1 = 0.
+*      IF (Y2 .GT. 0.) Y2 = 0.
   
-      R1 = sqrt(Y1**2 + Z1**2)
-      R2 = sqrt(Y2**2 + Z2**2)
+*      R1 = abs(X1) + max(-Y1, abs(Z1))
+*      R2 = abs(X2) + max(-Y2, abs(Z2))
 
-      IF ( R1 .LT. 20.0 ) R1 = 20.0
-      IF ( R2 .LT. 20.0 ) R2 = 20.0
+      R1 = sqrt(X1**2 + Y1**2 + Z1**2)
+      R2 = sqrt(X2**2 + Y2**2 + Z2**2)
+
+      IF ( R1 .LT. 50.0 ) R1 = 50.0
+      IF ( R2 .LT. 50.0 ) R2 = 50.0
 *      IF ( R1 .GT. 900.0 ) R1 = 900.0
 *      IF ( R2 .GT. 900.0 ) R2 = 900.0
-      
-*      IF ((MREG .EQ.  3) .OR. (MREG .EQ. 19) .OR. 
-*     &    (MREG .EQ. 20) .OR. (MREG .EQ. 21) .OR. 
-*     &    (MREG .EQ. 27) .OR. (MREG .EQ. 28) .OR. 
-*     &    (MREG .EQ. 29) .OR. (MREG .EQ. 32) .OR. 
-*     &    (MREG .EQ. 33) ) THEN
-*         R1 = 0.0
-*      END IF
-*      IF ((NEWREG .EQ.  3) .OR. (NEWREG .EQ. 19) .OR. 
-*     &    (NEWREG .EQ. 20) .OR. (NEWREG .EQ. 21) .OR. 
-*     &    (NEWREG .EQ. 27) .OR. (NEWREG .EQ. 28) .OR. 
-*     &    (NEWREG .EQ. 29) .OR. (NEWREG .EQ. 32) .OR. 
-*     &    (NEWREG .EQ. 33) ) THEN
-*         R1 = 0.0
-*      END IF
 
+      FIMP = (R2/R1)**2
+      
 *      CALL GEOR2N(MREG, MNAM, IERR)
 *      print *,MREG
 *      print *,MNAM
@@ -139,9 +134,11 @@
       NEWMAT = MEDFLK(NEWREG,1)
       R3 = R1
       R4 = R2
-      IF ((RHO(MMAT) .LT. 0.01) .AND. (RHO(NEWMAT) .LT. 0.01)) R4 = R3
-
-      FIMP = (R2/R1)**2 * EXP( (R4 - R3)/35. )
+      IF ((RHO(MMAT) .GT. 4.) .AND. (RHO(NEWMAT) .GT. 4.)) THEN
+        FIMP = FIMP * EXP( (R4 - R3)/20.)
+      ELSE IF ((RHO(MMAT) .GT. 1.) .AND. (RHO(NEWMAT) .GT. 1.)) THEN
+        FIMP = FIMP * EXP( (R4 - R3)/40.)
+      END IF
 
       RETURN
 *
