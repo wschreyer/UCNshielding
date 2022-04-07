@@ -2,15 +2,15 @@
 Version: 300
 Mode: fluka
 Title: modified from 011tony_notsliced
-md5: d413985a9b842e689c11c769e4cf1e6d
+md5: 9e50538495d0673edd6c46bcda6ab55e
 Input:
 TITLE
 	modified from 011tony_notsliced
 GLOBAL DEPRBODY
 !#define BL1U
 !#define BL1U1
-#define BL1U2
-!#define BL1U3
+!#define BL1U2
+#define BL1U3
 !#define BL1A
 !#define BL1A0
 !#define BL1A1
@@ -73,10 +73,10 @@ BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMAXES , 0.0 0.0 1. 0.98768834 -.15643447 0.0
 BEAMPOS , -520. 870. 144.145
 #elif BL1U3
-START , 2000.
+START , 50000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
-BEAMPOS , 100. 687.5 144.145
+BEAMPOS , -60. 732.75 144.145
 #elif MOYER
 START , 100000.
 BEAM RAY -0.48,, 10000.0,,, 1.0
@@ -2993,7 +2993,7 @@ STOP
 STOP
 EndInput
 
-Page: Input
+Page: Plot
 F77bound: True
 F77dline: False
 Tabs: 0.1 0.32 0.56 0.81 1.0
@@ -3294,7 +3294,8 @@ Material: Al20KLO1
 	color: #507030
 End
 Geometry: Geometry
-	Frame.vsplit: 0.505654281099
+	Frame.tsplit: 0.0
+	Frame.vsplit: 1.0
 End
 
 # Plots information
@@ -3306,7 +3307,7 @@ Plot: Red
 	cbround: 0
 	coord: X-Z
 	cpd: 0
-	extends: 166.411 85.064
+	extends: 166.411 200192
 	grid: 0
 	layer: Media
 	origin: -363.958 -110 213
@@ -3320,7 +3321,7 @@ Plot: Green
 	cbround: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1498.17 765.819
+	extends: 1498.17 774.183
 	format: .svg
 	grid: 0
 	layer: Media
@@ -3336,7 +3337,7 @@ Plot: Blue
 	cbround: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 602.103 300.534
+	extends: 602.103 0.517271
 	grid: 0
 	layer: Media
 	origin: 980 -267.243 107.854
@@ -3350,7 +3351,7 @@ Plot: Magenta
 	cbround: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1009.01 503.638
+	extends: 1009.01 0.866847
 	grid: 0
 	layer: Media
 	origin: -1178.67 605.174 725
@@ -3861,10 +3862,10 @@ Plot: horizontal03
 	format: .svg
 	grid: 0
 	hist: 2D Projection
-	int: 141687.75232630107
+	int: 212438.65350896065
 	lw.0: 0
-	max: 0.533036411
-	min: 1.28440873E-24
+	max: 0.431798577
+	min: 7.04112374E-21
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -4519,7 +4520,6 @@ Plot: exp_area
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 12
 End
 Plot: M11_left
@@ -4541,11 +4541,11 @@ Plot: M11_left
 	datafile: ucn_24.bnn
 	format: .svg
 	grid: 0
-	hist: 1D Projection
-	int: 1.6610105819524338E-003
+	hist: 1D Max
+	int: 1.1324584973926508E-003
 	lw.0: 0
-	max: 3.46043888E-11
-	min: 3.46043888E-11
+	max: 2.35928846E-11
+	min: 2.35928846E-11
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -4572,10 +4572,10 @@ Plot: M11_right
 	format: .svg
 	grid: 0
 	hist: 1D Projection
-	int: 9.9050155723909056E-004
+	int: 1.0045132838053994E-003
 	lw.0: 0
-	max: 2.47625392E-11
-	min: 2.47625392E-11
+	max: 2.51128320E-11
+	min: 2.51128320E-11
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -4883,5 +4883,5 @@ Plot: newNM
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
+	with.0: errorlines
 End
