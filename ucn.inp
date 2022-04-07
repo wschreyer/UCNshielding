@@ -1,8 +1,8 @@
 TITLE
 modified from 011tony_notsliced
 GLOBAL                                                                DEPRBODY
-#define BL1U
-!#define BL1U1
+!#define BL1U
+#define BL1U1
 !#define BL1U2
 !#define BL1U3
 !#define BL1A
@@ -57,10 +57,10 @@ START          5000.
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         600.    958.92    137.16        1.       0.0
 #elif BL1U1
-START          5000.
+START         50000.
 BEAM            -.48                 0.0       0.0       0.0          PROTON
-BEAMAXES         0.0       0.0        1. 0.9612617 -.2756374       0.0
-BEAMPOS        -600.    888.24   144.145
+BEAMAXES         0.0       0.0        1.0.98768834-.15643447       0.0
+BEAMPOS        -760.    902.65   144.145
 #elif BL1U2
 START          1000.
 BEAM            -.48                 0.0       0.0       0.0          PROTON

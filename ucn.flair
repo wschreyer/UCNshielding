@@ -2,13 +2,13 @@
 Version: 300
 Mode: fluka
 Title: modified from 011tony_notsliced
-md5: 5c6888ce008cac4e17f4765f8aaa705d
+md5: ca44d77f89a500a7be2b823529675db1
 Input:
 TITLE
 	modified from 011tony_notsliced
 GLOBAL DEPRBODY
-#define BL1U
-!#define BL1U1
+!#define BL1U
+#define BL1U1
 !#define BL1U2
 !#define BL1U3
 !#define BL1A
@@ -24,75 +24,61 @@ GLOBAL DEPRBODY
 #define FARM
 #if FARM
 RANDOMIZ , 1. SEEDYSEED
-#if BL1A
-START , 500000.
-#elif BL1A0
-START , 20000.
-#elif BL1A1
-START , 10000.
-#elif BL1A2
-START , 2000.
-#elif BL1A3
-START , 10000.
-#elif BL1A4
-START , 5000.
-#elif BL1A5
-START , 5000.
-#elif BL1U1
-START , 5000.
-#elif BL1U2
-START , 1000.
-#elif BL1U3
-START , 2000.
-#elif MOYER
-START , 100000.
-#else
-START , 500000.
-#endif
 #else
 RANDOMIZ , 1. 8.
-START , 400000.
 #endif
 #if BL1U
+START , 400000.
 BEAM PROTON -.48,,, -0.88 -2.5
 BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
 BEAMPOS , 420.5 600.746257 144.145
 #elif BL1A
+START , 500000.
 BEAM PROTON -.48,, 0.0 -0.1295 -0.3533
 BEAMPOS , 206.9 964.2 137.16 1. 0.0
 #elif BL1A0
+START , 20000.
 BEAM PROTON -0.48,, 0.0 0.0 0.0
 BEAMPOS , -1100 958.92 137.16 1. 0.0
 #elif BL1A1
+START , 10000.
 BEAM PROTON -0.48,,, -0.5 -0.5
 BEAMPOS , -770. 964.2 137.16 1. 0.
 #elif BL1A2
+START , 2000.
 BEAM PROTON -0.48,, 0.0 -0.5 -0.5
 BEAMAXES , 0 0 1 0.99999643 -0.0026736 0
 BEAMPOS , -454 960.1 137.16
 #elif BL1A3
+START , 10000.
 BEAM PROTON -.48,, 0.0 -0.5 -0.5
 BEAMAXES , 0 0 1 0.99999643 -0.0026736 0
 BEAMPOS , -300 960.1 137.16
 #elif BL1A4
+START , 5000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMPOS , 400. 958.92 137.16 1. 0.0
 #elif BL1A5
+START , 5000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMPOS , 600. 958.92 137.16 1. 0.0
 #elif BL1U1
+START , 50000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
-BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
-BEAMPOS , -600. 888.24 144.145
+BEAMAXES , 0.0 0.0 1. 0.98768834 -.15643447 0.0
+BEAMPOS , -760. 902.65 144.145
 #elif BL1U2
+START , 1000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
 BEAMPOS , -250. 787.9 144.145
 #elif BL1U3
+START , 2000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
 BEAMPOS , 100. 687.5 144.145
 #elif MOYER
+START , 100000.
 BEAM RAY -0.48,, 10000.0,,, 1.0
 BEAMPOS , -770 964.2 137.16 1. 0.
 #endif
@@ -3375,9 +3361,10 @@ Plot: floor_level
 	bzmax: 165
 	bzmin: 135.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3408,9 +3395,10 @@ Plot: floor_level01
 	bzmax: 200
 	bzmin: 0.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3438,9 +3426,10 @@ Plot: guide_level
 	bzmax: 270
 	bzmin: 255.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3468,9 +3457,10 @@ End
 Plot: guide_level02
 	Type: USRBIN
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3498,12 +3488,13 @@ Plot: guide_level02
 End
 Plot: guide_level01
 	Type: USRBIN
-	bzmax: 300.
+	bzmax: 300
 	bzmin: 250.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3531,9 +3522,10 @@ Plot: pump_level
 	bzmax: 735
 	bzmin: 705.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3563,9 +3555,10 @@ Plot: pump_level01
 	bzmax: 700
 	bzmin: 500.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3591,12 +3584,13 @@ End
 Plot: cryostat_pit_NS
 	Type: USRBIN
 	axes: Y-Z
-	bxmax: 205.
+	bxmax: 205
 	bxmin: 175.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3625,9 +3619,10 @@ Plot: exclusion_area_NS
 	bxmax: -350
 	bxmin: -440.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3656,9 +3651,10 @@ Plot: cryostat_pit01_NS
 	bxmax: -350
 	bxmin: -450.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3687,9 +3683,10 @@ Plot: cryostat_pit_EW
 	bymax: 195
 	bymin: 105.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3718,9 +3715,10 @@ Plot: cryostat_pit01_EW
 	bymax: 200
 	bymin: 100.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3749,9 +3747,10 @@ Plot: BL1A
 	bymax: 945
 	bymin: 850.
 	cbcolors: 8
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5000000.0
-	cbmin: 0.05
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: FLUKA2
 	cbround: 0
 	cbtics: 1
@@ -3783,8 +3782,8 @@ Plot: horizontal01
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3816,8 +3815,8 @@ Plot: horizontal02
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3849,8 +3848,8 @@ Plot: horizontal03
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3862,10 +3861,10 @@ Plot: horizontal03
 	format: .svg
 	grid: 0
 	hist: 2D Projection
-	int: 412503.84923336218
+	int: 213171.29846878099
 	lw.0: 0
-	max: 1.23470664
-	min: 1.28257973E-25
+	max: 0.307174891
+	min: 1.01493000E-24
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -3882,8 +3881,8 @@ Plot: horizontal04
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3915,8 +3914,8 @@ Plot: horizontal05
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3948,8 +3947,8 @@ Plot: horizontal06
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3981,8 +3980,8 @@ Plot: horizontal07
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4014,8 +4013,8 @@ Plot: horizontal08
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4047,8 +4046,8 @@ Plot: horizontal09
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4080,8 +4079,8 @@ Plot: horizontal10
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4113,8 +4112,8 @@ Plot: horizontal11
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4146,8 +4145,8 @@ Plot: horizontal12
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4179,8 +4178,8 @@ Plot: horizontal13
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4212,8 +4211,8 @@ Plot: horizontal14
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4245,8 +4244,8 @@ Plot: horizontal15
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4278,8 +4277,8 @@ Plot: horizontal16
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4311,8 +4310,8 @@ Plot: horizontal17
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4344,8 +4343,8 @@ Plot: horizontal18
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4377,8 +4376,8 @@ Plot: horizontal19
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 1e+07
-	cbmin: 0.1
+	cbmax: 5e+08
+	cbmin: 5
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
