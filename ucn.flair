@@ -2,14 +2,14 @@
 Version: 300
 Mode: fluka
 Title: modified from 011tony_notsliced
-md5: ca44d77f89a500a7be2b823529675db1
+md5: d413985a9b842e689c11c769e4cf1e6d
 Input:
 TITLE
 	modified from 011tony_notsliced
 GLOBAL DEPRBODY
 !#define BL1U
-#define BL1U1
-!#define BL1U2
+!#define BL1U1
+#define BL1U2
 !#define BL1U3
 !#define BL1A
 !#define BL1A0
@@ -68,10 +68,10 @@ BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMAXES , 0.0 0.0 1. 0.98768834 -.15643447 0.0
 BEAMPOS , -760. 902.65 144.145
 #elif BL1U2
-START , 1000.
+START , 50000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
-BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
-BEAMPOS , -250. 787.9 144.145
+BEAMAXES , 0.0 0.0 1. 0.98768834 -.15643447 0.0
+BEAMPOS , -520. 870. 144.145
 #elif BL1U3
 START , 2000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
@@ -2993,7 +2993,7 @@ STOP
 STOP
 EndInput
 
-Page: Plot
+Page: Input
 F77bound: True
 F77dline: False
 Tabs: 0.1 0.32 0.56 0.81 1.0
@@ -3846,7 +3846,7 @@ Plot: horizontal03
 	bzmax: 150
 	bzmin: 100.
 	cbcolors: 8
-	cbcpd: 1
+	cbcpd: 0
 	cblog: 1
 	cbmax: 5e+08
 	cbmin: 5
@@ -3861,18 +3861,18 @@ Plot: horizontal03
 	format: .svg
 	grid: 0
 	hist: 2D Projection
-	int: 213171.29846878099
+	int: 141687.75232630107
 	lw.0: 0
-	max: 0.307174891
-	min: 1.01493000E-24
+	max: 0.533036411
+	min: 1.28440873E-24
 	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
 	xmax: -1200
 	xmin: 1400
-	ymax: 1400
-	ymin: -1500
+	ymax: 1200
+	ymin: -1200
 End
 Plot: horizontal04
 	Type: USRBIN
