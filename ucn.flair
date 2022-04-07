@@ -2,7 +2,7 @@
 Version: 300
 Mode: fluka
 Title: modified from 011tony_notsliced
-md5: 9e50538495d0673edd6c46bcda6ab55e
+md5: f067b4c449d9764ccf9a350e3df2a7ea
 Input:
 TITLE
 	modified from 011tony_notsliced
@@ -10,8 +10,8 @@ GLOBAL DEPRBODY
 !#define BL1U
 !#define BL1U1
 !#define BL1U2
-#define BL1U3
-!#define BL1A
+!#define BL1U3
+#define BL1A
 !#define BL1A0
 !#define BL1A1
 !#define BL1A2
@@ -33,7 +33,7 @@ BEAM PROTON -.48,,, -0.88 -2.5
 BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
 BEAMPOS , 420.5 600.746257 144.145
 #elif BL1A
-START , 500000.
+START , 1000000.
 BEAM PROTON -.48,, 0.0 -0.1295 -0.3533
 BEAMPOS , 206.9 964.2 137.16 1. 0.0
 #elif BL1A0
@@ -65,12 +65,12 @@ BEAMPOS , 600. 958.92 137.16 1. 0.0
 #elif BL1U1
 START , 50000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
-BEAMAXES , 0.0 0.0 1. 0.98768834 -.15643447 0.0
+BEAMAXES , 0.0 0.0 1. 0.98768834 -0.1564345 0.0
 BEAMPOS , -760. 902.65 144.145
 #elif BL1U2
 START , 50000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
-BEAMAXES , 0.0 0.0 1. 0.98768834 -.15643447 0.0
+BEAMAXES , 0.0 0.0 1. 0.98768834 -0.1564345 0.0
 BEAMPOS , -520. 870. 144.145
 #elif BL1U3
 START , 50000.
@@ -2859,27 +2859,27 @@ ASSIGNMA , VACUUM TgtVac
 ASSIGNMA , B4C NSHLD
 ASSIGNMA , GRAPHITE REFLECTO
 ASSIGNMA , ALUMINUM LD2OBOTT
-ASSIGNMA , D2O300K LD2O
+ASSIGNMA , VACUUM LD2O
 ASSIGNMA , ALUMINUM VACTNK
 ASSIGNMA , VACUUM ISOVAC
 ASSIGNMA , Al20KHI THSHLD
 ASSIGNMA , Al20KHI LD2BOTTL
-ASSIGNMA , D2_16K LD2
+ASSIGNMA , VACUUM LD2
 ASSIGNMA , Al20KHI VACSEP
 ASSIGNMA , VACUUM HEIIISOV
 ASSIGNMA , Al20KHI HEIIBOTT
-ASSIGNMA , HELIUM1K HEII
-ASSIGNMA , HELIUM1K CRHEII
+ASSIGNMA , VACUUM HEII
+ASSIGNMA , VACUUM CRHEII
 ASSIGNMA , Al20KHI CRGUIDE
 ASSIGNMA , VACUUM CRGDVAC
 ASSIGNMA , Al20KHI CRSHIELD
 ASSIGNMA , ALUMINUM CRVACTNK
-ASSIGNMA , D2_16K CRLD2
+ASSIGNMA , VACUUM CRLD2
 ASSIGNMA , Al20KHI CRLD2PIP
 ASSIGNMA , ALUMINUM CRAL
 ASSIGNMA , VACUUM CRYOVAC
 ASSIGNMA , COPPER CRHEX
-ASSIGNMA , He3_1K CRHE3
+ASSIGNMA , VACUUM CRHE3
 ASSIGNMA , Stainles CRSTEEL
 ASSIGNMA , TUNGSTEN Target
 ASSIGNMA , BORAPOLY BORAPOLY
@@ -2993,7 +2993,7 @@ STOP
 STOP
 EndInput
 
-Page: Plot
+Page: Input
 F77bound: True
 F77dline: False
 Tabs: 0.1 0.32 0.56 0.81 1.0
@@ -3293,10 +3293,6 @@ End
 Material: Al20KLO1
 	color: #507030
 End
-Geometry: Geometry
-	Frame.tsplit: 0.0
-	Frame.vsplit: 1.0
-End
 
 # Plots information
 Plot: Red
@@ -3307,7 +3303,7 @@ Plot: Red
 	cbround: 0
 	coord: X-Z
 	cpd: 0
-	extends: 166.411 200192
+	extends: 166.411 82.3044
 	grid: 0
 	layer: Media
 	origin: -363.958 -110 213
@@ -3321,11 +3317,11 @@ Plot: Green
 	cbround: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1498.17 774.183
+	extends: 1248.47 617.477
 	format: .svg
 	grid: 0
 	layer: Media
-	origin: 273.747 -1022.1 140
+	origin: -55.518 486.095 220
 	title: GeoViewer Green plot
 End
 Plot: Blue
@@ -3337,10 +3333,10 @@ Plot: Blue
 	cbround: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 602.103 0.517271
+	extends: 140.03 69.2567
 	grid: 0
 	layer: Media
-	origin: 980 -267.243 107.854
+	origin: 360 415.671 202.914
 	title: GeoViewer Blue plot
 End
 Plot: Magenta
@@ -3351,7 +3347,7 @@ Plot: Magenta
 	cbround: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1009.01 0.866847
+	extends: 1009.01 499.041
 	grid: 0
 	layer: Media
 	origin: -1178.67 605.174 725
@@ -3382,7 +3378,7 @@ Plot: floor_level
 	lw.0: 0
 	max: 2.20687270
 	min: 2.86676934E-25
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3415,7 +3411,7 @@ Plot: floor_level01
 	lw.0: 0
 	max: 0.425694615
 	min: 4.19857270E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3446,7 +3442,7 @@ Plot: guide_level
 	lw.0: 0
 	max: 2.19663652E-03
 	min: 2.29947730E-28
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3478,7 +3474,7 @@ Plot: guide_level02
 	lw.0: 0
 	max: 1.27345697E-06
 	min: 1.11550538E-18
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3511,7 +3507,7 @@ Plot: guide_level01
 	lw.0: 0
 	max: 4.72109485E-03
 	min: 1.27808900E-27
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3542,7 +3538,7 @@ Plot: pump_level
 	lw.0: 0
 	max: 1.65403833E-07
 	min: 9.04799192E-27
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3575,7 +3571,7 @@ Plot: pump_level01
 	lw.0: 0
 	max: 1.54481512E-07
 	min: 7.85051955E-27
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3607,7 +3603,7 @@ Plot: cryostat_pit_NS
 	lw.0: 0
 	max: 7.70560205E-02
 	min: 1.65339455E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	swap: 1
@@ -3639,7 +3635,7 @@ Plot: exclusion_area_NS
 	lw.0: 0
 	max: 0.329470664
 	min: 1.98048571E-19
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	swap: 1
@@ -3671,7 +3667,7 @@ Plot: cryostat_pit01_NS
 	lw.0: 0
 	max: 7.55140409E-02
 	min: 8.12164783E-16
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	swap: 1
@@ -3703,7 +3699,7 @@ Plot: cryostat_pit_EW
 	lw.0: 0
 	max: 1.48101371E-08
 	min: 6.46656484E-23
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	swap: 1
@@ -3735,7 +3731,7 @@ Plot: cryostat_pit01_EW
 	lw.0: 0
 	max: 1.20284619E-06
 	min: 6.79801043E-24
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	swap: 1
@@ -3767,7 +3763,7 @@ Plot: BL1A
 	lw.0: 0
 	max: 5.75459786E-02
 	min: 1.61806108E-20
-	norm: 40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	swap: 1
@@ -3800,7 +3796,7 @@ Plot: horizontal01
 	lw.0: 0
 	max: 7.83036987E-04
 	min: 7.32921500E-28
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3833,7 +3829,7 @@ Plot: horizontal02
 	lw.0: 0
 	max: 4.16848250E-02
 	min: 9.11725452E-27
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3862,11 +3858,11 @@ Plot: horizontal03
 	format: .svg
 	grid: 0
 	hist: 2D Projection
-	int: 212438.65350896065
+	int: 141687.75232630107
 	lw.0: 0
-	max: 0.431798577
-	min: 7.04112374E-21
-	norm: 3*40*6.24e12*3600/1e6
+	max: 0.533036411
+	min: 1.28440873E-24
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3899,7 +3895,7 @@ Plot: horizontal04
 	lw.0: 0
 	max: 1.24658421E-02
 	min: 6.20858316E-16
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3932,7 +3928,7 @@ Plot: horizontal05
 	lw.0: 0
 	max: 1.69005338E-02
 	min: 1.77188078E-27
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3965,7 +3961,7 @@ Plot: horizontal06
 	lw.0: 0
 	max: 3.32082319E-03
 	min: 4.85900521E-28
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3998,7 +3994,7 @@ Plot: horizontal07
 	lw.0: 0
 	max: 1.01867935E-03
 	min: 2.00586314E-28
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4031,7 +4027,7 @@ Plot: horizontal08
 	lw.0: 0
 	max: 5.44508948E-05
 	min: 9.07558751E-30
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4064,7 +4060,7 @@ Plot: horizontal09
 	lw.0: 0
 	max: 4.28163776E-06
 	min: 5.72759914E-28
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4097,7 +4093,7 @@ Plot: horizontal10
 	lw.0: 0
 	max: 6.64401682E-07
 	min: 1.79204796E-27
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4130,7 +4126,7 @@ Plot: horizontal11
 	lw.0: 0
 	max: 5.55463657E-07
 	min: 2.87070274E-26
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4163,7 +4159,7 @@ Plot: horizontal12
 	lw.0: 0
 	max: 4.22177891E-07
 	min: 1.41964379E-26
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4196,7 +4192,7 @@ Plot: horizontal13
 	lw.0: 0
 	max: 3.35763332E-07
 	min: 4.36395326E-26
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4229,7 +4225,7 @@ Plot: horizontal14
 	lw.0: 0
 	max: 2.88675807E-07
 	min: 6.28642368E-25
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4262,7 +4258,7 @@ Plot: horizontal15
 	lw.0: 0
 	max: 1.99126106E-07
 	min: 1.36206726E-20
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4295,7 +4291,7 @@ Plot: horizontal16
 	lw.0: 0
 	max: 8.32187741E-09
 	min: 4.54913665E-19
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4328,7 +4324,7 @@ Plot: horizontal17
 	lw.0: 0
 	max: 6.81879886E-09
 	min: 1.20978721E-18
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4361,7 +4357,7 @@ Plot: horizontal18
 	lw.0: 0
 	max: 6.80205003E-09
 	min: 1.41769813E-18
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4394,7 +4390,7 @@ Plot: horizontal19
 	lw.0: 0
 	max: 6.78351508E-09
 	min: 3.34350829E-18
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4427,7 +4423,7 @@ Plot: cryopit_bottom
 	lw.0: 0
 	max: 1.00825781E-09
 	min: 1.00825781E-09
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4457,7 +4453,7 @@ Plot: cryopit_top
 	lw.0: 0
 	max: 3.82490262E-10
 	min: 3.82490262E-10
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4487,7 +4483,7 @@ Plot: pumppit
 	lw.0: 0
 	max: 4.67806460E-10
 	min: 4.67806460E-10
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4517,9 +4513,10 @@ Plot: exp_area
 	lw.0: 0
 	max: 2.21613179E-12
 	min: 2.21613179E-12
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
+	with.0: errorbars
 	zrebin: 12
 End
 Plot: M11_left
@@ -4541,12 +4538,12 @@ Plot: M11_left
 	datafile: ucn_24.bnn
 	format: .svg
 	grid: 0
-	hist: 1D Max
-	int: 1.1324584973926508E-003
+	hist: 1D Projection
+	int: 1.6610105819524338E-003
 	lw.0: 0
-	max: 2.35928846E-11
-	min: 2.35928846E-11
-	norm: 3*40*6.24e12*3600/1e6
+	max: 3.46043888E-11
+	min: 3.46043888E-11
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4572,11 +4569,11 @@ Plot: M11_right
 	format: .svg
 	grid: 0
 	hist: 1D Projection
-	int: 1.0045132838053994E-003
+	int: 9.9050155723909056E-004
 	lw.0: 0
-	max: 2.51128320E-11
-	min: 2.51128320E-11
-	norm: 3*40*6.24e12*3600/1e6
+	max: 2.47625392E-11
+	min: 2.47625392E-11
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4606,7 +4603,7 @@ Plot: counting_room
 	lw.0: 0
 	max: 1.15496295E-12
 	min: 1.15496295E-12
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4637,7 +4634,7 @@ Plot: north_walkway
 	lw.0: 0
 	max: 9.62225438E-11
 	min: 1.34875955E-16
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -4667,7 +4664,7 @@ Plot: west_walkway
 	lw.0: 0
 	max: 8.33808647E-11
 	min: 6.26667717E-13
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -4698,7 +4695,7 @@ Plot: south_walkway
 	lw.0: 0
 	max: 5.43718369E-12
 	min: 4.17175870E-13
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
@@ -4729,7 +4726,7 @@ Plot: stair_case
 	lw.0: 0
 	max: 1.99197494E-12
 	min: 1.99197494E-12
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4760,7 +4757,7 @@ Plot: NM11_temp
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4790,7 +4787,7 @@ Plot: NM9
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4820,7 +4817,7 @@ Plot: NM10
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4850,7 +4847,7 @@ Plot: NM11
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4880,8 +4877,8 @@ Plot: newNM
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*40*6.24e12*3600/1e6
+	norm: 3*140*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorlines
+	with.0: errorbars
 End
