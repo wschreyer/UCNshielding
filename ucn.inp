@@ -5,11 +5,11 @@ GLOBAL                                                                DEPRBODY
 !#define BL1U1
 !#define BL1U2
 !#define BL1U3
-#define BL1A
+!#define BL1A
 !#define BL1A0
 !#define BL1A1
 !#define BL1A2
-!#define BL1A3
+#define BL1A3
 !#define BL1A4
 !#define BL1A5
 !#define MOYER
@@ -27,7 +27,7 @@ BEAM            -.48                         -0.88      -2.5          PROTON
 BEAMAXES         0.0       0.0        1. 0.9612617 -.2756374       0.0
 BEAMPOS        420.5600.746257   144.145
 #elif BL1A
-START       1000000.
+START        500000.
 BEAM            -.48                 0.0   -0.1295   -0.3533          PROTON
 BEAMPOS        206.9     964.2    137.16        1.       0.0
 #elif BL1A0
@@ -44,7 +44,7 @@ BEAM           -0.48                 0.0      -0.5      -0.5          PROTON
 BEAMAXES           0         0         10.99999643-0.0026736         0
 BEAMPOS         -454     960.1    137.16
 #elif BL1A3
-START         10000.
+START        100000.
 BEAM            -.48                 0.0      -0.5      -0.5          PROTON
 BEAMAXES           0         0         10.99999643-0.0026736         0
 BEAMPOS         -300     960.1    137.16
