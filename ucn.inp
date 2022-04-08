@@ -10,8 +10,8 @@ GLOBAL                                                                DEPRBODY
 !#define BL1A1
 !#define BL1A2
 !#define BL1A3
-#define BL1A4
-!#define BL1A5
+!#define BL1A4
+#define BL1A5
 !#define MOYER
 !#define DLAY
 !#define AIRACT
@@ -53,7 +53,7 @@ START         10000.
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         400.    958.92    137.16        1.       0.0
 #elif BL1A5
-START          5000.
+START         50000.
 BEAM            -.48                 0.0       0.0       0.0          PROTON
 BEAMPOS         600.    958.92    137.16        1.       0.0
 #elif BL1U1
