@@ -2,16 +2,16 @@
 Version: 300
 Mode: fluka
 Title: modified from 011tony_notsliced
-md5: f067b4c449d9764ccf9a350e3df2a7ea
+md5: 08930cc78ab5f1ec7c1820b2394e4760
 Input:
 TITLE
 	modified from 011tony_notsliced
 GLOBAL DEPRBODY
-!#define BL1U
+#define BL1U
 !#define BL1U1
 !#define BL1U2
 !#define BL1U3
-#define BL1A
+!#define BL1A
 !#define BL1A0
 !#define BL1A1
 !#define BL1A2
@@ -28,12 +28,12 @@ RANDOMIZ , 1. SEEDYSEED
 RANDOMIZ , 1. 8.
 #endif
 #if BL1U
-START , 400000.
+START , 100000.
 BEAM PROTON -.48,,, -0.88 -2.5
 BEAMAXES , 0.0 0.0 1. 0.9612617 -.2756374 0.0
 BEAMPOS , 420.5 600.746257 144.145
 #elif BL1A
-START , 1000000.
+START , 500000.
 BEAM PROTON -.48,, 0.0 -0.1295 -0.3533
 BEAMPOS , 206.9 964.2 137.16 1. 0.0
 #elif BL1A0
@@ -50,16 +50,16 @@ BEAM PROTON -0.48,, 0.0 -0.5 -0.5
 BEAMAXES , 0 0 1 0.99999643 -0.0026736 0
 BEAMPOS , -454 960.1 137.16
 #elif BL1A3
-START , 10000.
+START , 100000.
 BEAM PROTON -.48,, 0.0 -0.5 -0.5
 BEAMAXES , 0 0 1 0.99999643 -0.0026736 0
 BEAMPOS , -300 960.1 137.16
 #elif BL1A4
-START , 5000.
+START , 10000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMPOS , 400. 958.92 137.16 1. 0.0
 #elif BL1A5
-START , 5000.
+START , 50000.
 BEAM PROTON -.48,, 0.0 0.0 0.0
 BEAMPOS , 600. 958.92 137.16 1. 0.0
 #elif BL1U1
@@ -173,15 +173,10 @@ RCC magpipe4 13.632531977578 -140. 0.0 0.0 342. 0.0 10.56
 RCC magpii4 13.632531977578 -140. 0.0 0.0 342. 0.0 10.16
 RPP M11Q7 -32.36746802242 59.632531977578 49.869399573461 95.869399573461 -45.72 \
 	 45.72
-BOX M11Q7h 19.28464076381134 250.9687437389083 -137.16 0.0 0.0 243.84 97.88101659156699 \
-	 -35.62577653905 0.0 13.76463001910866 37.81801016464912 \
-	 0.0
 $end_transform
 $start_transform bend1
 RPP M11B2 -162.8545391604 162.1454608396 -67.15 47.15000000000001 -98.425 98.425
 RPP M11B2x -58.6165 58.6165 -94.4224326702465 74.0568720102465 -10.795 10.75
-BOX M11B2h 134.07764912101 -397.2048388504 -103.425 0.0 0.0 209.095 248.53207345812 \
-	 0.0 0.0 0.0 93.302546281154 0.0
 $end_transform
 RCC M11B2i 817. 207. 98.742 0.0 0.0 76.835 84.328
 $start_transform m2
@@ -1157,11 +1152,17 @@ RPP bl632_12 294. 476. 441. 532. 420. 481.
 RPP bl632_13 -165. -74. 413. 778. 367. 489.
 RPP bl632_14 586. 647. 323. 414. 0.0 213.
 RPP bl632_15 662. 753. -90. -29. 0.0 182.
-$start_transform m9
-RPP bl632_16 700.16783436145 791.16783436145 561.45904011387 622.45904011387 \
-	 -137.16 44.84
-$end_transform
+RPP bl632_16 754.0 845.0 -90.0 -29. 0 182.0
+RPP bl632_41 846.0 907.0 -72.0 20.0 0 182.0
+RPP bl632_99 908.0 969.0 -104.0 -12.0 0 182.0
+RPP bl632_96 1008.0 1069.0 28.0 119.0 0 182.0
 RPP bl632_17 -273. -71. -163. -72. 0.0 60.
+RPP bl632_97 664.0 846.0 -90.0 -29.0 183.0 274.0
+RPP bl632100 847.0 908.0 -72.0 19.0 183.0 244.0
+$start_transform m0
+RPP bl632_98 -83.869457303976 98.130542696025 100.43168888123 161.43168888122 \
+	 45.84 136.84
+$end_transform
 RPP bl632_18 -273. -71. -163. -72. 61. 121.
 RPP bl632_19 -273. -71. -163. -72. 122. 182.
 RPP bl632_20 -273. -71. -163. -72. 183. 244.
@@ -1202,6 +1203,7 @@ RPP bl632_55 67. 158. 163. 346. 430. 490.
 RPP bl632_56 67. 158. 163. 346. 491. 551.
 RPP bl632_57 67. 158. 224. 407. 552. 612.
 RPP bl632_58 67. 158. 177. 360. 613. 673.
+	@select=1
 RPP bl632_59 67. 158. 42. 225. 674. 734.
 RPP bl632_60 67. 158. 226. 360. 674. 734.
 RPP bl632_61 -440. -349. 42. 224. 369. 429.
@@ -1846,9 +1848,16 @@ REGION PYRACO01 5
 	| +handstk4
 	| +handstk5
 	| +handstk6
+	| +bl632_41
+	| +bl632_97
+	| +bl632_98
+	| +bl632_17
+	| +bl632_96
+	| +bl632_99
+	| +bl632100
 REGION TRANSM01 5
 	+M11e09 -M11B2i -M11B2x
-	| +M11e48 -M11B2 -M11B2h
+	| +M11e48 -M11B2
 	| +M11e10
 	| +ft03 +M11w10 +M11w5 -ft02 -M11w7
 	| +ft03 +M11w10 +M11w4 -ft02 -M11w8
@@ -1959,22 +1968,18 @@ REGION SURROUND 5
 	| +M11e08 +ft04 -M11w06 -M11w07 -ft03 -M11w05
 	| +ft04half +M11e08 +M11w03 +M11e04 +M11e05 +M11e06 +surrM11 -ft03 -magpipe3 -M11Q5 -M11Q5i
 	-M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 -M11Q4i -M11F1 -M11e02 -M11e11
-	| +ft08 +M11w01 +surrM11 -ft03 -nepyram -M11B2 -M11B2h -M11w07 -M11B2i -M11B2x -magpipe4 -M11n3
+	| +ft08 +M11w01 +surrM11 -ft03 -nepyram -M11B2 -M11w07 -M11B2i -M11B2x -magpipe4 -M11n3
 	-bl1864_3 -bl632_23 -bl322_9
 	| +M11SX3x +M11SX25 +ft04half -magpipe3
-	| +ft04half +M11B2h +M11e01 +surrM11 -ft04 -nepyram -magpipe4 -M11Q7h -M11B2 -M11B2x -M11B2i
-	-M11SX3 -magpipe3 -M11e09
 	| +ft04half +M11w03 +M11e02 -M11B2 -M11B2x -M11SX3 -M11SX3i -magpipe3 -M11Q5 -M11Q5i -ft04 -M11e01
 	| +ft04half +M11e08 +M11w05 -ft04 -M11Q5i -M11Q3i -M11Q4 -M11w03 -M11w04
 	| +ft04half +M11e08 -ft04 -M11w06 -M11w07 -M11w05
-	| +ft05 +M11B2h +surrM11 -ft04half -M11B2 -M11B2x -M11B2i -M11w07 -M11w03 -M11s2
 	| +ft05 +surrM11 +cut -ft04half -M11w6 -cut1
 	| +ft05 +M11w2 +M11e47 -ft04half -magpipe3 -M11Q5 -M11Q5i -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4
 	-M11Q4i -M11w5 -M11w6
 	| +ft08 +M11e08 +M11e07 -ft04half -magpipe3 -M11Q3 -M11F1 -M11w07 -M11e47 -body36
 	| +ft06 +M11e02 +M11w2 +M11w6 +surrM11 -ft05 -nepyram -M11B2 -M11B2i -M11SX3 -M11SX3i -M11Q5
 	-M11Q5i -M11e09 -M11e10 -M11e48
-	| +ft06 +M11B2h +M11e42 +surrM11 -ft05 -M11B2 -M11B2i -M11w07 -M11w2
 	| +ft07 +M11w1 -ft05 -M11B2 -M11w01 -M11w2 -M11w07 -M11s2
 	| +ft06 +M11w3 +M11e47 -ft05 -M11Q5 -M11Q5i -M11SX25 -M11SX25i -M11Q3 -M11Q3i -M11Q4 -M11Q4i
 	-M11w4 -M11w6
@@ -1998,14 +2003,12 @@ REGION SURROUND 5
 	| +M11SX3x +M11SX25 -ft04half -magpipe3
 	| +M11w1 +M11w2 +surrM11 -ft06 -nepyram -M11B2 -M11e48 -M11e09 -M11n3
 	| +ft05 +M11w03 +M11e02 +M11w6 +surrM11 -ft02 -nepyram -magpipe4 -M11B2 -M11B2x -M11B2i -M11SX3
-	-M11SX3i -magpipe3 -M11Q5 -M11Q5i -M11e09 -M11e10 -M11Q7h
+	-M11SX3i -magpipe3 -M11Q5 -M11Q5i -M11e09 -M11e10
 	| +ft05 +M11w2 +cut -ft04half -M11Q5i -M11w03 -M11w1
 	| +M11e01 +M11w6 +cut1 -M11e02 -M11e09 -M11e10 -ft04half +ft06
-	| +ft08 +M11e43 +cut1 -ft00 -M11B2h -M11s11 -surrM11 -body1  -M11n3 -M11B2x -magpipe4 -M11Q6
+	| +ft08 +M11e43 +cut1 -ft00 -M11s11 -surrM11 -body1  -M11n3 -M11B2x -magpipe4 -M11Q6
 	-M11Q6i -M11B2i
-	| +M11B2h +M11w01 -ft04 -magpipe4 -M11Q7h -M11B2 -M11B2x -M11B2i -M11n3
-	| +M11B2h -M11B2 -M11w01 -surrM11
-	| +ft05 +M11w1 -ft04half -M11B2h -M11w07 -M11w01 -M11w03 -M11s2 -M11B2
+	| +ft05 +M11w1 -ft04half -M11w07 -M11w01 -M11w03 -M11s2 -M11B2
 	| +ft04half +cut1 +xz -ft04 -M11e02 -M11e09
 	| +ft04half +M11e07 +M11e01 -ft04 -M11e02
 	| +cm045 +M13_z21 -ft00 -M13_ymin -M13_z1 -M13_z22
@@ -2115,7 +2118,7 @@ REGION SURROUND 5
 	-bl632_85 -bl632_86 -bl632_87 -bl632_88 -bl632_89 -bl632_90 -bl632_91 -bl632_92 -bl632_93
 	-bl632_94 -bl632_95 -M11B2i -M11B2x -bl321_32 -bl321_33 -bl321_34 -bl321_35 -handstk4 -handstk5
 	-handstk6 -tsh0700
-	-tsh0632 -tsh0704 -tsh0671
+	-tsh0632 -tsh0704 -tsh0671 -bl632_17 -bl632_41 -bl632_96 -bl632_97 -bl632_98 -bl632_99 -bl632100
 	| +BL1Ax +B1A05a -BL1A
 	| +BL1Ax +B1A05b -BL1A
 	| +cm081 +M13_xmax +M13_z6 +M13_z48 -ft02
@@ -2191,14 +2194,12 @@ REGION SURROUND 5
 	| +ft06 +M13_z10 -ft00 -M13_z3 -M13_z13
 	| +cm203 +M13_z70 +M13_z72 -ft02 -M11s25 -M11s27 -M11s30 -body6 -M11s36 -M11s37 -cut19
 	| +ft04 +M13_z41 +M13_z72 -ft03 -M11s05 -M11s06 -M13_ymax -M13_z11 -M13Q1 -M11s34 -M11s36 -B1A11
-	| +ft04 +M11B2h +M11s11 +M11w01 -ft03 -nepyram -M11B2 -M11e43
 	| +ft06 +M13_z41 +M13_z72 -ft04 -BL1A -M13_ymax -M13_z11 -M13Q1 -M11s36 -M11w49
 	| +ft08 +M13_z41 +M13_z72 -ft06 -M13_ymax -M13_z11 -M13Q1 -M13_z79 -M13_z82
 	| +ft08 +M13_ymax +M13_z41 -cm203 -M13_xmin -M13_z71 -M13bridg
 	| +ft08 +M11e07 +cut15 -ft07 -M11w19 -M11e47 -(+ft08 +M11w07 +cut15 -ft07 -M11w19) -body36
 	| +ft07 +M11w07 +cut15 -ft06 -M11w19 -(+ft08 +M11w07 +cut15 -ft06 -M11w19)
 	| +M13B3 +cm106 -ft02 -M13_z27 -M13_z34 -M13B1
-	| +B123_ +M11Q7h -body1
 	| +ft08 +M13_xmax -M13_z15 -M13B3 -ft08
 	| +M11w07 +surrM11 -cut14 -M11s50 +cut15 -tsh0637 -tsh0640 -seg2 -bl1264_1 -tsh0956 -tsh0950
 	-bl632_14 -md24ma18 -bl1mb30 -bl1864_3 -bl321_7 -bl321_8 -bl321_9 -bl632_23 -bl632_24 -bl632_25
@@ -2223,7 +2224,7 @@ REGION SURROUND 5
 	| +tsh0950b -tsh0462 -handstk4
 	| +tsh0967 +pl1mb37 -bl1mb37
 	| +bl1mb30 -bl1mb30a
-	| +M11n3 -M11n3a -bl632_15 -M11n6
+	| +M11n3 -M11n3a -bl632_15 -M11n6 -bl632_16 -bl632_97
 	| +d2oibott -vactnko -hvactnko
 	| +d2oibolo -vactnklo -d2oibott
 	| +body39
@@ -2859,27 +2860,27 @@ ASSIGNMA , VACUUM TgtVac
 ASSIGNMA , B4C NSHLD
 ASSIGNMA , GRAPHITE REFLECTO
 ASSIGNMA , ALUMINUM LD2OBOTT
-ASSIGNMA , VACUUM LD2O
+ASSIGNMA , D2O300K LD2O
 ASSIGNMA , ALUMINUM VACTNK
 ASSIGNMA , VACUUM ISOVAC
 ASSIGNMA , Al20KHI THSHLD
 ASSIGNMA , Al20KHI LD2BOTTL
-ASSIGNMA , VACUUM LD2
+ASSIGNMA , D2_16K LD2
 ASSIGNMA , Al20KHI VACSEP
 ASSIGNMA , VACUUM HEIIISOV
 ASSIGNMA , Al20KHI HEIIBOTT
-ASSIGNMA , VACUUM HEII
-ASSIGNMA , VACUUM CRHEII
+ASSIGNMA , HELIUM1K HEII
+ASSIGNMA , HELIUM1K CRHEII
 ASSIGNMA , Al20KHI CRGUIDE
 ASSIGNMA , VACUUM CRGDVAC
 ASSIGNMA , Al20KHI CRSHIELD
 ASSIGNMA , ALUMINUM CRVACTNK
-ASSIGNMA , VACUUM CRLD2
+ASSIGNMA , D2_16K CRLD2
 ASSIGNMA , Al20KHI CRLD2PIP
 ASSIGNMA , ALUMINUM CRAL
 ASSIGNMA , VACUUM CRYOVAC
 ASSIGNMA , COPPER CRHEX
-ASSIGNMA , VACUUM CRHE3
+ASSIGNMA , He3_1K CRHE3
 ASSIGNMA , Stainles CRSTEEL
 ASSIGNMA , TUNGSTEN Target
 ASSIGNMA , BORAPOLY BORAPOLY
@@ -2993,7 +2994,7 @@ STOP
 STOP
 EndInput
 
-Page: Input
+Page: Geometry
 F77bound: True
 F77dline: False
 Tabs: 0.1 0.32 0.56 0.81 1.0
@@ -3303,10 +3304,12 @@ Plot: Red
 	cbround: 0
 	coord: X-Z
 	cpd: 0
-	extends: 166.411 82.3044
+	extends: 1030.37 509.605
 	grid: 0
 	layer: Media
-	origin: -363.958 -110 213
+	nu: 1000
+	nv: 1000
+	origin: 229.45 0 152.926
 	title: GeoViewer Red plot
 End
 Plot: Green
@@ -3317,12 +3320,13 @@ Plot: Green
 	cbround: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1248.47 617.477
+	extends: 348.426 172.326
 	format: .svg
 	grid: 0
 	layer: Media
-	origin: -55.518 486.095 220
-	title: GeoViewer Green plot
+	nu: 1000
+	nv: 1000
+	origin: 256.345 449.125 220
 End
 Plot: Blue
 	Type: Geometry
@@ -3333,10 +3337,12 @@ Plot: Blue
 	cbround: 0
 	coord: Y-Z
 	cpd: 0
-	extends: 140.03 69.2567
+	extends: 501.753 248.159
 	grid: 0
 	layer: Media
-	origin: 360 415.671 202.914
+	nu: 1000
+	nv: 1000
+	origin: 360 354.012 247.007
 	title: GeoViewer Blue plot
 End
 Plot: Magenta
@@ -3347,10 +3353,12 @@ Plot: Magenta
 	cbround: 0
 	coord: X-Y
 	cpd: 0
-	extends: 1009.01 499.041
+	extends: 1743.57 862.343
 	grid: 0
 	layer: Media
-	origin: -1178.67 605.174 725
+	nu: 1000
+	nv: 1000
+	origin: 12.3234 326.658 660
 	title: GeoViewer Magenta plot
 End
 Plot: floor_level
@@ -3360,9 +3368,9 @@ Plot: floor_level
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3378,7 +3386,7 @@ Plot: floor_level
 	lw.0: 0
 	max: 2.20687270
 	min: 2.86676934E-25
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3394,9 +3402,9 @@ Plot: floor_level01
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3411,7 +3419,7 @@ Plot: floor_level01
 	lw.0: 0
 	max: 0.425694615
 	min: 4.19857270E-23
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3425,9 +3433,9 @@ Plot: guide_level
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3442,7 +3450,7 @@ Plot: guide_level
 	lw.0: 0
 	max: 2.19663652E-03
 	min: 2.29947730E-28
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3456,9 +3464,9 @@ Plot: guide_level02
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3474,7 +3482,7 @@ Plot: guide_level02
 	lw.0: 0
 	max: 1.27345697E-06
 	min: 1.11550538E-18
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3490,9 +3498,9 @@ Plot: guide_level01
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3507,7 +3515,7 @@ Plot: guide_level01
 	lw.0: 0
 	max: 4.72109485E-03
 	min: 1.27808900E-27
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3521,9 +3529,9 @@ Plot: pump_level
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3538,7 +3546,7 @@ Plot: pump_level
 	lw.0: 0
 	max: 1.65403833E-07
 	min: 9.04799192E-27
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3554,9 +3562,9 @@ Plot: pump_level01
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3571,7 +3579,7 @@ Plot: pump_level01
 	lw.0: 0
 	max: 1.54481512E-07
 	min: 7.85051955E-27
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3586,9 +3594,9 @@ Plot: cryostat_pit_NS
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3603,7 +3611,7 @@ Plot: cryostat_pit_NS
 	lw.0: 0
 	max: 7.70560205E-02
 	min: 1.65339455E-23
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	swap: 1
@@ -3618,9 +3626,9 @@ Plot: exclusion_area_NS
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3635,7 +3643,7 @@ Plot: exclusion_area_NS
 	lw.0: 0
 	max: 0.329470664
 	min: 1.98048571E-19
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	swap: 1
@@ -3650,9 +3658,9 @@ Plot: cryostat_pit01_NS
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3667,7 +3675,7 @@ Plot: cryostat_pit01_NS
 	lw.0: 0
 	max: 7.55140409E-02
 	min: 8.12164783E-16
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	swap: 1
@@ -3682,9 +3690,9 @@ Plot: cryostat_pit_EW
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3699,7 +3707,7 @@ Plot: cryostat_pit_EW
 	lw.0: 0
 	max: 1.48101371E-08
 	min: 6.46656484E-23
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	swap: 1
@@ -3714,9 +3722,9 @@ Plot: cryostat_pit01_EW
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3731,7 +3739,7 @@ Plot: cryostat_pit01_EW
 	lw.0: 0
 	max: 1.20284619E-06
 	min: 6.79801043E-24
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	swap: 1
@@ -3746,9 +3754,9 @@ Plot: BL1A
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
-	cbpalette: FLUKA2
+	cbmax: 1e+07
+	cbmin: 0.1
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -3779,8 +3787,8 @@ Plot: horizontal01
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3796,7 +3804,7 @@ Plot: horizontal01
 	lw.0: 0
 	max: 7.83036987E-04
 	min: 7.32921500E-28
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3812,8 +3820,8 @@ Plot: horizontal02
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3829,7 +3837,7 @@ Plot: horizontal02
 	lw.0: 0
 	max: 4.16848250E-02
 	min: 9.11725452E-27
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3843,10 +3851,10 @@ Plot: horizontal03
 	bzmax: 150
 	bzmin: 100.
 	cbcolors: 8
-	cbcpd: 0
+	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3862,7 +3870,7 @@ Plot: horizontal03
 	lw.0: 0
 	max: 0.533036411
 	min: 1.28440873E-24
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3878,8 +3886,8 @@ Plot: horizontal04
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3895,7 +3903,7 @@ Plot: horizontal04
 	lw.0: 0
 	max: 1.24658421E-02
 	min: 6.20858316E-16
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3911,8 +3919,8 @@ Plot: horizontal05
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3928,7 +3936,7 @@ Plot: horizontal05
 	lw.0: 0
 	max: 1.69005338E-02
 	min: 1.77188078E-27
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3944,8 +3952,8 @@ Plot: horizontal06
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3961,7 +3969,7 @@ Plot: horizontal06
 	lw.0: 0
 	max: 3.32082319E-03
 	min: 4.85900521E-28
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -3977,8 +3985,8 @@ Plot: horizontal07
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -3994,7 +4002,7 @@ Plot: horizontal07
 	lw.0: 0
 	max: 1.01867935E-03
 	min: 2.00586314E-28
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4010,8 +4018,8 @@ Plot: horizontal08
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4027,7 +4035,7 @@ Plot: horizontal08
 	lw.0: 0
 	max: 5.44508948E-05
 	min: 9.07558751E-30
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4043,8 +4051,8 @@ Plot: horizontal09
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4060,7 +4068,7 @@ Plot: horizontal09
 	lw.0: 0
 	max: 4.28163776E-06
 	min: 5.72759914E-28
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4076,8 +4084,8 @@ Plot: horizontal10
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4093,7 +4101,7 @@ Plot: horizontal10
 	lw.0: 0
 	max: 6.64401682E-07
 	min: 1.79204796E-27
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4109,8 +4117,8 @@ Plot: horizontal11
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4126,7 +4134,7 @@ Plot: horizontal11
 	lw.0: 0
 	max: 5.55463657E-07
 	min: 2.87070274E-26
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4142,8 +4150,8 @@ Plot: horizontal12
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4159,7 +4167,7 @@ Plot: horizontal12
 	lw.0: 0
 	max: 4.22177891E-07
 	min: 1.41964379E-26
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4175,8 +4183,8 @@ Plot: horizontal13
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4192,7 +4200,7 @@ Plot: horizontal13
 	lw.0: 0
 	max: 3.35763332E-07
 	min: 4.36395326E-26
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4208,8 +4216,8 @@ Plot: horizontal14
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4225,7 +4233,7 @@ Plot: horizontal14
 	lw.0: 0
 	max: 2.88675807E-07
 	min: 6.28642368E-25
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4241,8 +4249,8 @@ Plot: horizontal15
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4258,7 +4266,7 @@ Plot: horizontal15
 	lw.0: 0
 	max: 1.99126106E-07
 	min: 1.36206726E-20
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4274,8 +4282,8 @@ Plot: horizontal16
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4291,7 +4299,7 @@ Plot: horizontal16
 	lw.0: 0
 	max: 8.32187741E-09
 	min: 4.54913665E-19
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4307,8 +4315,8 @@ Plot: horizontal17
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4324,7 +4332,7 @@ Plot: horizontal17
 	lw.0: 0
 	max: 6.81879886E-09
 	min: 1.20978721E-18
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4340,8 +4348,8 @@ Plot: horizontal18
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4357,7 +4365,7 @@ Plot: horizontal18
 	lw.0: 0
 	max: 6.80205003E-09
 	min: 1.41769813E-18
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4373,8 +4381,8 @@ Plot: horizontal19
 	cbcolors: 8
 	cbcpd: 1
 	cblog: 1
-	cbmax: 5e+08
-	cbmin: 5
+	cbmax: 1e+07
+	cbmin: 0.1
 	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
@@ -4390,7 +4398,7 @@ Plot: horizontal19
 	lw.0: 0
 	max: 6.78351508E-09
 	min: 3.34350829E-18
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
 	with.0: errorbars
@@ -4408,7 +4416,7 @@ Plot: cryopit_bottom
 	bzmax: 400
 	bzmin: 150.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4419,14 +4427,13 @@ Plot: cryopit_bottom
 	format: .svg
 	grid: 0
 	hist: 1D Projection
-	int: 3.0247735397989611E-002
+	int: 44.672762849807199
 	lw.0: 0
-	max: 1.00825781E-09
-	min: 1.00825781E-09
-	norm: 3*140*6.24e12*3600/1e6
+	max: 1.48909214E-06
+	min: 1.48909214E-06
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 5
 End
 Plot: cryopit_top
@@ -4438,7 +4445,7 @@ Plot: cryopit_top
 	bzmax: 700
 	bzmin: 400.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4453,10 +4460,9 @@ Plot: cryopit_top
 	lw.0: 0
 	max: 3.82490262E-10
 	min: 3.82490262E-10
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 6
 End
 Plot: pumppit
@@ -4468,7 +4474,7 @@ Plot: pumppit
 	bzmax: 700
 	bzmin: 400.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4483,10 +4489,9 @@ Plot: pumppit
 	lw.0: 0
 	max: 4.67806460E-10
 	min: 4.67806460E-10
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 6
 End
 Plot: exp_area
@@ -4495,10 +4500,10 @@ Plot: exp_area
 	bxmin: -400.
 	bymax: -200
 	bymin: -900.
-	bzmax: 600
+	bzmax: 1000
 	bzmin: 0.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4506,18 +4511,18 @@ Plot: exp_area
 		|set rmargin at screen 0.8
 	cpd: 2
 	datafile: ucn_24.bnn
+	det: 3
 	format: .svg
 	grid: 0
 	hist: 1D Max
-	int: 1.0238528444894430E-003
+	int: 1.1544810358603296E-004
 	lw.0: 0
-	max: 2.21613179E-12
-	min: 2.21613179E-12
-	norm: 3*140*6.24e12*3600/1e6
+	max: 1.49932597E-13
+	min: 1.49932597E-13
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
-	zrebin: 12
+	zrebin: 20
 End
 Plot: M11_left
 	Type: USRBIN
@@ -4528,7 +4533,7 @@ Plot: M11_left
 	bzmax: 400
 	bzmin: 0.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4543,10 +4548,9 @@ Plot: M11_left
 	lw.0: 0
 	max: 3.46043888E-11
 	min: 3.46043888E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 8
 End
 Plot: M11_right
@@ -4558,7 +4562,7 @@ Plot: M11_right
 	bzmax: 400
 	bzmin: 0.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4573,10 +4577,9 @@ Plot: M11_right
 	lw.0: 0
 	max: 2.47625392E-11
 	min: 2.47625392E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 8
 End
 Plot: counting_room
@@ -4588,7 +4591,7 @@ Plot: counting_room
 	bzmax: 600
 	bzmin: 350.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4603,10 +4606,9 @@ Plot: counting_room
 	lw.0: 0
 	max: 1.15496295E-12
 	min: 1.15496295E-12
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 5
 End
 Plot: north_walkway
@@ -4619,7 +4621,7 @@ Plot: north_walkway
 	bzmin: 0.
 	cbcolors: 16
 	cblog: 1
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4629,16 +4631,15 @@ Plot: north_walkway
 	datafile: ucn_24.bnn
 	format: .svg
 	grid: 0
-	hist: 2D Projection
+	hist: 1D Projection
 	int: 1.7487535809193639E-003
 	lw.0: 0
 	max: 9.62225438E-11
 	min: 1.34875955E-16
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 End
 Plot: west_walkway
 	Type: USRBIN
@@ -4649,7 +4650,7 @@ Plot: west_walkway
 	bzmax: 1000
 	bzmin: 750.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4664,11 +4665,10 @@ Plot: west_walkway
 	lw.0: 0
 	max: 8.33808647E-11
 	min: 6.26667717E-13
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: Y
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 5
 End
 Plot: south_walkway
@@ -4680,7 +4680,7 @@ Plot: south_walkway
 	bzmax: 1200
 	bzmin: 950.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4695,11 +4695,10 @@ Plot: south_walkway
 	lw.0: 0
 	max: 5.43718369E-12
 	min: 4.17175870E-13
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	proj: X
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 5
 End
 Plot: stair_case
@@ -4711,7 +4710,7 @@ Plot: stair_case
 	bzmax: 1000
 	bzmin: 0.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4726,10 +4725,9 @@ Plot: stair_case
 	lw.0: 0
 	max: 1.99197494E-12
 	min: 1.99197494E-12
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 	zrebin: 20
 End
 Plot: NM11_temp
@@ -4741,7 +4739,7 @@ Plot: NM11_temp
 	bzmax: 400
 	bzmin: 350.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4757,10 +4755,9 @@ Plot: NM11_temp
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 End
 Plot: NM9
 	Type: USRBIN
@@ -4771,7 +4768,7 @@ Plot: NM9
 	bzmax: 800
 	bzmin: 750.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4787,10 +4784,9 @@ Plot: NM9
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 End
 Plot: NM10
 	Type: USRBIN
@@ -4801,7 +4797,7 @@ Plot: NM10
 	bzmax: 800
 	bzmin: 750.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4817,10 +4813,9 @@ Plot: NM10
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 End
 Plot: NM11
 	Type: USRBIN
@@ -4831,7 +4826,7 @@ Plot: NM11
 	bzmax: 350
 	bzmin: 300.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4847,10 +4842,9 @@ Plot: NM11
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 End
 Plot: newNM
 	Type: USRBIN
@@ -4861,7 +4855,7 @@ Plot: newNM
 	bzmax: 250
 	bzmin: 200.
 	cbcolors: 16
-	cbpalette: Matlab
+	cbpalette: bwr
 	cbround: 0
 	cbtics: 1
 	commands:
@@ -4877,8 +4871,7 @@ Plot: newNM
 	lw.0: 0
 	max: 7.00880465E-11
 	min: 7.00880465E-11
-	norm: 3*140*6.24e12*3600/1e6
+	norm: 3*40*6.24e12*3600/1e6
 	ps.0: 0
 	title: Prompt radiation (uSv/h)
-	with.0: errorbars
 End
